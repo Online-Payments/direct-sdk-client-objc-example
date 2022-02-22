@@ -1,0 +1,1 @@
+../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPPaymentProduct302SpecificData.h

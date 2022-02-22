@@ -1,0 +1,26 @@
+//
+// Do not remove or alter the notices in this preamble.
+// This software code is created for Online Payments on 21/07/2020
+// Copyright © 2020 Global Collect Services. All rights reserved.
+//
+
+"PayNow" = "Start payment process";
+"PaymentProductsErrorExplanation" = "We are unable to retrieve the available payment products. \n\n Please check your internet connection and the provided client session identifier and customer identifier.";
+"PaymentProductErrorExplanation" = "We are unable to retrieve information about the selected payment product. \n\n Please check your internet connection and the provided client session identifier and customer identifier.";
+"PaymentProductNetworksErrorExplanation" = "We are unable to retrieve information about the selected payment product's networks. \n\n Please check your internet connection and the provided client session identifier and customer identifier.";
+"SubmitErrorExplanation" = "We are unable to retrieve a key to encrypt your payment information. \n\n Please check your internet connection and the provided customer client session identifier and customer identifier.";
+"ConnectionErrorTitle" = "Connection error";
+"ContinueButtonTitle" = "Start another payment process";
+"SuccessLabel" = "Congratulations!";
+"SuccessText" = "Your payment has been successfully processed by the SDK.";
+
+"SetupExplanation" = "To process a payment using the services provided by Online Payments, the following information must be provided by a merchant.\n\nAfter providing the information requested below, this example app can process a payment.";
+"ClientSessionIdentifier" = "Client session identifier";
+"CustomerIdentifier" = "Customer identifier";
+"MerchantIdentifier" = "Merchant identifier";
+"Region" = "Region";
+"Environment" = "Environment";
+"AmountInCents" = "Amount in cents";
+"CountryCode" = "Country code";
+"CurrencyCode" = "Currency code";
+"RecurringPayment" = "Payment is recurring";

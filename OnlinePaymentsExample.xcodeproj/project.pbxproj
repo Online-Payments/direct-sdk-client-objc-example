@@ -1,0 +1,1089 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24441D370356A18E096BBBA3 /* libPods-OnlinePaymentsExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5D8A5FD72F81A42C96C326 /* libPods-OnlinePaymentsExampleTests.a */; };
+		5321ABFEF7F97593A64C8168 /* libPods-OnlinePaymentsExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D650D2711C2E1282B081BB94 /* libPods-OnlinePaymentsExample.a */; };
+		F739BBA024C5B87200FFE16B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB9F24C5B87200FFE16B /* AppDelegate.m */; };
+		F739BBAB24C5B87300FFE16B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F739BBAA24C5B87300FFE16B /* Assets.xcassets */; };
+		F739BBB124C5B87300FFE16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBB024C5B87300FFE16B /* main.m */; };
+		F739BBD124C6CCF200FFE16B /* IDTranslations.strings in Resources */ = {isa = PBXBuildFile; fileRef = F739BBD024C6CCF200FFE16B /* IDTranslations.strings */; };
+		F739BBD424C6CF1400FFE16B /* OPFormRowsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBD324C6CF1400FFE16B /* OPFormRowsConverter.m */; };
+		F739BBD724C6D1A500FFE16B /* OPViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBD624C6D1A500FFE16B /* OPViewFactory.m */; };
+		F739BBE424C6E5B300FFE16B /* OPTableSectionConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBE324C6E5B300FFE16B /* OPTableSectionConverter.m */; };
+		F739BBE824C6E8E800FFE16B /* OPPaymentProductInputData.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBE724C6E8E800FFE16B /* OPPaymentProductInputData.m */; };
+		F739BC1324C6ECB500FFE16B /* OPFormRowDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBEB24C6ECAE00FFE16B /* OPFormRowDate.m */; };
+		F739BC1424C6ECB500FFE16B /* OPPaymentProductsTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBEE24C6ECAF00FFE16B /* OPPaymentProductsTableRow.m */; };
+		F739BC1524C6ECB500FFE16B /* OPFormRowWithInfoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBF124C6ECAF00FFE16B /* OPFormRowWithInfoButton.m */; };
+		F739BC1624C6ECB500FFE16B /* OPFormRowSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBF324C6ECB000FFE16B /* OPFormRowSeparator.m */; };
+		F739BC1724C6ECB500FFE16B /* OPFormRowCoBrandsSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBF424C6ECB000FFE16B /* OPFormRowCoBrandsSelection.m */; };
+		F739BC1824C6ECB500FFE16B /* OPFormRowTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBF524C6ECB000FFE16B /* OPFormRowTextField.m */; };
+		F739BC1924C6ECB500FFE16B /* OPFormRowCoBrandsExplanation.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBF824C6ECB100FFE16B /* OPFormRowCoBrandsExplanation.m */; };
+		F739BC1A24C6ECB500FFE16B /* OPFormRowSmallLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBFB24C6ECB100FFE16B /* OPFormRowSmallLogo.m */; };
+		F739BC1B24C6ECB500FFE16B /* OPFormRowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBFC24C6ECB100FFE16B /* OPFormRowButton.m */; };
+		F739BC1C24C6ECB500FFE16B /* OPFormRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBFD24C6ECB200FFE16B /* OPFormRow.m */; };
+		F739BC1D24C6ECB500FFE16B /* OPFormRowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBFE24C6ECB200FFE16B /* OPFormRowImage.m */; };
+		F739BC1E24C6ECB500FFE16B /* OPFormRowField.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBFF24C6ECB200FFE16B /* OPFormRowField.m */; };
+		F739BC1F24C6ECB500FFE16B /* OPFormRowCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BC0324C6ECB300FFE16B /* OPFormRowCurrency.m */; };
+		F739BC2024C6ECB500FFE16B /* OPFormRowList.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BC0424C6ECB300FFE16B /* OPFormRowList.m */; };
+		F739BC2224C6ECB500FFE16B /* OPPaymentProductsTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BC0624C6ECB300FFE16B /* OPPaymentProductsTableSection.m */; };
+		F739BC2324C6ECB500FFE16B /* OPFormRowTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BC0924C6ECB400FFE16B /* OPFormRowTooltip.m */; };
+		F739BC2424C6ECB500FFE16B /* OPFormRowSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BC0A24C6ECB400FFE16B /* OPFormRowSwitch.m */; };
+		F739BC2524C6ECB500FFE16B /* OPFormRowErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BC0B24C6ECB400FFE16B /* OPFormRowErrorMessage.m */; };
+		F739BC2624C6ECB500FFE16B /* OPFormRowLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BC0C24C6ECB400FFE16B /* OPFormRowLabel.m */; };
+		F739BC2724C6ECB500FFE16B /* OPFormRowReadonlyReview.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BC1124C6ECB500FFE16B /* OPFormRowReadonlyReview.m */; };
+		F739BD0D24C7154500FFE16B /* OPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD0C24C7154500FFE16B /* OPButton.m */; };
+		F739BD1624C716C300FFE16B /* OPSeparatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD1524C716C300FFE16B /* OPSeparatorView.m */; };
+		F739BD1924C7175B00FFE16B /* OPMerchantLogoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD1824C7175B00FFE16B /* OPMerchantLogoImageView.m */; };
+		F739BD1C24C7179B00FFE16B /* OPLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD1B24C7179B00FFE16B /* OPLabel.m */; };
+		F739BD1F24C7193100FFE16B /* OPPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD1E24C7193100FFE16B /* OPPickerView.m */; };
+		F739BD2224C7197400FFE16B /* OPSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD2124C7197400FFE16B /* OPSwitch.m */; };
+		F739BD2524C719D100FFE16B /* OPSummaryTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD2424C719D100FFE16B /* OPSummaryTableHeaderView.m */; };
+		F739BD4A24C71B9B00FFE16B /* OPDetailedPickerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD2624C71B9100FFE16B /* OPDetailedPickerViewCell.m */; };
+		F739BD4B24C71B9B00FFE16B /* OPSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD2724C71B9100FFE16B /* OPSwitchTableViewCell.m */; };
+		F739BD4C24C71B9B00FFE16B /* OPCurrencyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD2A24C71B9200FFE16B /* OPCurrencyTableViewCell.m */; };
+		F739BD4D24C71B9B00FFE16B /* OPLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD2B24C71B9200FFE16B /* OPLabelTableViewCell.m */; };
+		F739BD4E24C71B9B00FFE16B /* OPCImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD2D24C71B9300FFE16B /* OPCImageTableViewCell.m */; };
+		F739BD4F24C71B9B00FFE16B /* OPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD2F24C71B9300FFE16B /* OPTableViewCell.m */; };
+		F739BD5024C71B9B00FFE16B /* OPReadonlyReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD3024C71B9400FFE16B /* OPReadonlyReviewTableViewCell.m */; };
+		F739BD5124C71B9B00FFE16B /* OPTooltipTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD3224C71B9400FFE16B /* OPTooltipTableViewCell.m */; };
+		F739BD5224C71B9B00FFE16B /* OPPaymentProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD3424C71B9500FFE16B /* OPPaymentProductTableViewCell.m */; };
+		F739BD5324C71B9B00FFE16B /* OPTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD3824C71B9600FFE16B /* OPTextFieldTableViewCell.m */; };
+		F739BD5424C71B9B00FFE16B /* OPErrorMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD3D24C71B9700FFE16B /* OPErrorMessageTableViewCell.m */; };
+		F739BD5524C71B9B00FFE16B /* OPLogoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD3E24C71B9800FFE16B /* OPLogoTableViewCell.m */; };
+		F739BD5624C71B9B00FFE16B /* OPPickerViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD4024C71B9800FFE16B /* OPPickerViewTableViewCell.m */; };
+		F739BD5724C71B9B00FFE16B /* OPCOBrandsExplanationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD4124C71B9800FFE16B /* OPCOBrandsExplanationTableViewCell.m */; };
+		F739BD5824C71B9B00FFE16B /* OPDatePickerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD4424C71B9900FFE16B /* OPDatePickerTableViewCell.m */; };
+		F739BD5924C71B9B00FFE16B /* OPSeparatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD4524C71B9900FFE16B /* OPSeparatorTableViewCell.m */; };
+		F739BD5A24C71B9B00FFE16B /* OPCoBrandsSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD4824C71B9A00FFE16B /* OPCoBrandsSelectionTableViewCell.m */; };
+		F739BD5B24C71B9B00FFE16B /* OPButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD4924C71B9A00FFE16B /* OPButtonTableViewCell.m */; };
+		F739BD5E24C71C2900FFE16B /* OPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BD5D24C71C2900FFE16B /* OPTextField.m */; };
+		F749A8D524C71EDD008597B6 /* OPIntegerTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8D424C71EDD008597B6 /* OPIntegerTextField.m */; };
+		F749A8D824C71F47008597B6 /* OPFractionalTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8D724C71F47008597B6 /* OPFractionalTextField.m */; };
+		F749A8E124C72D76008597B6 /* OPPaymentProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8D924C72D74008597B6 /* OPPaymentProductViewController.m */; };
+		F749A8E224C72D76008597B6 /* OPStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8DB24C72D74008597B6 /* OPStartViewController.m */; };
+		F749A8E324C72D76008597B6 /* OPEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8DD24C72D75008597B6 /* OPEndViewController.m */; };
+		F749A8E424C72D76008597B6 /* OPPaymentProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8DE24C72D75008597B6 /* OPPaymentProductsViewController.m */; };
+		F749A8F124C72D80008597B6 /* OPCardProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8E924C72D7E008597B6 /* OPCardProductViewController.m */; };
+		F749A8F724C72D99008597B6 /* OPPaymentProductsViewControllerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8F624C72D99008597B6 /* OPPaymentProductsViewControllerTarget.m */; };
+		F74DA1F524CF1C24002B6DE6 /* OPTableSectionConverterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F74DA1F424CF1C24002B6DE6 /* OPTableSectionConverterTestCase.m */; };
+		F74DA1F724CF1C5C002B6DE6 /* OPPaymentProductInputDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F74DA1F624CF1C5C002B6DE6 /* OPPaymentProductInputDataTestCase.m */; };
+		F74DA1FB24CF1CF0002B6DE6 /* paymentProduct.json in Resources */ = {isa = PBXBuildFile; fileRef = F74DA1F924CF1CF0002B6DE6 /* paymentProduct.json */; };
+		F74DA1FC24CF1CF0002B6DE6 /* paymentProducts.json in Resources */ = {isa = PBXBuildFile; fileRef = F74DA1FA24CF1CF0002B6DE6 /* paymentProducts.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F739BBB724C5B87300FFE16B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F739BB9324C5B87200FFE16B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F739BB9A24C5B87200FFE16B;
+			remoteInfo = IngenicoDirectExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		225AF9C492258FB7763C82AC /* Pods-OnlinePaymentsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.debug.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.debug.xcconfig"; sourceTree = "<group>"; };
+		5A5D8A5FD72F81A42C96C326 /* libPods-OnlinePaymentsExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlinePaymentsExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7236C8C11F10C58886EA0AC7 /* Pods-OnlinePaymentsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.release.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.release.xcconfig"; sourceTree = "<group>"; };
+		8928BB850216AFDE2609C876 /* Pods-OnlinePaymentsExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExampleTests.release.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExampleTests/Pods-OnlinePaymentsExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		B4F17DEAE9BF18EEF6606D0E /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExampleTests/Pods-OnlinePaymentsExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D650D2711C2E1282B081BB94 /* libPods-OnlinePaymentsExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlinePaymentsExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F739BB9B24C5B87200FFE16B /* OnlinePaymentsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlinePaymentsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F739BB9E24C5B87200FFE16B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F739BB9F24C5B87200FFE16B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F739BBAA24C5B87300FFE16B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F739BBAF24C5B87300FFE16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F739BBB024C5B87300FFE16B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F739BBB624C5B87300FFE16B /* OnlinePaymentsExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlinePaymentsExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F739BBBC24C5B87300FFE16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F739BBCE24C6C87600FFE16B /* OnlinePaymentsExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnlinePaymentsExample-Prefix.pch"; sourceTree = "<group>"; };
+		F739BBCF24C6CB2900FFE16B /* OPAppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPAppConstants.h; sourceTree = "<group>"; };
+		F739BBD024C6CCF200FFE16B /* IDTranslations.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = IDTranslations.strings; sourceTree = "<group>"; };
+		F739BBD224C6CF1400FFE16B /* OPFormRowsConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPFormRowsConverter.h; sourceTree = "<group>"; };
+		F739BBD324C6CF1400FFE16B /* OPFormRowsConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPFormRowsConverter.m; sourceTree = "<group>"; };
+		F739BBD524C6D1A500FFE16B /* OPViewFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPViewFactory.h; sourceTree = "<group>"; };
+		F739BBD624C6D1A500FFE16B /* OPViewFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPViewFactory.m; sourceTree = "<group>"; };
+		F739BBD824C6D29000FFE16B /* OPPaymentType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentType.h; sourceTree = "<group>"; };
+		F739BBD924C6D2AB00FFE16B /* OPViewType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPViewType.h; sourceTree = "<group>"; };
+		F739BBDD24C6D33500FFE16B /* OPStatusViewStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPStatusViewStatus.h; sourceTree = "<group>"; };
+		F739BBDE24C6D38B00FFE16B /* OPPaymentProductSelectionTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductSelectionTarget.h; sourceTree = "<group>"; };
+		F739BBDF24C6D3E000FFE16B /* OPPaymentRequestTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentRequestTarget.h; sourceTree = "<group>"; };
+		F739BBE024C6D50000FFE16B /* OPContinueShoppingTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPContinueShoppingTarget.h; sourceTree = "<group>"; };
+		F739BBE124C6D51C00FFE16B /* OPPaymentFinishedTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentFinishedTarget.h; sourceTree = "<group>"; };
+		F739BBE224C6E5B300FFE16B /* OPTableSectionConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPTableSectionConverter.h; sourceTree = "<group>"; };
+		F739BBE324C6E5B300FFE16B /* OPTableSectionConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPTableSectionConverter.m; sourceTree = "<group>"; };
+		F739BBE624C6E8E800FFE16B /* OPPaymentProductInputData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductInputData.h; sourceTree = "<group>"; };
+		F739BBE724C6E8E800FFE16B /* OPPaymentProductInputData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductInputData.m; sourceTree = "<group>"; };
+		F739BBE924C6ECAE00FFE16B /* OPFormRowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowButton.h; sourceTree = "<group>"; };
+		F739BBEA24C6ECAE00FFE16B /* OPFormRowCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowCurrency.h; sourceTree = "<group>"; };
+		F739BBEB24C6ECAE00FFE16B /* OPFormRowDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowDate.m; sourceTree = "<group>"; };
+		F739BBEC24C6ECAE00FFE16B /* OPFormRowList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowList.h; sourceTree = "<group>"; };
+		F739BBED24C6ECAF00FFE16B /* OPFormRowSeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowSeparator.h; sourceTree = "<group>"; };
+		F739BBEE24C6ECAF00FFE16B /* OPPaymentProductsTableRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductsTableRow.m; sourceTree = "<group>"; };
+		F739BBEF24C6ECAF00FFE16B /* OPFormRowCoBrandsExplanation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowCoBrandsExplanation.h; sourceTree = "<group>"; };
+		F739BBF024C6ECAF00FFE16B /* OPFormRowSmallLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowSmallLogo.h; sourceTree = "<group>"; };
+		F739BBF124C6ECAF00FFE16B /* OPFormRowWithInfoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowWithInfoButton.m; sourceTree = "<group>"; };
+		F739BBF224C6ECB000FFE16B /* OPFormRowImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowImage.h; sourceTree = "<group>"; };
+		F739BBF324C6ECB000FFE16B /* OPFormRowSeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowSeparator.m; sourceTree = "<group>"; };
+		F739BBF424C6ECB000FFE16B /* OPFormRowCoBrandsSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowCoBrandsSelection.m; sourceTree = "<group>"; };
+		F739BBF524C6ECB000FFE16B /* OPFormRowTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowTextField.m; sourceTree = "<group>"; };
+		F739BBF624C6ECB000FFE16B /* OPFormRowLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowLabel.h; sourceTree = "<group>"; };
+		F739BBF724C6ECB000FFE16B /* OPPaymentProductsTableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductsTableSection.h; sourceTree = "<group>"; };
+		F739BBF824C6ECB100FFE16B /* OPFormRowCoBrandsExplanation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowCoBrandsExplanation.m; sourceTree = "<group>"; };
+		F739BBF924C6ECB100FFE16B /* OPFormRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRow.h; sourceTree = "<group>"; };
+		F739BBFB24C6ECB100FFE16B /* OPFormRowSmallLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowSmallLogo.m; sourceTree = "<group>"; };
+		F739BBFC24C6ECB100FFE16B /* OPFormRowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowButton.m; sourceTree = "<group>"; };
+		F739BBFD24C6ECB200FFE16B /* OPFormRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRow.m; sourceTree = "<group>"; };
+		F739BBFE24C6ECB200FFE16B /* OPFormRowImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowImage.m; sourceTree = "<group>"; };
+		F739BBFF24C6ECB200FFE16B /* OPFormRowField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowField.m; sourceTree = "<group>"; };
+		F739BC0024C6ECB200FFE16B /* OPPaymentProductsTableRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductsTableRow.h; sourceTree = "<group>"; };
+		F739BC0124C6ECB200FFE16B /* OPFormRowSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowSwitch.h; sourceTree = "<group>"; };
+		F739BC0224C6ECB200FFE16B /* OPFormRowTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowTextField.h; sourceTree = "<group>"; };
+		F739BC0324C6ECB300FFE16B /* OPFormRowCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowCurrency.m; sourceTree = "<group>"; };
+		F739BC0424C6ECB300FFE16B /* OPFormRowList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowList.m; sourceTree = "<group>"; };
+		F739BC0624C6ECB300FFE16B /* OPPaymentProductsTableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductsTableSection.m; sourceTree = "<group>"; };
+		F739BC0724C6ECB300FFE16B /* OPFormRowCoBrandsSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowCoBrandsSelection.h; sourceTree = "<group>"; };
+		F739BC0824C6ECB300FFE16B /* OPFormRowErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowErrorMessage.h; sourceTree = "<group>"; };
+		F739BC0924C6ECB400FFE16B /* OPFormRowTooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowTooltip.m; sourceTree = "<group>"; };
+		F739BC0A24C6ECB400FFE16B /* OPFormRowSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowSwitch.m; sourceTree = "<group>"; };
+		F739BC0B24C6ECB400FFE16B /* OPFormRowErrorMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowErrorMessage.m; sourceTree = "<group>"; };
+		F739BC0C24C6ECB400FFE16B /* OPFormRowLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowLabel.m; sourceTree = "<group>"; };
+		F739BC0D24C6ECB400FFE16B /* OPFormRowReadonlyReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowReadonlyReview.h; sourceTree = "<group>"; };
+		F739BC0E24C6ECB500FFE16B /* OPFormRowWithInfoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowWithInfoButton.h; sourceTree = "<group>"; };
+		F739BC0F24C6ECB500FFE16B /* OPFormRowField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowField.h; sourceTree = "<group>"; };
+		F739BC1024C6ECB500FFE16B /* OPFormRowDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowDate.h; sourceTree = "<group>"; };
+		F739BC1124C6ECB500FFE16B /* OPFormRowReadonlyReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowReadonlyReview.m; sourceTree = "<group>"; };
+		F739BC1224C6ECB500FFE16B /* OpFormRowTooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpFormRowTooltip.h; sourceTree = "<group>"; };
+		F739BD0B24C7154500FFE16B /* OPButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPButton.h; sourceTree = "<group>"; };
+		F739BD0C24C7154500FFE16B /* OPButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPButton.m; sourceTree = "<group>"; };
+		F739BD1424C716C300FFE16B /* OPSeparatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPSeparatorView.h; sourceTree = "<group>"; };
+		F739BD1524C716C300FFE16B /* OPSeparatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPSeparatorView.m; sourceTree = "<group>"; };
+		F739BD1724C7175B00FFE16B /* OPMerchantLogoImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPMerchantLogoImageView.h; sourceTree = "<group>"; };
+		F739BD1824C7175B00FFE16B /* OPMerchantLogoImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPMerchantLogoImageView.m; sourceTree = "<group>"; };
+		F739BD1A24C7179B00FFE16B /* OPLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPLabel.h; sourceTree = "<group>"; };
+		F739BD1B24C7179B00FFE16B /* OPLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPLabel.m; sourceTree = "<group>"; };
+		F739BD1D24C7193100FFE16B /* OPPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPickerView.h; sourceTree = "<group>"; };
+		F739BD1E24C7193100FFE16B /* OPPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPickerView.m; sourceTree = "<group>"; };
+		F739BD2024C7197400FFE16B /* OPSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPSwitch.h; sourceTree = "<group>"; };
+		F739BD2124C7197400FFE16B /* OPSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPSwitch.m; sourceTree = "<group>"; };
+		F739BD2324C719D100FFE16B /* OPSummaryTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPSummaryTableHeaderView.h; sourceTree = "<group>"; };
+		F739BD2424C719D100FFE16B /* OPSummaryTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPSummaryTableHeaderView.m; sourceTree = "<group>"; };
+		F739BD2624C71B9100FFE16B /* OPDetailedPickerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPDetailedPickerViewCell.m; sourceTree = "<group>"; };
+		F739BD2724C71B9100FFE16B /* OPSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPSwitchTableViewCell.m; sourceTree = "<group>"; };
+		F739BD2824C71B9100FFE16B /* OPDetailedPickerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPDetailedPickerViewCell.h; sourceTree = "<group>"; };
+		F739BD2924C71B9200FFE16B /* OPSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPSwitchTableViewCell.h; sourceTree = "<group>"; };
+		F739BD2A24C71B9200FFE16B /* OPCurrencyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPCurrencyTableViewCell.m; sourceTree = "<group>"; };
+		F739BD2B24C71B9200FFE16B /* OPLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPLabelTableViewCell.m; sourceTree = "<group>"; };
+		F739BD2C24C71B9300FFE16B /* OPPickerViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPickerViewTableViewCell.h; sourceTree = "<group>"; };
+		F739BD2D24C71B9300FFE16B /* OPCImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPCImageTableViewCell.m; sourceTree = "<group>"; };
+		F739BD2E24C71B9300FFE16B /* OPPaymentProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductTableViewCell.h; sourceTree = "<group>"; };
+		F739BD2F24C71B9300FFE16B /* OPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPTableViewCell.m; sourceTree = "<group>"; };
+		F739BD3024C71B9400FFE16B /* OPReadonlyReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPReadonlyReviewTableViewCell.m; sourceTree = "<group>"; };
+		F739BD3124C71B9400FFE16B /* OPSeparatorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPSeparatorTableViewCell.h; sourceTree = "<group>"; };
+		F739BD3224C71B9400FFE16B /* OPTooltipTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPTooltipTableViewCell.m; sourceTree = "<group>"; };
+		F739BD3324C71B9500FFE16B /* OPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPTableViewCell.h; sourceTree = "<group>"; };
+		F739BD3424C71B9500FFE16B /* OPPaymentProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductTableViewCell.m; sourceTree = "<group>"; };
+		F739BD3524C71B9500FFE16B /* OPLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPLabelTableViewCell.h; sourceTree = "<group>"; };
+		F739BD3624C71B9500FFE16B /* OPCOBrandsExplanationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPCOBrandsExplanationTableViewCell.h; sourceTree = "<group>"; };
+		F739BD3724C71B9600FFE16B /* OPCoBrandsSelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPCoBrandsSelectionTableViewCell.h; sourceTree = "<group>"; };
+		F739BD3824C71B9600FFE16B /* OPTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		F739BD3924C71B9600FFE16B /* OPDatePickerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPDatePickerTableViewCell.h; sourceTree = "<group>"; };
+		F739BD3A24C71B9600FFE16B /* OPReadonlyReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPReadonlyReviewTableViewCell.h; sourceTree = "<group>"; };
+		F739BD3B24C71B9700FFE16B /* OPImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPImageTableViewCell.h; sourceTree = "<group>"; };
+		F739BD3C24C71B9700FFE16B /* OPTooltipTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPTooltipTableViewCell.h; sourceTree = "<group>"; };
+		F739BD3D24C71B9700FFE16B /* OPErrorMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPErrorMessageTableViewCell.m; sourceTree = "<group>"; };
+		F739BD3E24C71B9800FFE16B /* OPLogoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPLogoTableViewCell.m; sourceTree = "<group>"; };
+		F739BD3F24C71B9800FFE16B /* OPCurrencyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPCurrencyTableViewCell.h; sourceTree = "<group>"; };
+		F739BD4024C71B9800FFE16B /* OPPickerViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPickerViewTableViewCell.m; sourceTree = "<group>"; };
+		F739BD4124C71B9800FFE16B /* OPCOBrandsExplanationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPCOBrandsExplanationTableViewCell.m; sourceTree = "<group>"; };
+		F739BD4224C71B9900FFE16B /* OPLogoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPLogoTableViewCell.h; sourceTree = "<group>"; };
+		F739BD4324C71B9900FFE16B /* OPButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPButtonTableViewCell.h; sourceTree = "<group>"; };
+		F739BD4424C71B9900FFE16B /* OPDatePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPDatePickerTableViewCell.m; sourceTree = "<group>"; };
+		F739BD4524C71B9900FFE16B /* OPSeparatorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPSeparatorTableViewCell.m; sourceTree = "<group>"; };
+		F739BD4624C71B9A00FFE16B /* OPTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		F739BD4724C71B9A00FFE16B /* OPErrorMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPErrorMessageTableViewCell.h; sourceTree = "<group>"; };
+		F739BD4824C71B9A00FFE16B /* OPCoBrandsSelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPCoBrandsSelectionTableViewCell.m; sourceTree = "<group>"; };
+		F739BD4924C71B9A00FFE16B /* OPButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPButtonTableViewCell.m; sourceTree = "<group>"; };
+		F739BD5C24C71C2900FFE16B /* OPTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPTextField.h; sourceTree = "<group>"; };
+		F739BD5D24C71C2900FFE16B /* OPTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPTextField.m; sourceTree = "<group>"; };
+		F749A8D324C71EDD008597B6 /* OPIntegerTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPIntegerTextField.h; sourceTree = "<group>"; };
+		F749A8D424C71EDD008597B6 /* OPIntegerTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPIntegerTextField.m; sourceTree = "<group>"; };
+		F749A8D624C71F47008597B6 /* OPFractionalTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPFractionalTextField.h; sourceTree = "<group>"; };
+		F749A8D724C71F47008597B6 /* OPFractionalTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPFractionalTextField.m; sourceTree = "<group>"; };
+		F749A8D924C72D74008597B6 /* OPPaymentProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductViewController.m; sourceTree = "<group>"; };
+		F749A8DA24C72D74008597B6 /* OPPaymentProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductsViewController.h; sourceTree = "<group>"; };
+		F749A8DB24C72D74008597B6 /* OPStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPStartViewController.m; sourceTree = "<group>"; };
+		F749A8DC24C72D75008597B6 /* OPEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPEndViewController.h; sourceTree = "<group>"; };
+		F749A8DD24C72D75008597B6 /* OPEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPEndViewController.m; sourceTree = "<group>"; };
+		F749A8DE24C72D75008597B6 /* OPPaymentProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductsViewController.m; sourceTree = "<group>"; };
+		F749A8DF24C72D76008597B6 /* OPStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPStartViewController.h; sourceTree = "<group>"; };
+		F749A8E024C72D76008597B6 /* OPPaymentProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductViewController.h; sourceTree = "<group>"; };
+		F749A8E724C72D7E008597B6 /* OPCardProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPCardProductViewController.h; sourceTree = "<group>"; };
+		F749A8E924C72D7E008597B6 /* OPCardProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPCardProductViewController.m; sourceTree = "<group>"; };
+		F749A8F524C72D99008597B6 /* OPPaymentProductsViewControllerTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductsViewControllerTarget.h; sourceTree = "<group>"; };
+		F749A8F624C72D99008597B6 /* OPPaymentProductsViewControllerTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductsViewControllerTarget.m; sourceTree = "<group>"; };
+		F74DA1F424CF1C24002B6DE6 /* OPTableSectionConverterTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPTableSectionConverterTestCase.m; sourceTree = "<group>"; };
+		F74DA1F624CF1C5C002B6DE6 /* OPPaymentProductInputDataTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductInputDataTestCase.m; sourceTree = "<group>"; };
+		F74DA1F924CF1CF0002B6DE6 /* paymentProduct.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProduct.json; sourceTree = "<group>"; };
+		F74DA1FA24CF1CF0002B6DE6 /* paymentProducts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProducts.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F739BB9824C5B87200FFE16B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5321ABFEF7F97593A64C8168 /* libPods-OnlinePaymentsExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F739BBB324C5B87300FFE16B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24441D370356A18E096BBBA3 /* libPods-OnlinePaymentsExampleTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B05C8BBF3C3FF26A9828FD2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D650D2711C2E1282B081BB94 /* libPods-OnlinePaymentsExample.a */,
+				5A5D8A5FD72F81A42C96C326 /* libPods-OnlinePaymentsExampleTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFDE8820B37B7D1BB56DC797 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				225AF9C492258FB7763C82AC /* Pods-OnlinePaymentsExample.debug.xcconfig */,
+				7236C8C11F10C58886EA0AC7 /* Pods-OnlinePaymentsExample.release.xcconfig */,
+				B4F17DEAE9BF18EEF6606D0E /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */,
+				8928BB850216AFDE2609C876 /* Pods-OnlinePaymentsExampleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F739BB9224C5B87200FFE16B = {
+			isa = PBXGroup;
+			children = (
+				F739BB9D24C5B87200FFE16B /* OnlinePaymentsExample */,
+				F739BBB924C5B87300FFE16B /* OnlinePaymentsExampleTests */,
+				F739BB9C24C5B87200FFE16B /* Products */,
+				DFDE8820B37B7D1BB56DC797 /* Pods */,
+				B05C8BBF3C3FF26A9828FD2A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F739BB9C24C5B87200FFE16B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F739BB9B24C5B87200FFE16B /* OnlinePaymentsExample.app */,
+				F739BBB624C5B87300FFE16B /* OnlinePaymentsExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F739BB9D24C5B87200FFE16B /* OnlinePaymentsExample */ = {
+			isa = PBXGroup;
+			children = (
+				F739BB9E24C5B87200FFE16B /* AppDelegate.h */,
+				F739BB9F24C5B87200FFE16B /* AppDelegate.m */,
+				F739BBC524C6C7B700FFE16B /* Constants */,
+				F739BBC724C6C7CB00FFE16B /* Converters */,
+				F739BBC924C6C7D900FFE16B /* Enumerations */,
+				F739BBC824C6C7D000FFE16B /* Factories */,
+				F739BBC624C6C7C400FFE16B /* Models */,
+				F739BBCA24C6C7E100FFE16B /* Protocols */,
+				F739BBCD24C6C7FA00FFE16B /* Supporting Files */,
+				F739BBCC24C6C7ED00FFE16B /* ViewControllers */,
+				F739BBCB24C6C7E800FFE16B /* Views */,
+			);
+			path = OnlinePaymentsExample;
+			sourceTree = "<group>";
+		};
+		F739BBB924C5B87300FFE16B /* OnlinePaymentsExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F74DA1F824CF1CE1002B6DE6 /* Supporting Files */,
+				F74DA1F424CF1C24002B6DE6 /* OPTableSectionConverterTestCase.m */,
+				F74DA1F624CF1C5C002B6DE6 /* OPPaymentProductInputDataTestCase.m */,
+			);
+			path = OnlinePaymentsExampleTests;
+			sourceTree = "<group>";
+		};
+		F739BBC524C6C7B700FFE16B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F739BBCF24C6CB2900FFE16B /* OPAppConstants.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F739BBC624C6C7C400FFE16B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F739BBE524C6E8C400FFE16B /* Tables */,
+				F739BBE624C6E8E800FFE16B /* OPPaymentProductInputData.h */,
+				F739BBE724C6E8E800FFE16B /* OPPaymentProductInputData.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F739BBC724C6C7CB00FFE16B /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				F739BBD224C6CF1400FFE16B /* OPFormRowsConverter.h */,
+				F739BBD324C6CF1400FFE16B /* OPFormRowsConverter.m */,
+				F739BBE224C6E5B300FFE16B /* OPTableSectionConverter.h */,
+				F739BBE324C6E5B300FFE16B /* OPTableSectionConverter.m */,
+			);
+			path = Converters;
+			sourceTree = "<group>";
+		};
+		F739BBC824C6C7D000FFE16B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				F739BBD524C6D1A500FFE16B /* OPViewFactory.h */,
+				F739BBD624C6D1A500FFE16B /* OPViewFactory.m */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		F739BBC924C6C7D900FFE16B /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				F739BBD824C6D29000FFE16B /* OPPaymentType.h */,
+				F739BBDD24C6D33500FFE16B /* OPStatusViewStatus.h */,
+				F739BBD924C6D2AB00FFE16B /* OPViewType.h */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		F739BBCA24C6C7E100FFE16B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F739BBE024C6D50000FFE16B /* OPContinueShoppingTarget.h */,
+				F739BBE124C6D51C00FFE16B /* OPPaymentFinishedTarget.h */,
+				F739BBDE24C6D38B00FFE16B /* OPPaymentProductSelectionTarget.h */,
+				F739BBDF24C6D3E000FFE16B /* OPPaymentRequestTarget.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F739BBCB24C6C7E800FFE16B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F739BD0A24C7152D00FFE16B /* Buttons */,
+				F739BD0224C7148B00FFE16B /* CustomViews */,
+				F739BD0324C7149900FFE16B /* ImageViews */,
+				F739BD0424C7149F00FFE16B /* Labels */,
+				F739BD0724C7151700FFE16B /* PickerViews */,
+				F739BD0824C7151E00FFE16B /* Switches */,
+				F739BD0524C714A400FFE16B /* TableHeaderViews */,
+				F739BD0924C7152500FFE16B /* TableViewCells */,
+				F739BD0624C7150C00FFE16B /* TextFields */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F739BBCC24C6C7ED00FFE16B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F749A8F424C72D82008597B6 /* Targets */,
+				F749A8E724C72D7E008597B6 /* OPCardProductViewController.h */,
+				F749A8E924C72D7E008597B6 /* OPCardProductViewController.m */,
+				F749A8DC24C72D75008597B6 /* OPEndViewController.h */,
+				F749A8DD24C72D75008597B6 /* OPEndViewController.m */,
+				F749A8DA24C72D74008597B6 /* OPPaymentProductsViewController.h */,
+				F749A8DE24C72D75008597B6 /* OPPaymentProductsViewController.m */,
+				F749A8E024C72D76008597B6 /* OPPaymentProductViewController.h */,
+				F749A8D924C72D74008597B6 /* OPPaymentProductViewController.m */,
+				F749A8DF24C72D76008597B6 /* OPStartViewController.h */,
+				F749A8DB24C72D74008597B6 /* OPStartViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F739BBCD24C6C7FA00FFE16B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F739BBAA24C5B87300FFE16B /* Assets.xcassets */,
+				F739BBAF24C5B87300FFE16B /* Info.plist */,
+				F739BBB024C5B87300FFE16B /* main.m */,
+				F739BBCE24C6C87600FFE16B /* OnlinePaymentsExample-Prefix.pch */,
+				F739BBD024C6CCF200FFE16B /* IDTranslations.strings */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F739BBE524C6E8C400FFE16B /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				F739BBF924C6ECB100FFE16B /* OPFormRow.h */,
+				F739BBFD24C6ECB200FFE16B /* OPFormRow.m */,
+				F739BBE924C6ECAE00FFE16B /* OPFormRowButton.h */,
+				F739BBFC24C6ECB100FFE16B /* OPFormRowButton.m */,
+				F739BBEF24C6ECAF00FFE16B /* OPFormRowCoBrandsExplanation.h */,
+				F739BBF824C6ECB100FFE16B /* OPFormRowCoBrandsExplanation.m */,
+				F739BC0724C6ECB300FFE16B /* OPFormRowCoBrandsSelection.h */,
+				F739BBF424C6ECB000FFE16B /* OPFormRowCoBrandsSelection.m */,
+				F739BBEA24C6ECAE00FFE16B /* OPFormRowCurrency.h */,
+				F739BC0324C6ECB300FFE16B /* OPFormRowCurrency.m */,
+				F739BC1024C6ECB500FFE16B /* OPFormRowDate.h */,
+				F739BBEB24C6ECAE00FFE16B /* OPFormRowDate.m */,
+				F739BC0824C6ECB300FFE16B /* OPFormRowErrorMessage.h */,
+				F739BC0B24C6ECB400FFE16B /* OPFormRowErrorMessage.m */,
+				F739BC0F24C6ECB500FFE16B /* OPFormRowField.h */,
+				F739BBFF24C6ECB200FFE16B /* OPFormRowField.m */,
+				F739BBF224C6ECB000FFE16B /* OPFormRowImage.h */,
+				F739BBFE24C6ECB200FFE16B /* OPFormRowImage.m */,
+				F739BBF624C6ECB000FFE16B /* OPFormRowLabel.h */,
+				F739BC0C24C6ECB400FFE16B /* OPFormRowLabel.m */,
+				F739BBEC24C6ECAE00FFE16B /* OPFormRowList.h */,
+				F739BC0424C6ECB300FFE16B /* OPFormRowList.m */,
+				F739BC0D24C6ECB400FFE16B /* OPFormRowReadonlyReview.h */,
+				F739BC1124C6ECB500FFE16B /* OPFormRowReadonlyReview.m */,
+				F739BBED24C6ECAF00FFE16B /* OPFormRowSeparator.h */,
+				F739BBF324C6ECB000FFE16B /* OPFormRowSeparator.m */,
+				F739BBF024C6ECAF00FFE16B /* OPFormRowSmallLogo.h */,
+				F739BBFB24C6ECB100FFE16B /* OPFormRowSmallLogo.m */,
+				F739BC0124C6ECB200FFE16B /* OPFormRowSwitch.h */,
+				F739BC0A24C6ECB400FFE16B /* OPFormRowSwitch.m */,
+				F739BC0224C6ECB200FFE16B /* OPFormRowTextField.h */,
+				F739BBF524C6ECB000FFE16B /* OPFormRowTextField.m */,
+				F739BC1224C6ECB500FFE16B /* OpFormRowTooltip.h */,
+				F739BC0924C6ECB400FFE16B /* OPFormRowTooltip.m */,
+				F739BC0E24C6ECB500FFE16B /* OPFormRowWithInfoButton.h */,
+				F739BBF124C6ECAF00FFE16B /* OPFormRowWithInfoButton.m */,
+				F739BC0024C6ECB200FFE16B /* OPPaymentProductsTableRow.h */,
+				F739BBEE24C6ECAF00FFE16B /* OPPaymentProductsTableRow.m */,
+				F739BBF724C6ECB000FFE16B /* OPPaymentProductsTableSection.h */,
+				F739BC0624C6ECB300FFE16B /* OPPaymentProductsTableSection.m */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		F739BD0224C7148B00FFE16B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F739BD1424C716C300FFE16B /* OPSeparatorView.h */,
+				F739BD1524C716C300FFE16B /* OPSeparatorView.m */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F739BD0324C7149900FFE16B /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				F739BD1724C7175B00FFE16B /* OPMerchantLogoImageView.h */,
+				F739BD1824C7175B00FFE16B /* OPMerchantLogoImageView.m */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		F739BD0424C7149F00FFE16B /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				F739BD1A24C7179B00FFE16B /* OPLabel.h */,
+				F739BD1B24C7179B00FFE16B /* OPLabel.m */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		F739BD0524C714A400FFE16B /* TableHeaderViews */ = {
+			isa = PBXGroup;
+			children = (
+				F739BD2324C719D100FFE16B /* OPSummaryTableHeaderView.h */,
+				F739BD2424C719D100FFE16B /* OPSummaryTableHeaderView.m */,
+			);
+			path = TableHeaderViews;
+			sourceTree = "<group>";
+		};
+		F739BD0624C7150C00FFE16B /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				F739BD5C24C71C2900FFE16B /* OPTextField.h */,
+				F739BD5D24C71C2900FFE16B /* OPTextField.m */,
+				F749A8D324C71EDD008597B6 /* OPIntegerTextField.h */,
+				F749A8D424C71EDD008597B6 /* OPIntegerTextField.m */,
+				F749A8D624C71F47008597B6 /* OPFractionalTextField.h */,
+				F749A8D724C71F47008597B6 /* OPFractionalTextField.m */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		F739BD0724C7151700FFE16B /* PickerViews */ = {
+			isa = PBXGroup;
+			children = (
+				F739BD1D24C7193100FFE16B /* OPPickerView.h */,
+				F739BD1E24C7193100FFE16B /* OPPickerView.m */,
+			);
+			path = PickerViews;
+			sourceTree = "<group>";
+		};
+		F739BD0824C7151E00FFE16B /* Switches */ = {
+			isa = PBXGroup;
+			children = (
+				F739BD2024C7197400FFE16B /* OPSwitch.h */,
+				F739BD2124C7197400FFE16B /* OPSwitch.m */,
+			);
+			path = Switches;
+			sourceTree = "<group>";
+		};
+		F739BD0924C7152500FFE16B /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F739BD4324C71B9900FFE16B /* OPButtonTableViewCell.h */,
+				F739BD4924C71B9A00FFE16B /* OPButtonTableViewCell.m */,
+				F739BD3624C71B9500FFE16B /* OPCOBrandsExplanationTableViewCell.h */,
+				F739BD4124C71B9800FFE16B /* OPCOBrandsExplanationTableViewCell.m */,
+				F739BD3724C71B9600FFE16B /* OPCoBrandsSelectionTableViewCell.h */,
+				F739BD4824C71B9A00FFE16B /* OPCoBrandsSelectionTableViewCell.m */,
+				F739BD3F24C71B9800FFE16B /* OPCurrencyTableViewCell.h */,
+				F739BD2A24C71B9200FFE16B /* OPCurrencyTableViewCell.m */,
+				F739BD3924C71B9600FFE16B /* OPDatePickerTableViewCell.h */,
+				F739BD4424C71B9900FFE16B /* OPDatePickerTableViewCell.m */,
+				F739BD2824C71B9100FFE16B /* OPDetailedPickerViewCell.h */,
+				F739BD2624C71B9100FFE16B /* OPDetailedPickerViewCell.m */,
+				F739BD4724C71B9A00FFE16B /* OPErrorMessageTableViewCell.h */,
+				F739BD3D24C71B9700FFE16B /* OPErrorMessageTableViewCell.m */,
+				F739BD3B24C71B9700FFE16B /* OPImageTableViewCell.h */,
+				F739BD2D24C71B9300FFE16B /* OPCImageTableViewCell.m */,
+				F739BD3524C71B9500FFE16B /* OPLabelTableViewCell.h */,
+				F739BD2B24C71B9200FFE16B /* OPLabelTableViewCell.m */,
+				F739BD4224C71B9900FFE16B /* OPLogoTableViewCell.h */,
+				F739BD3E24C71B9800FFE16B /* OPLogoTableViewCell.m */,
+				F739BD2E24C71B9300FFE16B /* OPPaymentProductTableViewCell.h */,
+				F739BD3424C71B9500FFE16B /* OPPaymentProductTableViewCell.m */,
+				F739BD2C24C71B9300FFE16B /* OPPickerViewTableViewCell.h */,
+				F739BD4024C71B9800FFE16B /* OPPickerViewTableViewCell.m */,
+				F739BD3A24C71B9600FFE16B /* OPReadonlyReviewTableViewCell.h */,
+				F739BD3024C71B9400FFE16B /* OPReadonlyReviewTableViewCell.m */,
+				F739BD3124C71B9400FFE16B /* OPSeparatorTableViewCell.h */,
+				F739BD4524C71B9900FFE16B /* OPSeparatorTableViewCell.m */,
+				F739BD2924C71B9200FFE16B /* OPSwitchTableViewCell.h */,
+				F739BD2724C71B9100FFE16B /* OPSwitchTableViewCell.m */,
+				F739BD3324C71B9500FFE16B /* OPTableViewCell.h */,
+				F739BD2F24C71B9300FFE16B /* OPTableViewCell.m */,
+				F739BD4624C71B9A00FFE16B /* OPTextFieldTableViewCell.h */,
+				F739BD3824C71B9600FFE16B /* OPTextFieldTableViewCell.m */,
+				F739BD3C24C71B9700FFE16B /* OPTooltipTableViewCell.h */,
+				F739BD3224C71B9400FFE16B /* OPTooltipTableViewCell.m */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		F739BD0A24C7152D00FFE16B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F739BD0B24C7154500FFE16B /* OPButton.h */,
+				F739BD0C24C7154500FFE16B /* OPButton.m */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F749A8F424C72D82008597B6 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				F749A8F524C72D99008597B6 /* OPPaymentProductsViewControllerTarget.h */,
+				F749A8F624C72D99008597B6 /* OPPaymentProductsViewControllerTarget.m */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		F74DA1F824CF1CE1002B6DE6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F739BBBC24C5B87300FFE16B /* Info.plist */,
+				F74DA1F924CF1CF0002B6DE6 /* paymentProduct.json */,
+				F74DA1FA24CF1CF0002B6DE6 /* paymentProducts.json */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F739BB9A24C5B87200FFE16B /* OnlinePaymentsExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F739BBBF24C5B87300FFE16B /* Build configuration list for PBXNativeTarget "OnlinePaymentsExample" */;
+			buildPhases = (
+				CA4AEF9DB0AB994A4D010D30 /* [CP] Check Pods Manifest.lock */,
+				F739BB9724C5B87200FFE16B /* Sources */,
+				F739BB9824C5B87200FFE16B /* Frameworks */,
+				F739BB9924C5B87200FFE16B /* Resources */,
+				E91707C78BF8FB184221DF82 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnlinePaymentsExample;
+			productName = IngenicoDirectExample;
+			productReference = F739BB9B24C5B87200FFE16B /* OnlinePaymentsExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F739BBB524C5B87300FFE16B /* OnlinePaymentsExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F739BBC224C5B87300FFE16B /* Build configuration list for PBXNativeTarget "OnlinePaymentsExampleTests" */;
+			buildPhases = (
+				1FFDC0D8503D4C869D999A4A /* [CP] Check Pods Manifest.lock */,
+				F739BBB224C5B87300FFE16B /* Sources */,
+				F739BBB324C5B87300FFE16B /* Frameworks */,
+				F739BBB424C5B87300FFE16B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F739BBB824C5B87300FFE16B /* PBXTargetDependency */,
+			);
+			name = OnlinePaymentsExampleTests;
+			productName = IngenicoDirectExampleTests;
+			productReference = F739BBB624C5B87300FFE16B /* OnlinePaymentsExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F739BB9324C5B87200FFE16B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Ingenico ePayments";
+				TargetAttributes = {
+					F739BB9A24C5B87200FFE16B = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					F739BBB524C5B87300FFE16B = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = F739BB9A24C5B87200FFE16B;
+					};
+				};
+			};
+			buildConfigurationList = F739BB9624C5B87200FFE16B /* Build configuration list for PBXProject "OnlinePaymentsExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F739BB9224C5B87200FFE16B;
+			productRefGroup = F739BB9C24C5B87200FFE16B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F739BB9A24C5B87200FFE16B /* OnlinePaymentsExample */,
+				F739BBB524C5B87300FFE16B /* OnlinePaymentsExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F739BB9924C5B87200FFE16B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F739BBAB24C5B87300FFE16B /* Assets.xcassets in Resources */,
+				F739BBD124C6CCF200FFE16B /* IDTranslations.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F739BBB424C5B87300FFE16B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74DA1FC24CF1CF0002B6DE6 /* paymentProducts.json in Resources */,
+				F74DA1FB24CF1CF0002B6DE6 /* paymentProduct.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FFDC0D8503D4C869D999A4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnlinePaymentsExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA4AEF9DB0AB994A4D010D30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnlinePaymentsExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E91707C78BF8FB184221DF82 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F739BB9724C5B87200FFE16B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F739BC1824C6ECB500FFE16B /* OPFormRowTextField.m in Sources */,
+				F739BD5E24C71C2900FFE16B /* OPTextField.m in Sources */,
+				F749A8E324C72D76008597B6 /* OPEndViewController.m in Sources */,
+				F739BD5924C71B9B00FFE16B /* OPSeparatorTableViewCell.m in Sources */,
+				F749A8D824C71F47008597B6 /* OPFractionalTextField.m in Sources */,
+				F739BD4B24C71B9B00FFE16B /* OPSwitchTableViewCell.m in Sources */,
+				F739BD4E24C71B9B00FFE16B /* OPCImageTableViewCell.m in Sources */,
+				F739BD1C24C7179B00FFE16B /* OPLabel.m in Sources */,
+				F739BBE824C6E8E800FFE16B /* OPPaymentProductInputData.m in Sources */,
+				F749A8E424C72D76008597B6 /* OPPaymentProductsViewController.m in Sources */,
+				F739BD1924C7175B00FFE16B /* OPMerchantLogoImageView.m in Sources */,
+				F739BBA024C5B87200FFE16B /* AppDelegate.m in Sources */,
+				F739BD5A24C71B9B00FFE16B /* OPCoBrandsSelectionTableViewCell.m in Sources */,
+				F739BD5324C71B9B00FFE16B /* OPTextFieldTableViewCell.m in Sources */,
+				F739BBB124C5B87300FFE16B /* main.m in Sources */,
+				F739BC1724C6ECB500FFE16B /* OPFormRowCoBrandsSelection.m in Sources */,
+				F739BC1D24C6ECB500FFE16B /* OPFormRowImage.m in Sources */,
+				F739BD4A24C71B9B00FFE16B /* OPDetailedPickerViewCell.m in Sources */,
+				F739BC2624C6ECB500FFE16B /* OPFormRowLabel.m in Sources */,
+				F749A8F724C72D99008597B6 /* OPPaymentProductsViewControllerTarget.m in Sources */,
+				F739BD4F24C71B9B00FFE16B /* OPTableViewCell.m in Sources */,
+				F739BC1324C6ECB500FFE16B /* OPFormRowDate.m in Sources */,
+				F749A8E124C72D76008597B6 /* OPPaymentProductViewController.m in Sources */,
+				F749A8D524C71EDD008597B6 /* OPIntegerTextField.m in Sources */,
+				F739BD5824C71B9B00FFE16B /* OPDatePickerTableViewCell.m in Sources */,
+				F739BC1F24C6ECB500FFE16B /* OPFormRowCurrency.m in Sources */,
+				F739BD0D24C7154500FFE16B /* OPButton.m in Sources */,
+				F739BD5124C71B9B00FFE16B /* OPTooltipTableViewCell.m in Sources */,
+				F749A8F124C72D80008597B6 /* OPCardProductViewController.m in Sources */,
+				F739BC1E24C6ECB500FFE16B /* OPFormRowField.m in Sources */,
+				F739BD4D24C71B9B00FFE16B /* OPLabelTableViewCell.m in Sources */,
+				F739BD5724C71B9B00FFE16B /* OPCOBrandsExplanationTableViewCell.m in Sources */,
+				F739BC2324C6ECB500FFE16B /* OPFormRowTooltip.m in Sources */,
+				F739BC2724C6ECB500FFE16B /* OPFormRowReadonlyReview.m in Sources */,
+				F739BC1424C6ECB500FFE16B /* OPPaymentProductsTableRow.m in Sources */,
+				F739BD5424C71B9B00FFE16B /* OPErrorMessageTableViewCell.m in Sources */,
+				F739BD1F24C7193100FFE16B /* OPPickerView.m in Sources */,
+				F749A8E224C72D76008597B6 /* OPStartViewController.m in Sources */,
+				F739BD1624C716C300FFE16B /* OPSeparatorView.m in Sources */,
+				F739BC2024C6ECB500FFE16B /* OPFormRowList.m in Sources */,
+				F739BC1924C6ECB500FFE16B /* OPFormRowCoBrandsExplanation.m in Sources */,
+				F739BC1524C6ECB500FFE16B /* OPFormRowWithInfoButton.m in Sources */,
+				F739BC1A24C6ECB500FFE16B /* OPFormRowSmallLogo.m in Sources */,
+				F739BD5524C71B9B00FFE16B /* OPLogoTableViewCell.m in Sources */,
+				F739BC1B24C6ECB500FFE16B /* OPFormRowButton.m in Sources */,
+				F739BBD724C6D1A500FFE16B /* OPViewFactory.m in Sources */,
+				F739BBE424C6E5B300FFE16B /* OPTableSectionConverter.m in Sources */,
+				F739BC1624C6ECB500FFE16B /* OPFormRowSeparator.m in Sources */,
+				F739BD2524C719D100FFE16B /* OPSummaryTableHeaderView.m in Sources */,
+				F739BC2224C6ECB500FFE16B /* OPPaymentProductsTableSection.m in Sources */,
+				F739BC1C24C6ECB500FFE16B /* OPFormRow.m in Sources */,
+				F739BC2424C6ECB500FFE16B /* OPFormRowSwitch.m in Sources */,
+				F739BD5B24C71B9B00FFE16B /* OPButtonTableViewCell.m in Sources */,
+				F739BD2224C7197400FFE16B /* OPSwitch.m in Sources */,
+				F739BD5224C71B9B00FFE16B /* OPPaymentProductTableViewCell.m in Sources */,
+				F739BD4C24C71B9B00FFE16B /* OPCurrencyTableViewCell.m in Sources */,
+				F739BBD424C6CF1400FFE16B /* OPFormRowsConverter.m in Sources */,
+				F739BD5024C71B9B00FFE16B /* OPReadonlyReviewTableViewCell.m in Sources */,
+				F739BC2524C6ECB500FFE16B /* OPFormRowErrorMessage.m in Sources */,
+				F739BD5624C71B9B00FFE16B /* OPPickerViewTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F739BBB224C5B87300FFE16B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74DA1F724CF1C5C002B6DE6 /* OPPaymentProductInputDataTestCase.m in Sources */,
+				F74DA1F524CF1C24002B6DE6 /* OPTableSectionConverterTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F739BBB824C5B87300FFE16B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F739BB9A24C5B87200FFE16B /* OnlinePaymentsExample */;
+			targetProxy = F739BBB724C5B87300FFE16B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F739BBBD24C5B87300FFE16B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F739BBBE24C5B87300FFE16B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F739BBC024C5B87300FFE16B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 225AF9C492258FB7763C82AC /* Pods-OnlinePaymentsExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIDon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "OnlinePaymentsExample/Supporting Files/OnlinePaymentsExample-Prefix.pch";
+				INFOPLIST_FILE = "OnlinePaymentsExample/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.OnlinePayments.iOSExampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F739BBC124C5B87300FFE16B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7236C8C11F10C58886EA0AC7 /* Pods-OnlinePaymentsExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIDon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "OnlinePaymentsExample/Supporting Files/OnlinePaymentsExample-Prefix.pch";
+				INFOPLIST_FILE = "OnlinePaymentsExample/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.OnlinePayments.iOSExampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F739BBC324C5B87300FFE16B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F17DEAE9BF18EEF6606D0E /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "OnlinePaymentsExampleTests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onlinepayments.OnlinePaymentsExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnlinePaymentsExample.app/OnlinePaymentsExample";
+			};
+			name = Debug;
+		};
+		F739BBC424C5B87300FFE16B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8928BB850216AFDE2609C876 /* Pods-OnlinePaymentsExampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "OnlinePaymentsExampleTests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onlinepayments.OnlinePaymentsExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnlinePaymentsExample.app/OnlinePaymentsExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F739BB9624C5B87200FFE16B /* Build configuration list for PBXProject "OnlinePaymentsExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F739BBBD24C5B87300FFE16B /* Debug */,
+				F739BBBE24C5B87300FFE16B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F739BBBF24C5B87300FFE16B /* Build configuration list for PBXNativeTarget "OnlinePaymentsExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F739BBC024C5B87300FFE16B /* Debug */,
+				F739BBC124C5B87300FFE16B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F739BBC224C5B87300FFE16B /* Build configuration list for PBXNativeTarget "OnlinePaymentsExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F739BBC324C5B87300FFE16B /* Debug */,
+				F739BBC424C5B87300FFE16B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F739BB9324C5B87200FFE16B /* Project object */;
+}

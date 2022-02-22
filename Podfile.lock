@@ -1,0 +1,19 @@
+PODS:
+  - OnlinePaymentsSDK (2.0.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - OnlinePaymentsSDK
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  OnlinePaymentsSDK: cf7a4bf3fe81e2317c7cd3f05bc38123cd9e768f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 0042776ae2ea118e81a82cd032d6b08bd4a45291
+
+COCOAPODS: 1.11.2

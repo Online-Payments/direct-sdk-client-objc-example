@@ -1,0 +1,1504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		023A31F09752D35AF7D32E70DCAAD213 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = CD78FAA4F57E4C8A356C5A23246A495F /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		02AF7B0AC2639064BB414496BF840B45 /* OPEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FE9DE7042E19A116B3FD74A554DDB31 /* OPEncryptor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		03BA485BEE655850FB8BA7241BE6DEA8 /* OPBasicPaymentProductGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 160F291D1CAEB38CD644401FF2E0434E /* OPBasicPaymentProductGroups.m */; };
+		068D3243185C7989D7C52BE14E8C5771 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = F5D4077DAE168B0F3DCC78108241BDDE /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		082EB85EFA3F6E604BB0013955DF8E8E /* OPDisplayElementType.h in Headers */ = {isa = PBXBuildFile; fileRef = 160ABE7395DB3EF54AB6FC66A08E007A /* OPDisplayElementType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		09BC53B79C01737412371AAEDC93F659 /* OPBasicPaymentProductConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B236A0CF5BB10B8661822E6BCE4DABF /* OPBasicPaymentProductConverter.m */; };
+		0A786D4100B2F17C712B35C257A5F018 /* OPValidationErrorFixedList.h in Headers */ = {isa = PBXBuildFile; fileRef = 701A18BF6C49F165BF02E754435A8771 /* OPValidationErrorFixedList.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0BC51CB23E4B262791E8935D69E8F15E /* OPPaymentContextConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1A8B380BE7D7DE861CA5485586B583 /* OPPaymentContextConverter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0C24DC8C4A4E051C7144594A7115DE9E /* OPValidatorIBAN.h in Headers */ = {isa = PBXBuildFile; fileRef = F2433DB9EE0961C9B1DE5AB9F6EB64B5 /* OPValidatorIBAN.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0CE5687BEC64F59A4D5EAB813723B0B2 /* OPAccountOnFileAttributeStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 74174385D19A8CA31F919E94643CAF3C /* OPAccountOnFileAttributeStatus.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0D29845595556CFEB4D36E3ACB8118A5 /* OPValidatorIBAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 349F19BBEAEF762BF51EBC0A6AD92D81 /* OPValidatorIBAN.m */; };
+		1078DF7C5E27545967D53D0CD3C13F1F /* OPStringFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD685AFBCEDC93D8AFB64CC26DEF709 /* OPStringFormatter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		10E1F480F34B242DEF7895B60E14E912 /* OPValidatorRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B3A32F3868E7E847E127886EEBDA0FF /* OPValidatorRegularExpression.m */; };
+		1189B5CD7755CE5CCB56AAC49B0F0B5A /* OPValidationErrorTermsAndConditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A6123C3E3757A3C4CEB6CDC60F753171 /* OPValidationErrorTermsAndConditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1322986313CF81D7862E423A83B20AF2 /* OPValidationErrorLuhn.h in Headers */ = {isa = PBXBuildFile; fileRef = A56F4C43FCC99677B372FE7BDA3B4BC0 /* OPValidationErrorLuhn.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		13B57C144B2830F96F82F59A3D19BB70 /* OPFormElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 175219C0579641F5BFBD37ECC55D5276 /* OPFormElement.m */; };
+		146D4B96AF41EA653E05C8B1819CE4DC /* OPValidationErrorRegularExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = B53DBE0A3EB0DBB38DF4CCE9B8D98581 /* OPValidationErrorRegularExpression.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		168C4728BF82F5238D11E83AC1EA58FA /* OPPaymentProductConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB2CA13C95CCAA1A03DC4655B4CC933 /* OPPaymentProductConverter.m */; };
+		187B507319E09F0EA375EA5C0A45439E /* OPIINStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C9CF0FA8E267DBAE6A2B5C089615D6 /* OPIINStatus.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		189ACC5280120533A56A765DC092E945 /* OPPaymentProductFieldDisplayHints.m in Sources */ = {isa = PBXBuildFile; fileRef = EB64F5484CC12649173C0362C5E796C9 /* OPPaymentProductFieldDisplayHints.m */; };
+		1979CFE42D429AA476AD6680A3034559 /* OPBasicPaymentProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = D8294056D97324A31B01097DAA72AC9F /* OPBasicPaymentProducts.m */; };
+		19CDCCD17828154CC4604D41EDA1E35F /* OPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 0544E16E3AEE3AA669800A272128B04E /* OPSession.m */; };
+		1AFFB228F734F03DB13AE7EB5730A151 /* OPPublicKeyResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8F72E7E0CC77060AD9741D3FD21CE5 /* OPPublicKeyResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1B3DDBC3F03C8741CFAC445ED33796A2 /* OPValidatorFixedList.m in Sources */ = {isa = PBXBuildFile; fileRef = A23518B23B7B444C1E6586D01B051581 /* OPValidatorFixedList.m */; };
+		22053BBF0F09171303E52213F6754668 /* OPPreparedPaymentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B076F108B5DFEAB3B96C514472472E07 /* OPPreparedPaymentRequest.m */; };
+		23CBFA64FD8C1B691E6B904CEF375E98 /* OPAccountOnFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D974260767009E137B6FBEE80717B81 /* OPAccountOnFile.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		262EF617346C027A185C16B1B6072587 /* OPPaymentProductFields.h in Headers */ = {isa = PBXBuildFile; fileRef = CC0EF10A6D0DC26C3086F8082DBFBE1F /* OPPaymentProductFields.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		26608352606854501143C11E77E8E600 /* OPValidatorLuhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AEF2DBD675AB3E450225C9A3E879E0 /* OPValidatorLuhn.m */; };
+		26BC8F19DB81466A2876430245A39D30 /* OPValidationErrorRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DCF9E4D1E96433CA0CD650FD2B40425 /* OPValidationErrorRange.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		27BBFB0214310346A5402A07979F8303 /* OPPaymentProduct302SpecificData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D69E30521B3E47F91295E924FD2AB /* OPPaymentProduct302SpecificData.m */; };
+		27E57A80A491C6955B6F7DE075B46967 /* OPValidationErrorIBAN.h in Headers */ = {isa = PBXBuildFile; fileRef = 3988E794770B5D4B864A44BE596D8B0E /* OPValidationErrorIBAN.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		298E82F4FEFD5F06A0BDE9690EFE8800 /* OPC2SCommunicatorConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 627716FA4239DF0C51688BB8C9AE398B /* OPC2SCommunicatorConfiguration.m */; };
+		2BB07984961EBADE9B5DDB11FE7260D3 /* OPNetworkingWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = DA08B7C50DF02A822410A647D4E845C8 /* OPNetworkingWrapper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2FDF4A5A0FDE6F4D832045026C67777E /* OPValidatorExpirationDate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9D45B822EA1FC3507F233A79DD6B4D /* OPValidatorExpirationDate.m */; };
+		30B035C6C0044049BDE865365224ACCD /* OPValidationErrorIsRequired.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4C61748F9455B764EAAA74C94F74A6 /* OPValidationErrorIsRequired.m */; };
+		30E611747C57283FFE7DC6AB17694F72 /* OPAccountOnFileDisplayHints.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7C0528766A4B33D458B46DD66A563 /* OPAccountOnFileDisplayHints.m */; };
+		349665B9E78F8FAC71BFA9222857740A /* OPValidationErrorRange.m in Sources */ = {isa = PBXBuildFile; fileRef = D68213067D625F0F8A824B9E05935307 /* OPValidationErrorRange.m */; };
+		357A7D3E1ED8CE8FE78ACBF7B0AAC277 /* OPValidationErrorNumericString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9565661B946968B26A6607449D4D2BCE /* OPValidationErrorNumericString.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3849520EDED2344EA136A4DFACEAA7CD /* OPC2SCommunicatorConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADC3CAEF9DEB17C4CED611D79E780AA /* OPC2SCommunicatorConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		397A4B3D7A0582FEAFB9A01D4AD86D00 /* OPIINDetailsResponseConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 884FB26A5713FD02E18FF8F502C71F2B /* OPIINDetailsResponseConverter.m */; };
+		3A36ED45ACA0D1A1248468F17E07E45A /* OPPaymentProductNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = 300A7BA7612F8520D8A9272DCBAF2604 /* OPPaymentProductNetworks.m */; };
+		3FB9D56B4319050CF25E72CA6903647D /* OPValidationErrorEmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F8B109F55ABE42809ECF5A93F661DC /* OPValidationErrorEmailAddress.m */; };
+		4107050031821CDF9D1DF1F42795D8FE /* OPToolTip.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C86417EACDF207F1AA8E1154839CA0F /* OPToolTip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4142B0A1F87C73D0921D06025B78558E /* OPMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AEBAE9E5F9D4B2FF91D4F5CB7715D9E /* OPMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		432AA0FE137CE1B82FA332991FDAAEE6 /* OPPaymentRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DB88D37533DA8CCB1480DE2CEA1DC05 /* OPPaymentRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		48F9209F0B1F828DA4E5AF382FEB8EC7 /* OPFormElementType.h in Headers */ = {isa = PBXBuildFile; fileRef = 27436F30A57F98B6A60B418CDDAA6862 /* OPFormElementType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4A1E89D51F1765DCB058534690DECE04 /* OPValidationErrorLuhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CE245D07DCC6C3B4EAD131FC8D025B /* OPValidationErrorLuhn.m */; };
+		4A1EC988A2F8135E64AB95126C00EDDC /* OPDisplayElementsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAC3FB4078816DB37BCC5C7FA16BEDF /* OPDisplayElementsConverter.m */; };
+		4C2530CDFB0EDC141599B1C00F49D435 /* OPNetworkingActivityConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCE2CB20290CEC9FF02E4D2424E47BD /* OPNetworkingActivityConsoleLogger.m */; };
+		4C2C9B967ECBA11C256CE04A04E20206 /* OPSDKConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E61CD5AA8AA509FBAE9F9577668689D /* OPSDKConstants.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4C7CF6E91756EED36E619112AE7A8F4D /* OPAssetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EF491C7A981EBFB7AA2B3FBD92875B20 /* OPAssetManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4CD0AD2A76AE674AEE85F17A1B912C6E /* OPPaymentProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A6389EE8875D0856F9B23488736ADAD /* OPPaymentProduct.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4FC4ABD8FCF18A3EDB0E8D1EF63B125F /* OPValueMappingItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 289902786B2C9D8560F7075534C5DA90 /* OPValueMappingItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		52C1E3A1AD44B309A20C8A03920ADA2E /* OPDisplayElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E9619D4BC18F2FD4A815A77560B9EE6A /* OPDisplayElement.m */; };
+		52D74F792F6FF1D05716174FD461D96E /* OPJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = B1992FF1019F459E4195C56A013F5D49 /* OPJSON.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		53A131399DCE3E3705F3BA6677B656E3 /* OPDisplayElementsConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = E62EEF0FDC9706AB535B8897BF31040E /* OPDisplayElementsConverter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		543D2C891E06795723DA51F004EAA918 /* OPValidationErrorEmailAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = E0B64A407ED84370D2A72605422DCAEE /* OPValidationErrorEmailAddress.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		57CB73B2D5E4C61744E2FDEC9F3CCD7F /* OPValidationErrorLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 402AE88183B89A1A971DDFB8CA245499 /* OPValidationErrorLength.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		58057F16FDA93E0DE77C968BE4032113 /* OPValidatorEmailAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 09CA7919FF64428BB7D4130D9DE2CB92 /* OPValidatorEmailAddress.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5873ABA3CD69B641D6F9998399FDFE61 /* OPBasicPaymentProductGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = EC353943F2AC2F582383A826E183174E /* OPBasicPaymentProductGroup.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5940B21E0AA7D72C02E68E947D2E51D5 /* OPPaymentItems.h in Headers */ = {isa = PBXBuildFile; fileRef = 130B0AD17CDC0B30D35EF282E7C63AE9 /* OPPaymentItems.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5994DD13C001AD503DEA64AEE219E12A /* OPDataRestrictions.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4C5BA7422EEBEF141B62423DFF2EC /* OPDataRestrictions.m */; };
+		5AAD431D7DF59861676D84EAFA188A62 /* OPValidationErrorTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9169653C9DE3B78F2B46379E16A135D /* OPValidationErrorTermsAndConditions.m */; };
+		5B2AA272032E5B4673E7EB15FF0D3087 /* OPPreferredInputType.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B26B83B54AD6FD3E9FE0EAD7518362B /* OPPreferredInputType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C1AF20AE64512E795A325C0AA7B3330 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = BFBF861E3EEF28F7A1F76543EF1A3BD2 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C92279F6E486547EB488BE5AE4FECDD /* OPValidationErrorExpirationDate.h in Headers */ = {isa = PBXBuildFile; fileRef = F960977C96BF0F408B533B50032837BF /* OPValidationErrorExpirationDate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5CB2D03E757355817B07929327ADD3F1 /* OPPaymentProductField.h in Headers */ = {isa = PBXBuildFile; fileRef = 38CD575C08D3FA0BB6A80F02F96945F0 /* OPPaymentProductField.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5FD22B47523004E7671B985BD2700EE9 /* OPValidatorRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B69C45F6915722CE219B4814CB584B4 /* OPValidatorRange.m */; };
+		60FA9258DB5F86DE72ED73486A298B53 /* OPPaymentProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F63CA3853F6001E0C90CFDE9D1B76E85 /* OPPaymentProduct.m */; };
+		62184AF836C0922183B5BE7276E73E7E /* OPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFEC9BB44D88F5F4AEABD6D9D75679B /* OPUtil.m */; };
+		64629F34C419F10E410E19D817859C8D /* OPToolTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD3E1713BA6D44926BF3B0081DB09AF /* OPToolTip.m */; };
+		6528C11B757126D6A19E91CA946C3704 /* OPPaymentProductGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7083D90BBA7880D37105232A2B87C0 /* OPPaymentProductGroup.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		65EAE0B8830EC3604919149355005D1B /* OPJOSEEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FD850BA82F610E96484895D3A15BD5 /* OPJOSEEncryptor.m */; };
+		662AFD0E83B611707BCACB34DB508E19 /* OPNetworkingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C4334C3A7EA9B673DBDDEC304AB80 /* OPNetworkingWrapper.m */; };
+		66CD646BA7E53CC73E7B95C10AC1EB41 /* OPValueMappingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B52B3668BA580696BE5383382657A92 /* OPValueMappingItem.m */; };
+		68550F09E28EB90EFD48FB4B7B2AFFB0 /* OPValidatorLuhn.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D92953A61806F4990EF93F8F0E49FEA /* OPValidatorLuhn.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6859BBD0B30F76F60FEC12D77B1159BF /* OPPaymentProductConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 73169D783A8D7485FFFB8EFEEAD1FC18 /* OPPaymentProductConverter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		69125ACEB2A33DF56A62A8C407BF92CE /* OPPaymentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4C888A4DF36F9BD469D1652560F12 /* OPPaymentRequest.m */; };
+		6A8260EB19F82952004A59D6B54D7744 /* OPValidationErrorFixedList.m in Sources */ = {isa = PBXBuildFile; fileRef = F194D483F9B5E163D20C2B1C82E7BAE4 /* OPValidationErrorFixedList.m */; };
+		6ABE9EE728ADDA03E5D3913AC836502D /* OPFormElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 952D0C034A75EA27398730363281B2FC /* OPFormElement.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6DE80CB80745310683A1611A8A650AAC /* OPBasicPaymentProductGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FE3DFD60E7E104B912AE2A00BE79C3 /* OPBasicPaymentProductGroup.m */; };
+		6E4761D698B26BC1106174334661016E /* OPAccountOnFileAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC9219D33B167042734A95A6B9C24A0 /* OPAccountOnFileAttribute.m */; };
+		6F2E214AF5AA737D8EF04AC8479169C0 /* OPJOSEEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2C3763A746AF270156E4BD78B46F8A /* OPJOSEEncryptor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		70D9C67CF569EEA1B7BE2D1728B33C10 /* OPValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 126D2E4832AFD94C4B9EDD7FAE3E3AC7 /* OPValidator.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		71501C1178FEEAA92EEDC555D911F241 /* OPBasicPaymentProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC6CEDA3A2C677B548E8961C2488FE /* OPBasicPaymentProduct.m */; };
+		71B8C194D02415CB3143E759ACDF0BEF /* OPAccountOnFileAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D82645C2966EF87E5EFBA62EAF17D80 /* OPAccountOnFileAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		76044B01ABDEFCD073E1D7E19800F2A4 /* OPPaymentProductNetworks.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C05AD2CDB6418101B52F63AF224364 /* OPPaymentProductNetworks.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		776018F70DD8D306B0CA2BF83E523223 /* OPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EA3C4849061FE13B0401976FB35B6EA /* OPSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		77BDEAC7AB059285BB98613E1D90295E /* OPPaymentItemDisplayHints.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E692836540A9398F67A3DAD652FF4B /* OPPaymentItemDisplayHints.m */; };
+		7C60DB9C9933744B9642F375F80F973C /* OPValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D5BD0F52199D199593C2BAB6D2A968 /* OPValidator.m */; };
+		7D5B76108CB7FB11C6190E82781B5946 /* OPNetworkingActivityLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = E920B6FF0B873962EB3520D0D043DEB2 /* OPNetworkingActivityLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F96F7DFD11A08D59A2333CA7482A866 /* OPValidatorRegularExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 05896DD1A14FEC32C0E6855073BD5C25 /* OPValidatorRegularExpression.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		80214A42F4DD37F93BC49261A6EF8090 /* OPAccountOnFile.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AF2AC7B64FD099FFA36C870E228CB0 /* OPAccountOnFile.m */; };
+		80CA4E18C8A298AFF0D108117D1DC903 /* OPValidationErrorIsRequired.h in Headers */ = {isa = PBXBuildFile; fileRef = 77C5E2635982D364558D2B12D7A9FC3F /* OPValidationErrorIsRequired.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		812C76C7670036462BDE178C35FB875C /* OPPaymentProductGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD20CBB112EE369818D88052CCBABDC /* OPPaymentProductGroup.m */; };
+		81FC41D3A7DCD25FE69513563863A198 /* OPPaymentAmountOfMoney.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E47DC9A1E1F145ECBC475B7AABEC6B /* OPPaymentAmountOfMoney.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8260D62273F18FEA02F5FB0EFB7D364B /* OPNetworkingActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB46FBDBBA17B725C65AA10B7778349 /* OPNetworkingActivityLogger.m */; };
+		82B543F8FB87A755F340C70DEAFCC8C6 /* OPC2SCommunicator.h in Headers */ = {isa = PBXBuildFile; fileRef = EDB0B193036AAC0667189847E57C1FA2 /* OPC2SCommunicator.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86AFA347308EBAA6991B8967E47F1B7B /* OPValidationErrorRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 6618FFCD103B4328E705A01CC7EB9991 /* OPValidationErrorRegularExpression.m */; };
+		87503E14C4ED166DFDD1B5C46DB8A08A /* OPValidatorTermsAndConditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B17BA9799C8187DD50950FB758D0C6F /* OPValidatorTermsAndConditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		88160614213837CE4896D2F8C1F404B5 /* OnlinePaymentsSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AA9D286E6C9A352B19AEE9D628C7652 /* OnlinePaymentsSDK-dummy.m */; };
+		8937AF93ED171F8F570E0F7C69EE1222 /* OPBasicPaymentProducts.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B6F155D6DC4EE3F571D2FA6A11657E1 /* OPBasicPaymentProducts.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8A8142BA8277477C5723AF5067A36728 /* OPBasicPaymentProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = AFE95F401F13BA26AF9E6F65934D49B0 /* OPBasicPaymentProduct.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8BBCDC560F645066000EF8AB74152C3C /* OPEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B35665648946CC0D74F50D2FC5A2495 /* OPEncryptor.m */; };
+		8C8BCBF9A8BE48D486AD11E334364D22 /* OPValidatorFixedList.h in Headers */ = {isa = PBXBuildFile; fileRef = B7996BBC3C004AE7222582ADDC9D349A /* OPValidatorFixedList.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8D7D28792ABD558FA2566CA9E0DFD6B9 /* OPPaymentContext.h in Headers */ = {isa = PBXBuildFile; fileRef = B84CD1DDC197C0A4CC74A7992A4D89DD /* OPPaymentContext.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8E0FAEB64EE4A08D04BDE79EC0C4DD85 /* OPDataRestrictions.h in Headers */ = {isa = PBXBuildFile; fileRef = D80FF1A869F05F5356F71D2F5D95BAE4 /* OPDataRestrictions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8F1C1EFFB1EFC4D75A17A4B26B172C13 /* OPValidationErrorIBAN.m in Sources */ = {isa = PBXBuildFile; fileRef = 41862FEA9FBB409DD90DAF150F240C84 /* OPValidationErrorIBAN.m */; };
+		8F96EAB04C7156B2B2A007A6D6D6660A /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE9EF848C5F146820F90EAD2AF276B7 /* SVRadialGradientLayer.m */; };
+		91BE1F9BEA8D0A906B170D67EF8D09BE /* OPLabelTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4B7272E64F8FA67DCD2E56A1943FC0 /* OPLabelTemplate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		931256958249FCBDDBBFAD8895C55B92 /* OPPaymentItemDisplayHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AFA00B691ED6198C4F853BD90718DC6 /* OPPaymentItemDisplayHints.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9879FF96294C72BB77117929B69CEAFB /* OPValidatorEmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B0294AC4F20BAEA14E1500D0B5C01BFF /* OPValidatorEmailAddress.m */; };
+		99D72AC647B4C8444602CF2D2E493C72 /* OPBasicPaymentProductsConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C6F6FD0D16B48B410B4D9643F2B0E2A /* OPBasicPaymentProductsConverter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9AC25AA7E516E1D9F0C9028B4617CE54 /* OPPaymentItem.h in Headers */ = {isa = PBXBuildFile; fileRef = B05E3A09DD1589A78668D3CC028DBB02 /* OPPaymentItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9C62D64CD34B4CC97ADE3AE8663D352B /* OPValidationErrorAllowed.h in Headers */ = {isa = PBXBuildFile; fileRef = 20DE31800C382894C345D27F99E06F49 /* OPValidationErrorAllowed.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D1A608B2B6B7A35185FD1F7DEB52D9C /* OPValidationErrorExpirationDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B5F21D53160B8BDF6AB270C27587E2 /* OPValidationErrorExpirationDate.m */; };
+		9DBD2D1995B982E7A0A503A23953D459 /* OPValidatorExpirationDate.h in Headers */ = {isa = PBXBuildFile; fileRef = C173DF300D0B7ECF707E577CC78A05D9 /* OPValidatorExpirationDate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9E1FFC63A78CC9B76F2E4EC7EEED91CB /* OPPaymentItemConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 781081601214836BC9141C4B4DE4A0F4 /* OPPaymentItemConverter.m */; };
+		9F30E1957E81D17C220C5D65D0B26D36 /* OPValidationErrorAllowed.m in Sources */ = {isa = PBXBuildFile; fileRef = 6559AC5F0DABCF61AEF37EF674B1638F /* OPValidationErrorAllowed.m */; };
+		A20F5E6CD9F27ECEC451078631E5AFB4 /* OPIINDetailsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = E2CE9AB51EDBD308C1937519E7372881 /* OPIINDetailsResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A21824C5DB19D429BD0B326089E2B432 /* OPStringFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C417B2A39D694DE5FFC0003B2D4191F /* OPStringFormatter.m */; };
+		A2B1E65781C322CB7EF748BAC308F54F /* OPAccountOnFileAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 250DCC1F67F7E8466C529CE73AAB2AA4 /* OPAccountOnFileAttributes.m */; };
+		A712637A17408FC7E9184C6E7382267C /* OPAccountsOnFile.m in Sources */ = {isa = PBXBuildFile; fileRef = A4870E9C4012FC38321C9FFB0D8EF896 /* OPAccountsOnFile.m */; };
+		A8B243630F1CB24A28408C6FE65C2409 /* OPBasicPaymentProductGroups.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C7AC157D6B88B3CDF1B873E84CFC516 /* OPBasicPaymentProductGroups.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A95751A764FF7D914B833E7FAE9A56E0 /* OPValidationErrorLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790AEAB1EBFD1BF0244785B5549A17A /* OPValidationErrorLength.m */; };
+		AAF5274E42A89BB283353648E2C7888D /* OPValidationErrorInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 949085BB0B3B59CE47B276B378D88CEA /* OPValidationErrorInteger.m */; };
+		AE61806A139209E91C880074D84EA7C8 /* OPPaymentItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 143B485282DB33E8B1FD3C84F5FE2562 /* OPPaymentItems.m */; };
+		AE84B81FF74A37E6D0C7E644F96E61E7 /* OPPublicKeyResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9A5D553B84B670DACE36629FA861A5 /* OPPublicKeyResponse.m */; };
+		AE84E28AA68212A7031ED1C92A17CB51 /* OPPreparedPaymentRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A8C816B7F5CDA5B2C691CAF7EAAFB7 /* OPPreparedPaymentRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AF25A55158E708DC46460E4AACF7CE0E /* OPValidatorRange.h in Headers */ = {isa = PBXBuildFile; fileRef = F88CD7DCBB1F0EE77DA4D5EBCBA605B0 /* OPValidatorRange.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AF68177CDA447AF74624906FC9644E08 /* OPAccountsOnFile.h in Headers */ = {isa = PBXBuildFile; fileRef = F03279EF8A1FA250B2897E5E9B6672DF /* OPAccountsOnFile.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B147ADCA4F1CE4C78F24B2B4F2FA7A16 /* OnlinePaymentsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 456D751412ECFA8DED83DA6B669ACCE6 /* OnlinePaymentsSDK.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B2F44A84F5DAFAEDD7FA91F7E076A574 /* OPPaymentProduct302SpecificData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCC3882F3200B378C60FDD0FD118F8F /* OPPaymentProduct302SpecificData.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B3C2663C26CFFC4F27AB6FFDB453BBFF /* OPLabelTemplateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBD4DE473875ED63F0C5CED4A01365B /* OPLabelTemplateItem.m */; };
+		B3FB31282E59DC9F923B4F54B8833788 /* OPValidationError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7546B17EFA8B8B391F7FE9325B52BA30 /* OPValidationError.m */; };
+		B4D1DF37FF767178752A1BC7069DCB35 /* OPPaymentItemConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 673B0B08BFFCE120BBC0CD7BB4238F87 /* OPPaymentItemConverter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4EB118E0C2B45EA228E2A23E29ADB7A /* OPBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = BEAD18CE59F7404DF9BCD56612F1DDEB /* OPBase64.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B806374782FB219A4E72F1C323D72CEA /* OPC2SCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9828BD47C38E796AD16C32FC1A3085 /* OPC2SCommunicator.m */; };
+		BB1BFD65690B75A29A15471BAB336310 /* OPType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E0C2299BB9F70080992522B0F89B1E3 /* OPType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C131D6D67F6BCEBE657BF16126A4E057 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 193380CF0DDFFC1DA4C26DD68A3E5B7D /* SVProgressHUD.m */; };
+		C2E075890912DDBF4B3C5341B3FCA296 /* OPAFNetworkingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B596ED24D671DE8C521C0C0CAEBD1A3 /* OPAFNetworkingWrapper.m */; };
+		C35321A2673302A53726A2520F48D12E /* OPIINDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A7779F98473F82CA5E9E454CFECB9369 /* OPIINDetail.m */; };
+		C38BD1A57E6DF56D7054862FA40FB3D5 /* OPDisplayElement.h in Headers */ = {isa = PBXBuildFile; fileRef = EF61AA28E525674AE92FF87F771EB47C /* OPDisplayElement.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C4984B0CA3588CCC169C4B26F661990E /* OPBasicPaymentItemConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FA5D871CCFB5779525F4C7246A51368 /* OPBasicPaymentItemConverter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C6F9A06F7931E3609EBD6E67DF45A7CE /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45DF297826AF09B98160F77E7639F /* SVProgressAnimatedView.m */; };
+		C7CB0869BFA6917AAF23949C6CD7F378 /* OPValidationErrorInteger.h in Headers */ = {isa = PBXBuildFile; fileRef = 5442F7BBD9BAC4C2A670B02BDE56F9A1 /* OPValidationErrorInteger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C96A2504A5313227BEA830C3FA1AABBD /* OPBasicPaymentProductsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD389DD39EF021C10737A7A9B715CF /* OPBasicPaymentProductsConverter.m */; };
+		CA0DA335FC68987E628E7E1EEA032CED /* OPAccountOnFileAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FA95551545C598B09C8FF241F900B84 /* OPAccountOnFileAttributes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CA681CA44FDD39CDA72E5BF1490E257E /* OPNetworkingActivityLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = F8DCB7F4438B3D71527A143441623F53 /* OPNetworkingActivityLoggerProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CC671A55D8F18922AB0EFA7A799093C1 /* Pods-OnlinePaymentsExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D5D0E3DC74243F48C9D73BAF69A048 /* Pods-OnlinePaymentsExample-dummy.m */; };
+		CD9B76EA437A647A6C968A7C16E834E0 /* OPAccountOnFileDisplayHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C4EB7308DD11FB2B1261AD02C307001 /* OPAccountOnFileDisplayHints.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CDE54CEB72E0280231ABDF020FEAFAD6 /* OPIINDetailsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7466D3E8C6CAE399BEEE428A8CA99B3E /* OPIINDetailsResponse.m */; };
+		D05C6EC1893A4E47AA09467618FEE33E /* OPIINDetailsResponseConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 78EA3ECF637FC0C49693E1E4E2F17635 /* OPIINDetailsResponseConverter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D09C42D33F6AC6F25E8E51095BCF05D7 /* OPPaymentAmountOfMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = D91993C7673BDC68E1C35F2DEEDFF647 /* OPPaymentAmountOfMoney.m */; };
+		D3A00E1B712418B5CD5DFAD0FFA0C9F8 /* OPLabelTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7A132A4C62DC031EC2D2007F57DB5 /* OPLabelTemplate.m */; };
+		D3A47E8496D366233446E7612004738D /* OPValidatorLength.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B95C90CFE1458BE99C25A6836E13D1 /* OPValidatorLength.m */; };
+		D5377B972EA03E8372D026D1C676D066 /* OPNetworkingActivityConsoleLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2910F1A5E1A4BE5FB6803B75318A2A5D /* OPNetworkingActivityConsoleLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D5863162E72E811C9AE254DE0B987AA4 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E53F251231306653704A5432E1D79259 /* SVIndefiniteAnimatedView.m */; };
+		D5D101B485AAB093072D05935179BB24 /* OPValidators.h in Headers */ = {isa = PBXBuildFile; fileRef = CF9ADA16991A58D121BD0E30A38C93B2 /* OPValidators.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D673268EAADFF0D2FCCFD629692D28DD /* OPPaymentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2570F6BEC00BC983C913B594095FA1D3 /* OPPaymentContext.m */; };
+		D69903F38A226E2E9B096A851B989905 /* OPJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE5A9E9E4D9D1824D36FCC48E0A4590 /* OPJSON.m */; };
+		DA63562A50DD02C4DBCCFA99AB0E7FB3 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A7A0E39C86D9EDCBCE8AA0E89C163 /* SVProgressHUD-dummy.m */; };
+		DB78A0D0E93E04FFB54BDBD46E1AA882 /* OPValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = 326F0B6F1CFB4CBDBEAF34E0E4D7EC95 /* OPValidators.m */; };
+		DD2D44E2ABE2109567EB4A1A585F3F3C /* OPValidationErrorNumericString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D755391B61016FD4E1B92BD6127ADDE /* OPValidationErrorNumericString.m */; };
+		DECDF2B1B423C3C860C0FB0BDDD0C487 /* OPUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = E825E7D423DBDF38B4464882A99A56B9 /* OPUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E01B3BECA0D3718FCE384E86B71CD14D /* OPAFNetworkingWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 350AD68065F477F9F5E193F3D848E0E1 /* OPAFNetworkingWrapper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E1ED0707D133A6AB5BC856DDE16FF5E0 /* OPPaymentProductField.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAB142C19DA73FEDE855F974BCA1C95 /* OPPaymentProductField.m */; };
+		E215A9BAE48BA366DC57D37121CA0D6A /* OPValidationError.h in Headers */ = {isa = PBXBuildFile; fileRef = 739810E90D002892F7152240C1A4B455 /* OPValidationError.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E56E7823A8E5590D1F2E61734E76A701 /* OPIINDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = A5FBBEDBA98212045F311DE34630D80C /* OPIINDetail.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E5FF1CF30766ABF6020AF12BBC69A46B /* OPBasicPaymentItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B2DA821CAB52FB9BDA653D5B6762901 /* OPBasicPaymentItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E74C7B06657CA680C92B400872303ECA /* OPAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FF8F5EF1A119F9FB8F4A6277008693 /* OPAssetManager.m */; };
+		EBCEC9A47A36FB8905ED94E4584E3BE8 /* OPValidatorTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7933252A5A90E65E9E4FCEE2FBEF00 /* OPValidatorTermsAndConditions.m */; };
+		EBE1C22F1C30390AB8456D300EE853B7 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = B47C61C9A7B76894B8FD4177D13562E0 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EC35C354FF7D6C4B78117C324A0BBCBA /* OPBasicPaymentItemConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 168E800A2F270985934C4B1693D13927 /* OPBasicPaymentItemConverter.m */; };
+		EF8977986240C3590E58470E1DF66BB1 /* OPPaymentContextConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBE7E023E80723ABA12F82BE926BC4D /* OPPaymentContextConverter.m */; };
+		F12AD1EC6910D8F088C71F3DC148A8DE /* OPPaymentProductFieldDisplayHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8C149A8C264DD0A06E0FF05FB11C1F /* OPPaymentProductFieldDisplayHints.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F1D224FB6FF432A031347E947C40CEB6 /* OPBasicPaymentProductConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 67435EF01D4F844CA3E66FF1C9F49FB7 /* OPBasicPaymentProductConverter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F46345C0C20EA3497630960480AF76AE /* Pods-OnlinePaymentsExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9541A7481D3F6CEBA9C1867CCD8504A /* Pods-OnlinePaymentsExampleTests-dummy.m */; };
+		F4A08677867729789FE70147EA5F0207 /* OPPaymentProductFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 152BD21CA3A3087E37589ED68BD3610D /* OPPaymentProductFields.m */; };
+		FA0106A9885CA60B72DA64E6CF09BEBC /* OPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA6AE28912A04DB15D710A2CD51C6C /* OPBase64.m */; };
+		FAC1CFAC9AFBEEA98FFE8DF81650EE74 /* OPLabelTemplateItem.h in Headers */ = {isa = PBXBuildFile; fileRef = D036CD0A33B6E399A43186B78A87A388 /* OPLabelTemplateItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FDA05AEF61C5E5DF9378009E6DEA44D2 /* OPValidatorLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 307F6E3CFC4CA59AECE25A6F2A8165EC /* OPValidatorLength.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		679F0E26A30E2E75714A52EAE30A9683 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2E7F83847EA4D125E11382BC9036970;
+			remoteInfo = OnlinePaymentsSDK;
+		};
+		87FC62285B5A925555BFCC2CFA71E36F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A2109B4346F0E3EFB49ED962FF518BB;
+			remoteInfo = "Pods-OnlinePaymentsExample";
+		};
+		F471B55917A90B259692E64B6CE34C63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C8D67D8B72D6BA42CCEDB648537A340;
+			remoteInfo = SVProgressHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F348E7E1647059E33948DA9E5B0EE1 /* OnlinePaymentsSDK */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = OnlinePaymentsSDK; path = libOnlinePaymentsSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		02FF8F5EF1A119F9FB8F4A6277008693 /* OPAssetManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPAssetManager.m; path = OnlinePaymentsSDK/OPAssetManager.m; sourceTree = "<group>"; };
+		0544E16E3AEE3AA669800A272128B04E /* OPSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPSession.m; path = OnlinePaymentsSDK/OPSession.m; sourceTree = "<group>"; };
+		05896DD1A14FEC32C0E6855073BD5C25 /* OPValidatorRegularExpression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidatorRegularExpression.h; path = OnlinePaymentsSDK/OPValidatorRegularExpression.h; sourceTree = "<group>"; };
+		06A8C816B7F5CDA5B2C691CAF7EAAFB7 /* OPPreparedPaymentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPreparedPaymentRequest.h; path = OnlinePaymentsSDK/OPPreparedPaymentRequest.h; sourceTree = "<group>"; };
+		06BC6CEDA3A2C677B548E8961C2488FE /* OPBasicPaymentProduct.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPBasicPaymentProduct.m; path = OnlinePaymentsSDK/OPBasicPaymentProduct.m; sourceTree = "<group>"; };
+		09CA7919FF64428BB7D4130D9DE2CB92 /* OPValidatorEmailAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidatorEmailAddress.h; path = OnlinePaymentsSDK/OPValidatorEmailAddress.h; sourceTree = "<group>"; };
+		0A7933252A5A90E65E9E4FCEE2FBEF00 /* OPValidatorTermsAndConditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidatorTermsAndConditions.m; path = OnlinePaymentsSDK/OPValidatorTermsAndConditions.m; sourceTree = "<group>"; };
+		0ADC3CAEF9DEB17C4CED611D79E780AA /* OPC2SCommunicatorConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPC2SCommunicatorConfiguration.h; path = OnlinePaymentsSDK/OPC2SCommunicatorConfiguration.h; sourceTree = "<group>"; };
+		0B69C45F6915722CE219B4814CB584B4 /* OPValidatorRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidatorRange.m; path = OnlinePaymentsSDK/OPValidatorRange.m; sourceTree = "<group>"; };
+		0C7AC157D6B88B3CDF1B873E84CFC516 /* OPBasicPaymentProductGroups.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPBasicPaymentProductGroups.h; path = OnlinePaymentsSDK/OPBasicPaymentProductGroups.h; sourceTree = "<group>"; };
+		0D82645C2966EF87E5EFBA62EAF17D80 /* OPAccountOnFileAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPAccountOnFileAttribute.h; path = OnlinePaymentsSDK/OPAccountOnFileAttribute.h; sourceTree = "<group>"; };
+		0DB46FBDBBA17B725C65AA10B7778349 /* OPNetworkingActivityLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPNetworkingActivityLogger.m; path = OnlinePaymentsSDK/OPNetworkingActivityLogger.m; sourceTree = "<group>"; };
+		0FE9DE7042E19A116B3FD74A554DDB31 /* OPEncryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPEncryptor.h; path = OnlinePaymentsSDK/OPEncryptor.h; sourceTree = "<group>"; };
+		126D2E4832AFD94C4B9EDD7FAE3E3AC7 /* OPValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidator.h; path = OnlinePaymentsSDK/OPValidator.h; sourceTree = "<group>"; };
+		130B0AD17CDC0B30D35EF282E7C63AE9 /* OPPaymentItems.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentItems.h; path = OnlinePaymentsSDK/OPPaymentItems.h; sourceTree = "<group>"; };
+		143B485282DB33E8B1FD3C84F5FE2562 /* OPPaymentItems.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentItems.m; path = OnlinePaymentsSDK/OPPaymentItems.m; sourceTree = "<group>"; };
+		14E692836540A9398F67A3DAD652FF4B /* OPPaymentItemDisplayHints.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentItemDisplayHints.m; path = OnlinePaymentsSDK/OPPaymentItemDisplayHints.m; sourceTree = "<group>"; };
+		152BD21CA3A3087E37589ED68BD3610D /* OPPaymentProductFields.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentProductFields.m; path = OnlinePaymentsSDK/OPPaymentProductFields.m; sourceTree = "<group>"; };
+		160ABE7395DB3EF54AB6FC66A08E007A /* OPDisplayElementType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPDisplayElementType.h; path = OnlinePaymentsSDK/OPDisplayElementType.h; sourceTree = "<group>"; };
+		160F291D1CAEB38CD644401FF2E0434E /* OPBasicPaymentProductGroups.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPBasicPaymentProductGroups.m; path = OnlinePaymentsSDK/OPBasicPaymentProductGroups.m; sourceTree = "<group>"; };
+		168E800A2F270985934C4B1693D13927 /* OPBasicPaymentItemConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPBasicPaymentItemConverter.m; path = OnlinePaymentsSDK/OPBasicPaymentItemConverter.m; sourceTree = "<group>"; };
+		175219C0579641F5BFBD37ECC55D5276 /* OPFormElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPFormElement.m; path = OnlinePaymentsSDK/OPFormElement.m; sourceTree = "<group>"; };
+		184747D229C6E408B71BE7E80B247630 /* OnlinePaymentsSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = OnlinePaymentsSDK.bundle; path = OnlinePaymentsSDK/OnlinePaymentsSDK.bundle; sourceTree = "<group>"; };
+		193380CF0DDFFC1DA4C26DD68A3E5B7D /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		1B52B3668BA580696BE5383382657A92 /* OPValueMappingItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValueMappingItem.m; path = OnlinePaymentsSDK/OPValueMappingItem.m; sourceTree = "<group>"; };
+		1B6F155D6DC4EE3F571D2FA6A11657E1 /* OPBasicPaymentProducts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPBasicPaymentProducts.h; path = OnlinePaymentsSDK/OPBasicPaymentProducts.h; sourceTree = "<group>"; };
+		1CD3E1713BA6D44926BF3B0081DB09AF /* OPToolTip.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPToolTip.m; path = OnlinePaymentsSDK/OPToolTip.m; sourceTree = "<group>"; };
+		1EDD389DD39EF021C10737A7A9B715CF /* OPBasicPaymentProductsConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPBasicPaymentProductsConverter.m; path = OnlinePaymentsSDK/OPBasicPaymentProductsConverter.m; sourceTree = "<group>"; };
+		1FA95551545C598B09C8FF241F900B84 /* OPAccountOnFileAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPAccountOnFileAttributes.h; path = OnlinePaymentsSDK/OPAccountOnFileAttributes.h; sourceTree = "<group>"; };
+		20DE31800C382894C345D27F99E06F49 /* OPValidationErrorAllowed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorAllowed.h; path = OnlinePaymentsSDK/OPValidationErrorAllowed.h; sourceTree = "<group>"; };
+		250DCC1F67F7E8466C529CE73AAB2AA4 /* OPAccountOnFileAttributes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPAccountOnFileAttributes.m; path = OnlinePaymentsSDK/OPAccountOnFileAttributes.m; sourceTree = "<group>"; };
+		2570F6BEC00BC983C913B594095FA1D3 /* OPPaymentContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentContext.m; path = OnlinePaymentsSDK/OPPaymentContext.m; sourceTree = "<group>"; };
+		25CE245D07DCC6C3B4EAD131FC8D025B /* OPValidationErrorLuhn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorLuhn.m; path = OnlinePaymentsSDK/OPValidationErrorLuhn.m; sourceTree = "<group>"; };
+		27436F30A57F98B6A60B418CDDAA6862 /* OPFormElementType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPFormElementType.h; path = OnlinePaymentsSDK/OPFormElementType.h; sourceTree = "<group>"; };
+		289902786B2C9D8560F7075534C5DA90 /* OPValueMappingItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValueMappingItem.h; path = OnlinePaymentsSDK/OPValueMappingItem.h; sourceTree = "<group>"; };
+		2910F1A5E1A4BE5FB6803B75318A2A5D /* OPNetworkingActivityConsoleLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPNetworkingActivityConsoleLogger.h; path = OnlinePaymentsSDK/OPNetworkingActivityConsoleLogger.h; sourceTree = "<group>"; };
+		2AEBAE9E5F9D4B2FF91D4F5CB7715D9E /* OPMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPMacros.h; path = OnlinePaymentsSDK/OPMacros.h; sourceTree = "<group>"; };
+		2B35665648946CC0D74F50D2FC5A2495 /* OPEncryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPEncryptor.m; path = OnlinePaymentsSDK/OPEncryptor.m; sourceTree = "<group>"; };
+		2B596ED24D671DE8C521C0C0CAEBD1A3 /* OPAFNetworkingWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPAFNetworkingWrapper.m; path = OnlinePaymentsSDK/OPAFNetworkingWrapper.m; sourceTree = "<group>"; };
+		2C6F6FD0D16B48B410B4D9643F2B0E2A /* OPBasicPaymentProductsConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPBasicPaymentProductsConverter.h; path = OnlinePaymentsSDK/OPBasicPaymentProductsConverter.h; sourceTree = "<group>"; };
+		2C86417EACDF207F1AA8E1154839CA0F /* OPToolTip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPToolTip.h; path = OnlinePaymentsSDK/OPToolTip.h; sourceTree = "<group>"; };
+		2C8C149A8C264DD0A06E0FF05FB11C1F /* OPPaymentProductFieldDisplayHints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentProductFieldDisplayHints.h; path = OnlinePaymentsSDK/OPPaymentProductFieldDisplayHints.h; sourceTree = "<group>"; };
+		2DB0C008455E3037148DB4CA4EAAC126 /* Pods-OnlinePaymentsExampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OnlinePaymentsExampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2DF4C888A4DF36F9BD469D1652560F12 /* OPPaymentRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentRequest.m; path = OnlinePaymentsSDK/OPPaymentRequest.m; sourceTree = "<group>"; };
+		300A7BA7612F8520D8A9272DCBAF2604 /* OPPaymentProductNetworks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentProductNetworks.m; path = OnlinePaymentsSDK/OPPaymentProductNetworks.m; sourceTree = "<group>"; };
+		307F6E3CFC4CA59AECE25A6F2A8165EC /* OPValidatorLength.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidatorLength.h; path = OnlinePaymentsSDK/OPValidatorLength.h; sourceTree = "<group>"; };
+		326F0B6F1CFB4CBDBEAF34E0E4D7EC95 /* OPValidators.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidators.m; path = OnlinePaymentsSDK/OPValidators.m; sourceTree = "<group>"; };
+		32BEB15FF5B1B4B302275A45D141059A /* OnlinePaymentsSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OnlinePaymentsSDK.debug.xcconfig; sourceTree = "<group>"; };
+		32D5BD0F52199D199593C2BAB6D2A968 /* OPValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidator.m; path = OnlinePaymentsSDK/OPValidator.m; sourceTree = "<group>"; };
+		349F19BBEAEF762BF51EBC0A6AD92D81 /* OPValidatorIBAN.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidatorIBAN.m; path = OnlinePaymentsSDK/OPValidatorIBAN.m; sourceTree = "<group>"; };
+		350AD68065F477F9F5E193F3D848E0E1 /* OPAFNetworkingWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPAFNetworkingWrapper.h; path = OnlinePaymentsSDK/OPAFNetworkingWrapper.h; sourceTree = "<group>"; };
+		3790AEAB1EBFD1BF0244785B5549A17A /* OPValidationErrorLength.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorLength.m; path = OnlinePaymentsSDK/OPValidationErrorLength.m; sourceTree = "<group>"; };
+		38CD575C08D3FA0BB6A80F02F96945F0 /* OPPaymentProductField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentProductField.h; path = OnlinePaymentsSDK/OPPaymentProductField.h; sourceTree = "<group>"; };
+		3988E794770B5D4B864A44BE596D8B0E /* OPValidationErrorIBAN.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorIBAN.h; path = OnlinePaymentsSDK/OPValidationErrorIBAN.h; sourceTree = "<group>"; };
+		3B7C4334C3A7EA9B673DBDDEC304AB80 /* OPNetworkingWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPNetworkingWrapper.m; path = OnlinePaymentsSDK/OPNetworkingWrapper.m; sourceTree = "<group>"; };
+		3BD7C0528766A4B33D458B46DD66A563 /* OPAccountOnFileDisplayHints.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPAccountOnFileDisplayHints.m; path = OnlinePaymentsSDK/OPAccountOnFileDisplayHints.m; sourceTree = "<group>"; };
+		3C4EB7308DD11FB2B1261AD02C307001 /* OPAccountOnFileDisplayHints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPAccountOnFileDisplayHints.h; path = OnlinePaymentsSDK/OPAccountOnFileDisplayHints.h; sourceTree = "<group>"; };
+		3DAC3FB4078816DB37BCC5C7FA16BEDF /* OPDisplayElementsConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPDisplayElementsConverter.m; path = OnlinePaymentsSDK/OPDisplayElementsConverter.m; sourceTree = "<group>"; };
+		3E0D69E30521B3E47F91295E924FD2AB /* OPPaymentProduct302SpecificData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentProduct302SpecificData.m; path = OnlinePaymentsSDK/OPPaymentProduct302SpecificData.m; sourceTree = "<group>"; };
+		3E8F72E7E0CC77060AD9741D3FD21CE5 /* OPPublicKeyResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPublicKeyResponse.h; path = OnlinePaymentsSDK/OPPublicKeyResponse.h; sourceTree = "<group>"; };
+		402AE88183B89A1A971DDFB8CA245499 /* OPValidationErrorLength.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorLength.h; path = OnlinePaymentsSDK/OPValidationErrorLength.h; sourceTree = "<group>"; };
+		41862FEA9FBB409DD90DAF150F240C84 /* OPValidationErrorIBAN.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorIBAN.m; path = OnlinePaymentsSDK/OPValidationErrorIBAN.m; sourceTree = "<group>"; };
+		4383A958C32AFE5E7080236B192A6B41 /* Pods-OnlinePaymentsExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OnlinePaymentsExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		456D751412ECFA8DED83DA6B669ACCE6 /* OnlinePaymentsSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OnlinePaymentsSDK.h; path = OnlinePaymentsSDK/OnlinePaymentsSDK.h; sourceTree = "<group>"; };
+		45B5F21D53160B8BDF6AB270C27587E2 /* OPValidationErrorExpirationDate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorExpirationDate.m; path = OnlinePaymentsSDK/OPValidationErrorExpirationDate.m; sourceTree = "<group>"; };
+		49FD850BA82F610E96484895D3A15BD5 /* OPJOSEEncryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPJOSEEncryptor.m; path = OnlinePaymentsSDK/OPJOSEEncryptor.m; sourceTree = "<group>"; };
+		4A6389EE8875D0856F9B23488736ADAD /* OPPaymentProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentProduct.h; path = OnlinePaymentsSDK/OPPaymentProduct.h; sourceTree = "<group>"; };
+		4B236A0CF5BB10B8661822E6BCE4DABF /* OPBasicPaymentProductConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPBasicPaymentProductConverter.m; path = OnlinePaymentsSDK/OPBasicPaymentProductConverter.m; sourceTree = "<group>"; };
+		4BBD4DE473875ED63F0C5CED4A01365B /* OPLabelTemplateItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPLabelTemplateItem.m; path = OnlinePaymentsSDK/OPLabelTemplateItem.m; sourceTree = "<group>"; };
+		4DB88D37533DA8CCB1480DE2CEA1DC05 /* OPPaymentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentRequest.h; path = OnlinePaymentsSDK/OPPaymentRequest.h; sourceTree = "<group>"; };
+		4EE45DF297826AF09B98160F77E7639F /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		5442F7BBD9BAC4C2A670B02BDE56F9A1 /* OPValidationErrorInteger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorInteger.h; path = OnlinePaymentsSDK/OPValidationErrorInteger.h; sourceTree = "<group>"; };
+		54C05AD2CDB6418101B52F63AF224364 /* OPPaymentProductNetworks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentProductNetworks.h; path = OnlinePaymentsSDK/OPPaymentProductNetworks.h; sourceTree = "<group>"; };
+		5A0B30DFB76783729FFEE558B18F99D4 /* OnlinePaymentsSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OnlinePaymentsSDK.release.xcconfig; sourceTree = "<group>"; };
+		5AFA00B691ED6198C4F853BD90718DC6 /* OPPaymentItemDisplayHints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentItemDisplayHints.h; path = OnlinePaymentsSDK/OPPaymentItemDisplayHints.h; sourceTree = "<group>"; };
+		5B7083D90BBA7880D37105232A2B87C0 /* OPPaymentProductGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentProductGroup.h; path = OnlinePaymentsSDK/OPPaymentProductGroup.h; sourceTree = "<group>"; };
+		5C417B2A39D694DE5FFC0003B2D4191F /* OPStringFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPStringFormatter.m; path = OnlinePaymentsSDK/OPStringFormatter.m; sourceTree = "<group>"; };
+		5DCF9E4D1E96433CA0CD650FD2B40425 /* OPValidationErrorRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorRange.h; path = OnlinePaymentsSDK/OPValidationErrorRange.h; sourceTree = "<group>"; };
+		5DE5A9E9E4D9D1824D36FCC48E0A4590 /* OPJSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPJSON.m; path = OnlinePaymentsSDK/OPJSON.m; sourceTree = "<group>"; };
+		5E61CD5AA8AA509FBAE9F9577668689D /* OPSDKConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPSDKConstants.h; path = OnlinePaymentsSDK/OPSDKConstants.h; sourceTree = "<group>"; };
+		5E9828BD47C38E796AD16C32FC1A3085 /* OPC2SCommunicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPC2SCommunicator.m; path = OnlinePaymentsSDK/OPC2SCommunicator.m; sourceTree = "<group>"; };
+		5EA3C4849061FE13B0401976FB35B6EA /* OPSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPSession.h; path = OnlinePaymentsSDK/OPSession.h; sourceTree = "<group>"; };
+		5F1A8B380BE7D7DE861CA5485586B583 /* OPPaymentContextConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentContextConverter.h; path = OnlinePaymentsSDK/OPPaymentContextConverter.h; sourceTree = "<group>"; };
+		5FFEC9BB44D88F5F4AEABD6D9D75679B /* OPUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPUtil.m; path = OnlinePaymentsSDK/OPUtil.m; sourceTree = "<group>"; };
+		61AEF2DBD675AB3E450225C9A3E879E0 /* OPValidatorLuhn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidatorLuhn.m; path = OnlinePaymentsSDK/OPValidatorLuhn.m; sourceTree = "<group>"; };
+		627716FA4239DF0C51688BB8C9AE398B /* OPC2SCommunicatorConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPC2SCommunicatorConfiguration.m; path = OnlinePaymentsSDK/OPC2SCommunicatorConfiguration.m; sourceTree = "<group>"; };
+		6559AC5F0DABCF61AEF37EF674B1638F /* OPValidationErrorAllowed.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorAllowed.m; path = OnlinePaymentsSDK/OPValidationErrorAllowed.m; sourceTree = "<group>"; };
+		6618FFCD103B4328E705A01CC7EB9991 /* OPValidationErrorRegularExpression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorRegularExpression.m; path = OnlinePaymentsSDK/OPValidationErrorRegularExpression.m; sourceTree = "<group>"; };
+		673B0B08BFFCE120BBC0CD7BB4238F87 /* OPPaymentItemConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentItemConverter.h; path = OnlinePaymentsSDK/OPPaymentItemConverter.h; sourceTree = "<group>"; };
+		67435EF01D4F844CA3E66FF1C9F49FB7 /* OPBasicPaymentProductConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPBasicPaymentProductConverter.h; path = OnlinePaymentsSDK/OPBasicPaymentProductConverter.h; sourceTree = "<group>"; };
+		6ADE0B7482788DCE82A72B26D6DD8289 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		6B17BA9799C8187DD50950FB758D0C6F /* OPValidatorTermsAndConditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidatorTermsAndConditions.h; path = OnlinePaymentsSDK/OPValidatorTermsAndConditions.h; sourceTree = "<group>"; };
+		6B26B83B54AD6FD3E9FE0EAD7518362B /* OPPreferredInputType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPreferredInputType.h; path = OnlinePaymentsSDK/OPPreferredInputType.h; sourceTree = "<group>"; };
+		6B2DA821CAB52FB9BDA653D5B6762901 /* OPBasicPaymentItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPBasicPaymentItem.h; path = OnlinePaymentsSDK/OPBasicPaymentItem.h; sourceTree = "<group>"; };
+		6B3A32F3868E7E847E127886EEBDA0FF /* OPValidatorRegularExpression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidatorRegularExpression.m; path = OnlinePaymentsSDK/OPValidatorRegularExpression.m; sourceTree = "<group>"; };
+		6CF7A132A4C62DC031EC2D2007F57DB5 /* OPLabelTemplate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPLabelTemplate.m; path = OnlinePaymentsSDK/OPLabelTemplate.m; sourceTree = "<group>"; };
+		701A18BF6C49F165BF02E754435A8771 /* OPValidationErrorFixedList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorFixedList.h; path = OnlinePaymentsSDK/OPValidationErrorFixedList.h; sourceTree = "<group>"; };
+		73169D783A8D7485FFFB8EFEEAD1FC18 /* OPPaymentProductConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentProductConverter.h; path = OnlinePaymentsSDK/OPPaymentProductConverter.h; sourceTree = "<group>"; };
+		739810E90D002892F7152240C1A4B455 /* OPValidationError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationError.h; path = OnlinePaymentsSDK/OPValidationError.h; sourceTree = "<group>"; };
+		74174385D19A8CA31F919E94643CAF3C /* OPAccountOnFileAttributeStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPAccountOnFileAttributeStatus.h; path = OnlinePaymentsSDK/OPAccountOnFileAttributeStatus.h; sourceTree = "<group>"; };
+		7466D3E8C6CAE399BEEE428A8CA99B3E /* OPIINDetailsResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPIINDetailsResponse.m; path = OnlinePaymentsSDK/OPIINDetailsResponse.m; sourceTree = "<group>"; };
+		7546B17EFA8B8B391F7FE9325B52BA30 /* OPValidationError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationError.m; path = OnlinePaymentsSDK/OPValidationError.m; sourceTree = "<group>"; };
+		77C5E2635982D364558D2B12D7A9FC3F /* OPValidationErrorIsRequired.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorIsRequired.h; path = OnlinePaymentsSDK/OPValidationErrorIsRequired.h; sourceTree = "<group>"; };
+		77F8B109F55ABE42809ECF5A93F661DC /* OPValidationErrorEmailAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorEmailAddress.m; path = OnlinePaymentsSDK/OPValidationErrorEmailAddress.m; sourceTree = "<group>"; };
+		781081601214836BC9141C4B4DE4A0F4 /* OPPaymentItemConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentItemConverter.m; path = OnlinePaymentsSDK/OPPaymentItemConverter.m; sourceTree = "<group>"; };
+		78EA3ECF637FC0C49693E1E4E2F17635 /* OPIINDetailsResponseConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPIINDetailsResponseConverter.h; path = OnlinePaymentsSDK/OPIINDetailsResponseConverter.h; sourceTree = "<group>"; };
+		7C01B97EDF1DCD43025AFBA03724A021 /* Pods-OnlinePaymentsExample */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-OnlinePaymentsExample"; path = "libPods-OnlinePaymentsExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D755391B61016FD4E1B92BD6127ADDE /* OPValidationErrorNumericString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorNumericString.m; path = OnlinePaymentsSDK/OPValidationErrorNumericString.m; sourceTree = "<group>"; };
+		7D881E6F5A8065ABCBDE9BCFADA79425 /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OnlinePaymentsExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D974260767009E137B6FBEE80717B81 /* OPAccountOnFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPAccountOnFile.h; path = OnlinePaymentsSDK/OPAccountOnFile.h; sourceTree = "<group>"; };
+		7DCC3882F3200B378C60FDD0FD118F8F /* OPPaymentProduct302SpecificData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentProduct302SpecificData.h; path = OnlinePaymentsSDK/OPPaymentProduct302SpecificData.h; sourceTree = "<group>"; };
+		7FA3355A636FA9050EFA9DCA7F41BB26 /* Pods-OnlinePaymentsExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OnlinePaymentsExample-resources.sh"; sourceTree = "<group>"; };
+		7FA5D871CCFB5779525F4C7246A51368 /* OPBasicPaymentItemConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPBasicPaymentItemConverter.h; path = OnlinePaymentsSDK/OPBasicPaymentItemConverter.h; sourceTree = "<group>"; };
+		8399026905C187E07993DCBE54A983C7 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		84FE3DFD60E7E104B912AE2A00BE79C3 /* OPBasicPaymentProductGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPBasicPaymentProductGroup.m; path = OnlinePaymentsSDK/OPBasicPaymentProductGroup.m; sourceTree = "<group>"; };
+		884FB26A5713FD02E18FF8F502C71F2B /* OPIINDetailsResponseConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPIINDetailsResponseConverter.m; path = OnlinePaymentsSDK/OPIINDetailsResponseConverter.m; sourceTree = "<group>"; };
+		8C2C3763A746AF270156E4BD78B46F8A /* OPJOSEEncryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPJOSEEncryptor.h; path = OnlinePaymentsSDK/OPJOSEEncryptor.h; sourceTree = "<group>"; };
+		8D4B7272E64F8FA67DCD2E56A1943FC0 /* OPLabelTemplate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPLabelTemplate.h; path = OnlinePaymentsSDK/OPLabelTemplate.h; sourceTree = "<group>"; };
+		9031D62CF8C12447D6AB50110A950185 /* OnlinePaymentsSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = OnlinePaymentsSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		949085BB0B3B59CE47B276B378D88CEA /* OPValidationErrorInteger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorInteger.m; path = OnlinePaymentsSDK/OPValidationErrorInteger.m; sourceTree = "<group>"; };
+		952D0C034A75EA27398730363281B2FC /* OPFormElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPFormElement.h; path = OnlinePaymentsSDK/OPFormElement.h; sourceTree = "<group>"; };
+		9565661B946968B26A6607449D4D2BCE /* OPValidationErrorNumericString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorNumericString.h; path = OnlinePaymentsSDK/OPValidationErrorNumericString.h; sourceTree = "<group>"; };
+		9AA9D286E6C9A352B19AEE9D628C7652 /* OnlinePaymentsSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OnlinePaymentsSDK-dummy.m"; sourceTree = "<group>"; };
+		9D92953A61806F4990EF93F8F0E49FEA /* OPValidatorLuhn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidatorLuhn.h; path = OnlinePaymentsSDK/OPValidatorLuhn.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E0C2299BB9F70080992522B0F89B1E3 /* OPType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPType.h; path = OnlinePaymentsSDK/OPType.h; sourceTree = "<group>"; };
+		A23518B23B7B444C1E6586D01B051581 /* OPValidatorFixedList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidatorFixedList.m; path = OnlinePaymentsSDK/OPValidatorFixedList.m; sourceTree = "<group>"; };
+		A2B95C90CFE1458BE99C25A6836E13D1 /* OPValidatorLength.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidatorLength.m; path = OnlinePaymentsSDK/OPValidatorLength.m; sourceTree = "<group>"; };
+		A3A6028492814CECEB0B30617BF3D15F /* SVProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
+		A4870E9C4012FC38321C9FFB0D8EF896 /* OPAccountsOnFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPAccountsOnFile.m; path = OnlinePaymentsSDK/OPAccountsOnFile.m; sourceTree = "<group>"; };
+		A56F4C43FCC99677B372FE7BDA3B4BC0 /* OPValidationErrorLuhn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorLuhn.h; path = OnlinePaymentsSDK/OPValidationErrorLuhn.h; sourceTree = "<group>"; };
+		A5FBBEDBA98212045F311DE34630D80C /* OPIINDetail.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPIINDetail.h; path = OnlinePaymentsSDK/OPIINDetail.h; sourceTree = "<group>"; };
+		A6123C3E3757A3C4CEB6CDC60F753171 /* OPValidationErrorTermsAndConditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorTermsAndConditions.h; path = OnlinePaymentsSDK/OPValidationErrorTermsAndConditions.h; sourceTree = "<group>"; };
+		A7779F98473F82CA5E9E454CFECB9369 /* OPIINDetail.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPIINDetail.m; path = OnlinePaymentsSDK/OPIINDetail.m; sourceTree = "<group>"; };
+		AACD44DCF6CFB5C9233653278A732941 /* Pods-OnlinePaymentsExampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OnlinePaymentsExampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AD79EF67E9F3072EADBFAC892131307D /* Pods-OnlinePaymentsExampleTests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-OnlinePaymentsExampleTests"; path = "libPods-OnlinePaymentsExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD875C9656733F61767E075C387F1D6D /* Pods-OnlinePaymentsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OnlinePaymentsExample.debug.xcconfig"; sourceTree = "<group>"; };
+		AFB2CA13C95CCAA1A03DC4655B4CC933 /* OPPaymentProductConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentProductConverter.m; path = OnlinePaymentsSDK/OPPaymentProductConverter.m; sourceTree = "<group>"; };
+		AFE95F401F13BA26AF9E6F65934D49B0 /* OPBasicPaymentProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPBasicPaymentProduct.h; path = OnlinePaymentsSDK/OPBasicPaymentProduct.h; sourceTree = "<group>"; };
+		B0294AC4F20BAEA14E1500D0B5C01BFF /* OPValidatorEmailAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidatorEmailAddress.m; path = OnlinePaymentsSDK/OPValidatorEmailAddress.m; sourceTree = "<group>"; };
+		B05E3A09DD1589A78668D3CC028DBB02 /* OPPaymentItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentItem.h; path = OnlinePaymentsSDK/OPPaymentItem.h; sourceTree = "<group>"; };
+		B076F108B5DFEAB3B96C514472472E07 /* OPPreparedPaymentRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPreparedPaymentRequest.m; path = OnlinePaymentsSDK/OPPreparedPaymentRequest.m; sourceTree = "<group>"; };
+		B0E47DC9A1E1F145ECBC475B7AABEC6B /* OPPaymentAmountOfMoney.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentAmountOfMoney.h; path = OnlinePaymentsSDK/OPPaymentAmountOfMoney.h; sourceTree = "<group>"; };
+		B1992FF1019F459E4195C56A013F5D49 /* OPJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPJSON.h; path = OnlinePaymentsSDK/OPJSON.h; sourceTree = "<group>"; };
+		B25A7A0E39C86D9EDCBCE8AA0E89C163 /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		B3AF2AC7B64FD099FFA36C870E228CB0 /* OPAccountOnFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPAccountOnFile.m; path = OnlinePaymentsSDK/OPAccountOnFile.m; sourceTree = "<group>"; };
+		B47C61C9A7B76894B8FD4177D13562E0 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		B53DBE0A3EB0DBB38DF4CCE9B8D98581 /* OPValidationErrorRegularExpression.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorRegularExpression.h; path = OnlinePaymentsSDK/OPValidationErrorRegularExpression.h; sourceTree = "<group>"; };
+		B7996BBC3C004AE7222582ADDC9D349A /* OPValidatorFixedList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidatorFixedList.h; path = OnlinePaymentsSDK/OPValidatorFixedList.h; sourceTree = "<group>"; };
+		B84CD1DDC197C0A4CC74A7992A4D89DD /* OPPaymentContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentContext.h; path = OnlinePaymentsSDK/OPPaymentContext.h; sourceTree = "<group>"; };
+		BE81BDF3E46EBE354A6C609AB084D692 /* Pods-OnlinePaymentsExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OnlinePaymentsExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BEAD18CE59F7404DF9BCD56612F1DDEB /* OPBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPBase64.h; path = OnlinePaymentsSDK/OPBase64.h; sourceTree = "<group>"; };
+		BFBF861E3EEF28F7A1F76543EF1A3BD2 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		BFC9219D33B167042734A95A6B9C24A0 /* OPAccountOnFileAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPAccountOnFileAttribute.m; path = OnlinePaymentsSDK/OPAccountOnFileAttribute.m; sourceTree = "<group>"; };
+		C173DF300D0B7ECF707E577CC78A05D9 /* OPValidatorExpirationDate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidatorExpirationDate.h; path = OnlinePaymentsSDK/OPValidatorExpirationDate.h; sourceTree = "<group>"; };
+		C1A4C5BA7422EEBEF141B62423DFF2EC /* OPDataRestrictions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPDataRestrictions.m; path = OnlinePaymentsSDK/OPDataRestrictions.m; sourceTree = "<group>"; };
+		C233E4D07AE4B1D75EE37B2A3DCDFB40 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		C9541A7481D3F6CEBA9C1867CCD8504A /* Pods-OnlinePaymentsExampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OnlinePaymentsExampleTests-dummy.m"; sourceTree = "<group>"; };
+		CC0EF10A6D0DC26C3086F8082DBFBE1F /* OPPaymentProductFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPPaymentProductFields.h; path = OnlinePaymentsSDK/OPPaymentProductFields.h; sourceTree = "<group>"; };
+		CD78FAA4F57E4C8A356C5A23246A495F /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		CDBE7E023E80723ABA12F82BE926BC4D /* OPPaymentContextConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentContextConverter.m; path = OnlinePaymentsSDK/OPPaymentContextConverter.m; sourceTree = "<group>"; };
+		CF9ADA16991A58D121BD0E30A38C93B2 /* OPValidators.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidators.h; path = OnlinePaymentsSDK/OPValidators.h; sourceTree = "<group>"; };
+		D036CD0A33B6E399A43186B78A87A388 /* OPLabelTemplateItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPLabelTemplateItem.h; path = OnlinePaymentsSDK/OPLabelTemplateItem.h; sourceTree = "<group>"; };
+		D0EA6AE28912A04DB15D710A2CD51C6C /* OPBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPBase64.m; path = OnlinePaymentsSDK/OPBase64.m; sourceTree = "<group>"; };
+		D68213067D625F0F8A824B9E05935307 /* OPValidationErrorRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorRange.m; path = OnlinePaymentsSDK/OPValidationErrorRange.m; sourceTree = "<group>"; };
+		D80FF1A869F05F5356F71D2F5D95BAE4 /* OPDataRestrictions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPDataRestrictions.h; path = OnlinePaymentsSDK/OPDataRestrictions.h; sourceTree = "<group>"; };
+		D8294056D97324A31B01097DAA72AC9F /* OPBasicPaymentProducts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPBasicPaymentProducts.m; path = OnlinePaymentsSDK/OPBasicPaymentProducts.m; sourceTree = "<group>"; };
+		D846F1916C30A264132FF2755686D93E /* Pods-OnlinePaymentsExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OnlinePaymentsExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		D9169653C9DE3B78F2B46379E16A135D /* OPValidationErrorTermsAndConditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorTermsAndConditions.m; path = OnlinePaymentsSDK/OPValidationErrorTermsAndConditions.m; sourceTree = "<group>"; };
+		D91993C7673BDC68E1C35F2DEEDFF647 /* OPPaymentAmountOfMoney.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentAmountOfMoney.m; path = OnlinePaymentsSDK/OPPaymentAmountOfMoney.m; sourceTree = "<group>"; };
+		D9D5D0E3DC74243F48C9D73BAF69A048 /* Pods-OnlinePaymentsExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OnlinePaymentsExample-dummy.m"; sourceTree = "<group>"; };
+		DA08B7C50DF02A822410A647D4E845C8 /* OPNetworkingWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPNetworkingWrapper.h; path = OnlinePaymentsSDK/OPNetworkingWrapper.h; sourceTree = "<group>"; };
+		DA9A5D553B84B670DACE36629FA861A5 /* OPPublicKeyResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPublicKeyResponse.m; path = OnlinePaymentsSDK/OPPublicKeyResponse.m; sourceTree = "<group>"; };
+		DCAB142C19DA73FEDE855F974BCA1C95 /* OPPaymentProductField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentProductField.m; path = OnlinePaymentsSDK/OPPaymentProductField.m; sourceTree = "<group>"; };
+		DCCE2CB20290CEC9FF02E4D2424E47BD /* OPNetworkingActivityConsoleLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPNetworkingActivityConsoleLogger.m; path = OnlinePaymentsSDK/OPNetworkingActivityConsoleLogger.m; sourceTree = "<group>"; };
+		DE9287F3CB57BB97750CA9FBA7BD25F6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E0B64A407ED84370D2A72605422DCAEE /* OPValidationErrorEmailAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorEmailAddress.h; path = OnlinePaymentsSDK/OPValidationErrorEmailAddress.h; sourceTree = "<group>"; };
+		E2CE9AB51EDBD308C1937519E7372881 /* OPIINDetailsResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPIINDetailsResponse.h; path = OnlinePaymentsSDK/OPIINDetailsResponse.h; sourceTree = "<group>"; };
+		E53F251231306653704A5432E1D79259 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		E62EEF0FDC9706AB535B8897BF31040E /* OPDisplayElementsConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPDisplayElementsConverter.h; path = OnlinePaymentsSDK/OPDisplayElementsConverter.h; sourceTree = "<group>"; };
+		E66C685D15858D18AEB754F2EF98E536 /* SVProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.release.xcconfig; sourceTree = "<group>"; };
+		E825E7D423DBDF38B4464882A99A56B9 /* OPUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPUtil.h; path = OnlinePaymentsSDK/OPUtil.h; sourceTree = "<group>"; };
+		E8C9CF0FA8E267DBAE6A2B5C089615D6 /* OPIINStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPIINStatus.h; path = OnlinePaymentsSDK/OPIINStatus.h; sourceTree = "<group>"; };
+		E920B6FF0B873962EB3520D0D043DEB2 /* OPNetworkingActivityLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPNetworkingActivityLogger.h; path = OnlinePaymentsSDK/OPNetworkingActivityLogger.h; sourceTree = "<group>"; };
+		E9619D4BC18F2FD4A815A77560B9EE6A /* OPDisplayElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPDisplayElement.m; path = OnlinePaymentsSDK/OPDisplayElement.m; sourceTree = "<group>"; };
+		E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = SVProgressHUD; path = libSVProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA4C61748F9455B764EAAA74C94F74A6 /* OPValidationErrorIsRequired.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorIsRequired.m; path = OnlinePaymentsSDK/OPValidationErrorIsRequired.m; sourceTree = "<group>"; };
+		EB64F5484CC12649173C0362C5E796C9 /* OPPaymentProductFieldDisplayHints.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentProductFieldDisplayHints.m; path = OnlinePaymentsSDK/OPPaymentProductFieldDisplayHints.m; sourceTree = "<group>"; };
+		EBE9EF848C5F146820F90EAD2AF276B7 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		EC046749A4E1BEB40154B40FBDCD91C7 /* OnlinePaymentsSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OnlinePaymentsSDK-prefix.pch"; sourceTree = "<group>"; };
+		EC353943F2AC2F582383A826E183174E /* OPBasicPaymentProductGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPBasicPaymentProductGroup.h; path = OnlinePaymentsSDK/OPBasicPaymentProductGroup.h; sourceTree = "<group>"; };
+		EC9D45B822EA1FC3507F233A79DD6B4D /* OPValidatorExpirationDate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidatorExpirationDate.m; path = OnlinePaymentsSDK/OPValidatorExpirationDate.m; sourceTree = "<group>"; };
+		EDB0B193036AAC0667189847E57C1FA2 /* OPC2SCommunicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPC2SCommunicator.h; path = OnlinePaymentsSDK/OPC2SCommunicator.h; sourceTree = "<group>"; };
+		EDD20CBB112EE369818D88052CCBABDC /* OPPaymentProductGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentProductGroup.m; path = OnlinePaymentsSDK/OPPaymentProductGroup.m; sourceTree = "<group>"; };
+		EDD685AFBCEDC93D8AFB64CC26DEF709 /* OPStringFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPStringFormatter.h; path = OnlinePaymentsSDK/OPStringFormatter.h; sourceTree = "<group>"; };
+		EF491C7A981EBFB7AA2B3FBD92875B20 /* OPAssetManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPAssetManager.h; path = OnlinePaymentsSDK/OPAssetManager.h; sourceTree = "<group>"; };
+		EF61AA28E525674AE92FF87F771EB47C /* OPDisplayElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPDisplayElement.h; path = OnlinePaymentsSDK/OPDisplayElement.h; sourceTree = "<group>"; };
+		F03279EF8A1FA250B2897E5E9B6672DF /* OPAccountsOnFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPAccountsOnFile.h; path = OnlinePaymentsSDK/OPAccountsOnFile.h; sourceTree = "<group>"; };
+		F194D483F9B5E163D20C2B1C82E7BAE4 /* OPValidationErrorFixedList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPValidationErrorFixedList.m; path = OnlinePaymentsSDK/OPValidationErrorFixedList.m; sourceTree = "<group>"; };
+		F2433DB9EE0961C9B1DE5AB9F6EB64B5 /* OPValidatorIBAN.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidatorIBAN.h; path = OnlinePaymentsSDK/OPValidatorIBAN.h; sourceTree = "<group>"; };
+		F5D4077DAE168B0F3DCC78108241BDDE /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		F63CA3853F6001E0C90CFDE9D1B76E85 /* OPPaymentProduct.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OPPaymentProduct.m; path = OnlinePaymentsSDK/OPPaymentProduct.m; sourceTree = "<group>"; };
+		F88CD7DCBB1F0EE77DA4D5EBCBA605B0 /* OPValidatorRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidatorRange.h; path = OnlinePaymentsSDK/OPValidatorRange.h; sourceTree = "<group>"; };
+		F8DCB7F4438B3D71527A143441623F53 /* OPNetworkingActivityLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPNetworkingActivityLoggerProtocol.h; path = OnlinePaymentsSDK/OPNetworkingActivityLoggerProtocol.h; sourceTree = "<group>"; };
+		F960977C96BF0F408B533B50032837BF /* OPValidationErrorExpirationDate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OPValidationErrorExpirationDate.h; path = OnlinePaymentsSDK/OPValidationErrorExpirationDate.h; sourceTree = "<group>"; };
+		FA8346916902987EE867C84B8D3C4FF3 /* Pods-OnlinePaymentsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OnlinePaymentsExample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F67B90A8320FDFF8D825495D4ABAEC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A15D63B5DD2E17603A3F474F6976AFB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D165930FADA1C5C7B2805C24FD6E4F16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F95DF6F617F5AA65FA55EA9DE87C7DFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		038F456DB83F4E8682A60F851ADEE417 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9AA9D286E6C9A352B19AEE9D628C7652 /* OnlinePaymentsSDK-dummy.m */,
+				EC046749A4E1BEB40154B40FBDCD91C7 /* OnlinePaymentsSDK-prefix.pch */,
+				32BEB15FF5B1B4B302275A45D141059A /* OnlinePaymentsSDK.debug.xcconfig */,
+				5A0B30DFB76783729FFEE558B18F99D4 /* OnlinePaymentsSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../direct-sdk-client-objc-example/Pods/Target Support Files/OnlinePaymentsSDK";
+			sourceTree = "<group>";
+		};
+		1463BB1C6CCD9BDD6F11C8B848BC50B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01F348E7E1647059E33948DA9E5B0EE1 /* OnlinePaymentsSDK */,
+				7C01B97EDF1DCD43025AFBA03724A021 /* Pods-OnlinePaymentsExample */,
+				AD79EF67E9F3072EADBFAC892131307D /* Pods-OnlinePaymentsExampleTests */,
+				E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2413B8818E4218C9AB4668416776DD23 /* Pods-OnlinePaymentsExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				AACD44DCF6CFB5C9233653278A732941 /* Pods-OnlinePaymentsExampleTests-acknowledgements.markdown */,
+				2DB0C008455E3037148DB4CA4EAAC126 /* Pods-OnlinePaymentsExampleTests-acknowledgements.plist */,
+				C9541A7481D3F6CEBA9C1867CCD8504A /* Pods-OnlinePaymentsExampleTests-dummy.m */,
+				7D881E6F5A8065ABCBDE9BCFADA79425 /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */,
+				D846F1916C30A264132FF2755686D93E /* Pods-OnlinePaymentsExampleTests.release.xcconfig */,
+			);
+			name = "Pods-OnlinePaymentsExampleTests";
+			path = "Target Support Files/Pods-OnlinePaymentsExampleTests";
+			sourceTree = "<group>";
+		};
+		34962C8E4058794732D7CDC79DA73B14 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C233E4D07AE4B1D75EE37B2A3DCDFB40 /* LICENSE.txt */,
+				9031D62CF8C12447D6AB50110A950185 /* OnlinePaymentsSDK.podspec */,
+				DE9287F3CB57BB97750CA9FBA7BD25F6 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		84BE1280FF7A2B14CC923D86146AD7BB /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A8C974CD92FA5AE637BAB8BB853C132 /* OnlinePaymentsSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8A8C974CD92FA5AE637BAB8BB853C132 /* OnlinePaymentsSDK */ = {
+			isa = PBXGroup;
+			children = (
+				184747D229C6E408B71BE7E80B247630 /* OnlinePaymentsSDK.bundle */,
+				456D751412ECFA8DED83DA6B669ACCE6 /* OnlinePaymentsSDK.h */,
+				7D974260767009E137B6FBEE80717B81 /* OPAccountOnFile.h */,
+				B3AF2AC7B64FD099FFA36C870E228CB0 /* OPAccountOnFile.m */,
+				0D82645C2966EF87E5EFBA62EAF17D80 /* OPAccountOnFileAttribute.h */,
+				BFC9219D33B167042734A95A6B9C24A0 /* OPAccountOnFileAttribute.m */,
+				1FA95551545C598B09C8FF241F900B84 /* OPAccountOnFileAttributes.h */,
+				250DCC1F67F7E8466C529CE73AAB2AA4 /* OPAccountOnFileAttributes.m */,
+				74174385D19A8CA31F919E94643CAF3C /* OPAccountOnFileAttributeStatus.h */,
+				3C4EB7308DD11FB2B1261AD02C307001 /* OPAccountOnFileDisplayHints.h */,
+				3BD7C0528766A4B33D458B46DD66A563 /* OPAccountOnFileDisplayHints.m */,
+				F03279EF8A1FA250B2897E5E9B6672DF /* OPAccountsOnFile.h */,
+				A4870E9C4012FC38321C9FFB0D8EF896 /* OPAccountsOnFile.m */,
+				350AD68065F477F9F5E193F3D848E0E1 /* OPAFNetworkingWrapper.h */,
+				2B596ED24D671DE8C521C0C0CAEBD1A3 /* OPAFNetworkingWrapper.m */,
+				EF491C7A981EBFB7AA2B3FBD92875B20 /* OPAssetManager.h */,
+				02FF8F5EF1A119F9FB8F4A6277008693 /* OPAssetManager.m */,
+				BEAD18CE59F7404DF9BCD56612F1DDEB /* OPBase64.h */,
+				D0EA6AE28912A04DB15D710A2CD51C6C /* OPBase64.m */,
+				6B2DA821CAB52FB9BDA653D5B6762901 /* OPBasicPaymentItem.h */,
+				7FA5D871CCFB5779525F4C7246A51368 /* OPBasicPaymentItemConverter.h */,
+				168E800A2F270985934C4B1693D13927 /* OPBasicPaymentItemConverter.m */,
+				AFE95F401F13BA26AF9E6F65934D49B0 /* OPBasicPaymentProduct.h */,
+				06BC6CEDA3A2C677B548E8961C2488FE /* OPBasicPaymentProduct.m */,
+				67435EF01D4F844CA3E66FF1C9F49FB7 /* OPBasicPaymentProductConverter.h */,
+				4B236A0CF5BB10B8661822E6BCE4DABF /* OPBasicPaymentProductConverter.m */,
+				EC353943F2AC2F582383A826E183174E /* OPBasicPaymentProductGroup.h */,
+				84FE3DFD60E7E104B912AE2A00BE79C3 /* OPBasicPaymentProductGroup.m */,
+				0C7AC157D6B88B3CDF1B873E84CFC516 /* OPBasicPaymentProductGroups.h */,
+				160F291D1CAEB38CD644401FF2E0434E /* OPBasicPaymentProductGroups.m */,
+				1B6F155D6DC4EE3F571D2FA6A11657E1 /* OPBasicPaymentProducts.h */,
+				D8294056D97324A31B01097DAA72AC9F /* OPBasicPaymentProducts.m */,
+				2C6F6FD0D16B48B410B4D9643F2B0E2A /* OPBasicPaymentProductsConverter.h */,
+				1EDD389DD39EF021C10737A7A9B715CF /* OPBasicPaymentProductsConverter.m */,
+				EDB0B193036AAC0667189847E57C1FA2 /* OPC2SCommunicator.h */,
+				5E9828BD47C38E796AD16C32FC1A3085 /* OPC2SCommunicator.m */,
+				0ADC3CAEF9DEB17C4CED611D79E780AA /* OPC2SCommunicatorConfiguration.h */,
+				627716FA4239DF0C51688BB8C9AE398B /* OPC2SCommunicatorConfiguration.m */,
+				D80FF1A869F05F5356F71D2F5D95BAE4 /* OPDataRestrictions.h */,
+				C1A4C5BA7422EEBEF141B62423DFF2EC /* OPDataRestrictions.m */,
+				EF61AA28E525674AE92FF87F771EB47C /* OPDisplayElement.h */,
+				E9619D4BC18F2FD4A815A77560B9EE6A /* OPDisplayElement.m */,
+				E62EEF0FDC9706AB535B8897BF31040E /* OPDisplayElementsConverter.h */,
+				3DAC3FB4078816DB37BCC5C7FA16BEDF /* OPDisplayElementsConverter.m */,
+				160ABE7395DB3EF54AB6FC66A08E007A /* OPDisplayElementType.h */,
+				0FE9DE7042E19A116B3FD74A554DDB31 /* OPEncryptor.h */,
+				2B35665648946CC0D74F50D2FC5A2495 /* OPEncryptor.m */,
+				952D0C034A75EA27398730363281B2FC /* OPFormElement.h */,
+				175219C0579641F5BFBD37ECC55D5276 /* OPFormElement.m */,
+				27436F30A57F98B6A60B418CDDAA6862 /* OPFormElementType.h */,
+				A5FBBEDBA98212045F311DE34630D80C /* OPIINDetail.h */,
+				A7779F98473F82CA5E9E454CFECB9369 /* OPIINDetail.m */,
+				E2CE9AB51EDBD308C1937519E7372881 /* OPIINDetailsResponse.h */,
+				7466D3E8C6CAE399BEEE428A8CA99B3E /* OPIINDetailsResponse.m */,
+				78EA3ECF637FC0C49693E1E4E2F17635 /* OPIINDetailsResponseConverter.h */,
+				884FB26A5713FD02E18FF8F502C71F2B /* OPIINDetailsResponseConverter.m */,
+				E8C9CF0FA8E267DBAE6A2B5C089615D6 /* OPIINStatus.h */,
+				8C2C3763A746AF270156E4BD78B46F8A /* OPJOSEEncryptor.h */,
+				49FD850BA82F610E96484895D3A15BD5 /* OPJOSEEncryptor.m */,
+				B1992FF1019F459E4195C56A013F5D49 /* OPJSON.h */,
+				5DE5A9E9E4D9D1824D36FCC48E0A4590 /* OPJSON.m */,
+				8D4B7272E64F8FA67DCD2E56A1943FC0 /* OPLabelTemplate.h */,
+				6CF7A132A4C62DC031EC2D2007F57DB5 /* OPLabelTemplate.m */,
+				D036CD0A33B6E399A43186B78A87A388 /* OPLabelTemplateItem.h */,
+				4BBD4DE473875ED63F0C5CED4A01365B /* OPLabelTemplateItem.m */,
+				2AEBAE9E5F9D4B2FF91D4F5CB7715D9E /* OPMacros.h */,
+				2910F1A5E1A4BE5FB6803B75318A2A5D /* OPNetworkingActivityConsoleLogger.h */,
+				DCCE2CB20290CEC9FF02E4D2424E47BD /* OPNetworkingActivityConsoleLogger.m */,
+				E920B6FF0B873962EB3520D0D043DEB2 /* OPNetworkingActivityLogger.h */,
+				0DB46FBDBBA17B725C65AA10B7778349 /* OPNetworkingActivityLogger.m */,
+				F8DCB7F4438B3D71527A143441623F53 /* OPNetworkingActivityLoggerProtocol.h */,
+				DA08B7C50DF02A822410A647D4E845C8 /* OPNetworkingWrapper.h */,
+				3B7C4334C3A7EA9B673DBDDEC304AB80 /* OPNetworkingWrapper.m */,
+				B0E47DC9A1E1F145ECBC475B7AABEC6B /* OPPaymentAmountOfMoney.h */,
+				D91993C7673BDC68E1C35F2DEEDFF647 /* OPPaymentAmountOfMoney.m */,
+				B84CD1DDC197C0A4CC74A7992A4D89DD /* OPPaymentContext.h */,
+				2570F6BEC00BC983C913B594095FA1D3 /* OPPaymentContext.m */,
+				5F1A8B380BE7D7DE861CA5485586B583 /* OPPaymentContextConverter.h */,
+				CDBE7E023E80723ABA12F82BE926BC4D /* OPPaymentContextConverter.m */,
+				B05E3A09DD1589A78668D3CC028DBB02 /* OPPaymentItem.h */,
+				673B0B08BFFCE120BBC0CD7BB4238F87 /* OPPaymentItemConverter.h */,
+				781081601214836BC9141C4B4DE4A0F4 /* OPPaymentItemConverter.m */,
+				5AFA00B691ED6198C4F853BD90718DC6 /* OPPaymentItemDisplayHints.h */,
+				14E692836540A9398F67A3DAD652FF4B /* OPPaymentItemDisplayHints.m */,
+				130B0AD17CDC0B30D35EF282E7C63AE9 /* OPPaymentItems.h */,
+				143B485282DB33E8B1FD3C84F5FE2562 /* OPPaymentItems.m */,
+				4A6389EE8875D0856F9B23488736ADAD /* OPPaymentProduct.h */,
+				F63CA3853F6001E0C90CFDE9D1B76E85 /* OPPaymentProduct.m */,
+				7DCC3882F3200B378C60FDD0FD118F8F /* OPPaymentProduct302SpecificData.h */,
+				3E0D69E30521B3E47F91295E924FD2AB /* OPPaymentProduct302SpecificData.m */,
+				73169D783A8D7485FFFB8EFEEAD1FC18 /* OPPaymentProductConverter.h */,
+				AFB2CA13C95CCAA1A03DC4655B4CC933 /* OPPaymentProductConverter.m */,
+				38CD575C08D3FA0BB6A80F02F96945F0 /* OPPaymentProductField.h */,
+				DCAB142C19DA73FEDE855F974BCA1C95 /* OPPaymentProductField.m */,
+				2C8C149A8C264DD0A06E0FF05FB11C1F /* OPPaymentProductFieldDisplayHints.h */,
+				EB64F5484CC12649173C0362C5E796C9 /* OPPaymentProductFieldDisplayHints.m */,
+				CC0EF10A6D0DC26C3086F8082DBFBE1F /* OPPaymentProductFields.h */,
+				152BD21CA3A3087E37589ED68BD3610D /* OPPaymentProductFields.m */,
+				5B7083D90BBA7880D37105232A2B87C0 /* OPPaymentProductGroup.h */,
+				EDD20CBB112EE369818D88052CCBABDC /* OPPaymentProductGroup.m */,
+				54C05AD2CDB6418101B52F63AF224364 /* OPPaymentProductNetworks.h */,
+				300A7BA7612F8520D8A9272DCBAF2604 /* OPPaymentProductNetworks.m */,
+				4DB88D37533DA8CCB1480DE2CEA1DC05 /* OPPaymentRequest.h */,
+				2DF4C888A4DF36F9BD469D1652560F12 /* OPPaymentRequest.m */,
+				6B26B83B54AD6FD3E9FE0EAD7518362B /* OPPreferredInputType.h */,
+				06A8C816B7F5CDA5B2C691CAF7EAAFB7 /* OPPreparedPaymentRequest.h */,
+				B076F108B5DFEAB3B96C514472472E07 /* OPPreparedPaymentRequest.m */,
+				3E8F72E7E0CC77060AD9741D3FD21CE5 /* OPPublicKeyResponse.h */,
+				DA9A5D553B84B670DACE36629FA861A5 /* OPPublicKeyResponse.m */,
+				5E61CD5AA8AA509FBAE9F9577668689D /* OPSDKConstants.h */,
+				5EA3C4849061FE13B0401976FB35B6EA /* OPSession.h */,
+				0544E16E3AEE3AA669800A272128B04E /* OPSession.m */,
+				EDD685AFBCEDC93D8AFB64CC26DEF709 /* OPStringFormatter.h */,
+				5C417B2A39D694DE5FFC0003B2D4191F /* OPStringFormatter.m */,
+				2C86417EACDF207F1AA8E1154839CA0F /* OPToolTip.h */,
+				1CD3E1713BA6D44926BF3B0081DB09AF /* OPToolTip.m */,
+				9E0C2299BB9F70080992522B0F89B1E3 /* OPType.h */,
+				E825E7D423DBDF38B4464882A99A56B9 /* OPUtil.h */,
+				5FFEC9BB44D88F5F4AEABD6D9D75679B /* OPUtil.m */,
+				739810E90D002892F7152240C1A4B455 /* OPValidationError.h */,
+				7546B17EFA8B8B391F7FE9325B52BA30 /* OPValidationError.m */,
+				20DE31800C382894C345D27F99E06F49 /* OPValidationErrorAllowed.h */,
+				6559AC5F0DABCF61AEF37EF674B1638F /* OPValidationErrorAllowed.m */,
+				E0B64A407ED84370D2A72605422DCAEE /* OPValidationErrorEmailAddress.h */,
+				77F8B109F55ABE42809ECF5A93F661DC /* OPValidationErrorEmailAddress.m */,
+				F960977C96BF0F408B533B50032837BF /* OPValidationErrorExpirationDate.h */,
+				45B5F21D53160B8BDF6AB270C27587E2 /* OPValidationErrorExpirationDate.m */,
+				701A18BF6C49F165BF02E754435A8771 /* OPValidationErrorFixedList.h */,
+				F194D483F9B5E163D20C2B1C82E7BAE4 /* OPValidationErrorFixedList.m */,
+				3988E794770B5D4B864A44BE596D8B0E /* OPValidationErrorIBAN.h */,
+				41862FEA9FBB409DD90DAF150F240C84 /* OPValidationErrorIBAN.m */,
+				5442F7BBD9BAC4C2A670B02BDE56F9A1 /* OPValidationErrorInteger.h */,
+				949085BB0B3B59CE47B276B378D88CEA /* OPValidationErrorInteger.m */,
+				77C5E2635982D364558D2B12D7A9FC3F /* OPValidationErrorIsRequired.h */,
+				EA4C61748F9455B764EAAA74C94F74A6 /* OPValidationErrorIsRequired.m */,
+				402AE88183B89A1A971DDFB8CA245499 /* OPValidationErrorLength.h */,
+				3790AEAB1EBFD1BF0244785B5549A17A /* OPValidationErrorLength.m */,
+				A56F4C43FCC99677B372FE7BDA3B4BC0 /* OPValidationErrorLuhn.h */,
+				25CE245D07DCC6C3B4EAD131FC8D025B /* OPValidationErrorLuhn.m */,
+				9565661B946968B26A6607449D4D2BCE /* OPValidationErrorNumericString.h */,
+				7D755391B61016FD4E1B92BD6127ADDE /* OPValidationErrorNumericString.m */,
+				5DCF9E4D1E96433CA0CD650FD2B40425 /* OPValidationErrorRange.h */,
+				D68213067D625F0F8A824B9E05935307 /* OPValidationErrorRange.m */,
+				B53DBE0A3EB0DBB38DF4CCE9B8D98581 /* OPValidationErrorRegularExpression.h */,
+				6618FFCD103B4328E705A01CC7EB9991 /* OPValidationErrorRegularExpression.m */,
+				A6123C3E3757A3C4CEB6CDC60F753171 /* OPValidationErrorTermsAndConditions.h */,
+				D9169653C9DE3B78F2B46379E16A135D /* OPValidationErrorTermsAndConditions.m */,
+				126D2E4832AFD94C4B9EDD7FAE3E3AC7 /* OPValidator.h */,
+				32D5BD0F52199D199593C2BAB6D2A968 /* OPValidator.m */,
+				09CA7919FF64428BB7D4130D9DE2CB92 /* OPValidatorEmailAddress.h */,
+				B0294AC4F20BAEA14E1500D0B5C01BFF /* OPValidatorEmailAddress.m */,
+				C173DF300D0B7ECF707E577CC78A05D9 /* OPValidatorExpirationDate.h */,
+				EC9D45B822EA1FC3507F233A79DD6B4D /* OPValidatorExpirationDate.m */,
+				B7996BBC3C004AE7222582ADDC9D349A /* OPValidatorFixedList.h */,
+				A23518B23B7B444C1E6586D01B051581 /* OPValidatorFixedList.m */,
+				F2433DB9EE0961C9B1DE5AB9F6EB64B5 /* OPValidatorIBAN.h */,
+				349F19BBEAEF762BF51EBC0A6AD92D81 /* OPValidatorIBAN.m */,
+				307F6E3CFC4CA59AECE25A6F2A8165EC /* OPValidatorLength.h */,
+				A2B95C90CFE1458BE99C25A6836E13D1 /* OPValidatorLength.m */,
+				9D92953A61806F4990EF93F8F0E49FEA /* OPValidatorLuhn.h */,
+				61AEF2DBD675AB3E450225C9A3E879E0 /* OPValidatorLuhn.m */,
+				F88CD7DCBB1F0EE77DA4D5EBCBA605B0 /* OPValidatorRange.h */,
+				0B69C45F6915722CE219B4814CB584B4 /* OPValidatorRange.m */,
+				05896DD1A14FEC32C0E6855073BD5C25 /* OPValidatorRegularExpression.h */,
+				6B3A32F3868E7E847E127886EEBDA0FF /* OPValidatorRegularExpression.m */,
+				CF9ADA16991A58D121BD0E30A38C93B2 /* OPValidators.h */,
+				326F0B6F1CFB4CBDBEAF34E0E4D7EC95 /* OPValidators.m */,
+				6B17BA9799C8187DD50950FB758D0C6F /* OPValidatorTermsAndConditions.h */,
+				0A7933252A5A90E65E9E4FCEE2FBEF00 /* OPValidatorTermsAndConditions.m */,
+				289902786B2C9D8560F7075534C5DA90 /* OPValueMappingItem.h */,
+				1B52B3668BA580696BE5383382657A92 /* OPValueMappingItem.m */,
+				34962C8E4058794732D7CDC79DA73B14 /* Pod */,
+				038F456DB83F4E8682A60F851ADEE417 /* Support Files */,
+			);
+			name = OnlinePaymentsSDK;
+			path = "../../direct-sdk-client-objc";
+			sourceTree = "<group>";
+		};
+		9EFE7BB1AF14C049D532052948B0F89A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B25A7A0E39C86D9EDCBCE8AA0E89C163 /* SVProgressHUD-dummy.m */,
+				6ADE0B7482788DCE82A72B26D6DD8289 /* SVProgressHUD-prefix.pch */,
+				A3A6028492814CECEB0B30617BF3D15F /* SVProgressHUD.debug.xcconfig */,
+				E66C685D15858D18AEB754F2EF98E536 /* SVProgressHUD.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SVProgressHUD";
+			sourceTree = "<group>";
+		};
+		C167899327BEF57044BCEE9BA305B51A /* Pods-OnlinePaymentsExample */ = {
+			isa = PBXGroup;
+			children = (
+				BE81BDF3E46EBE354A6C609AB084D692 /* Pods-OnlinePaymentsExample-acknowledgements.markdown */,
+				4383A958C32AFE5E7080236B192A6B41 /* Pods-OnlinePaymentsExample-acknowledgements.plist */,
+				D9D5D0E3DC74243F48C9D73BAF69A048 /* Pods-OnlinePaymentsExample-dummy.m */,
+				7FA3355A636FA9050EFA9DCA7F41BB26 /* Pods-OnlinePaymentsExample-resources.sh */,
+				AD875C9656733F61767E075C387F1D6D /* Pods-OnlinePaymentsExample.debug.xcconfig */,
+				FA8346916902987EE867C84B8D3C4FF3 /* Pods-OnlinePaymentsExample.release.xcconfig */,
+			);
+			name = "Pods-OnlinePaymentsExample";
+			path = "Target Support Files/Pods-OnlinePaymentsExample";
+			sourceTree = "<group>";
+		};
+		CBB7E12DC312A555D5A0FE0E0109E614 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C167899327BEF57044BCEE9BA305B51A /* Pods-OnlinePaymentsExample */,
+				2413B8818E4218C9AB4668416776DD23 /* Pods-OnlinePaymentsExampleTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				84BE1280FF7A2B14CC923D86146AD7BB /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				D0F28EFC8C9E325880381D586C3CA919 /* Pods */,
+				1463BB1C6CCD9BDD6F11C8B848BC50B7 /* Products */,
+				CBB7E12DC312A555D5A0FE0E0109E614 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D0F28EFC8C9E325880381D586C3CA919 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1EFD614676ED60DFF5205A5D3D716C5 /* SVProgressHUD */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D1EFD614676ED60DFF5205A5D3D716C5 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B47C61C9A7B76894B8FD4177D13562E0 /* SVIndefiniteAnimatedView.h */,
+				E53F251231306653704A5432E1D79259 /* SVIndefiniteAnimatedView.m */,
+				CD78FAA4F57E4C8A356C5A23246A495F /* SVProgressAnimatedView.h */,
+				4EE45DF297826AF09B98160F77E7639F /* SVProgressAnimatedView.m */,
+				F5D4077DAE168B0F3DCC78108241BDDE /* SVProgressHUD.h */,
+				193380CF0DDFFC1DA4C26DD68A3E5B7D /* SVProgressHUD.m */,
+				BFBF861E3EEF28F7A1F76543EF1A3BD2 /* SVRadialGradientLayer.h */,
+				EBE9EF848C5F146820F90EAD2AF276B7 /* SVRadialGradientLayer.m */,
+				D223C222CF4942FBB1C779E2FEA5F07F /* Resources */,
+				9EFE7BB1AF14C049D532052948B0F89A /* Support Files */,
+			);
+			name = SVProgressHUD;
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		D223C222CF4942FBB1C779E2FEA5F07F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8399026905C187E07993DCBE54A983C7 /* SVProgressHUD.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		861FDC6B4C9C0AD39AF2BEF45123A959 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87D8C5BA2B3212CABAE8587818D1C2BB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE1C22F1C30390AB8456D300EE853B7 /* SVIndefiniteAnimatedView.h in Headers */,
+				023A31F09752D35AF7D32E70DCAAD213 /* SVProgressAnimatedView.h in Headers */,
+				068D3243185C7989D7C52BE14E8C5771 /* SVProgressHUD.h in Headers */,
+				5C1AF20AE64512E795A325C0AA7B3330 /* SVRadialGradientLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B49C6E8D9675024E141C7740F9B8CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C43CAE6C9CFF1788E68CF57873C4EBE9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B147ADCA4F1CE4C78F24B2B4F2FA7A16 /* OnlinePaymentsSDK.h in Headers */,
+				23CBFA64FD8C1B691E6B904CEF375E98 /* OPAccountOnFile.h in Headers */,
+				71B8C194D02415CB3143E759ACDF0BEF /* OPAccountOnFileAttribute.h in Headers */,
+				CA0DA335FC68987E628E7E1EEA032CED /* OPAccountOnFileAttributes.h in Headers */,
+				0CE5687BEC64F59A4D5EAB813723B0B2 /* OPAccountOnFileAttributeStatus.h in Headers */,
+				CD9B76EA437A647A6C968A7C16E834E0 /* OPAccountOnFileDisplayHints.h in Headers */,
+				AF68177CDA447AF74624906FC9644E08 /* OPAccountsOnFile.h in Headers */,
+				E01B3BECA0D3718FCE384E86B71CD14D /* OPAFNetworkingWrapper.h in Headers */,
+				4C7CF6E91756EED36E619112AE7A8F4D /* OPAssetManager.h in Headers */,
+				B4EB118E0C2B45EA228E2A23E29ADB7A /* OPBase64.h in Headers */,
+				E5FF1CF30766ABF6020AF12BBC69A46B /* OPBasicPaymentItem.h in Headers */,
+				C4984B0CA3588CCC169C4B26F661990E /* OPBasicPaymentItemConverter.h in Headers */,
+				8A8142BA8277477C5723AF5067A36728 /* OPBasicPaymentProduct.h in Headers */,
+				F1D224FB6FF432A031347E947C40CEB6 /* OPBasicPaymentProductConverter.h in Headers */,
+				5873ABA3CD69B641D6F9998399FDFE61 /* OPBasicPaymentProductGroup.h in Headers */,
+				A8B243630F1CB24A28408C6FE65C2409 /* OPBasicPaymentProductGroups.h in Headers */,
+				8937AF93ED171F8F570E0F7C69EE1222 /* OPBasicPaymentProducts.h in Headers */,
+				99D72AC647B4C8444602CF2D2E493C72 /* OPBasicPaymentProductsConverter.h in Headers */,
+				82B543F8FB87A755F340C70DEAFCC8C6 /* OPC2SCommunicator.h in Headers */,
+				3849520EDED2344EA136A4DFACEAA7CD /* OPC2SCommunicatorConfiguration.h in Headers */,
+				8E0FAEB64EE4A08D04BDE79EC0C4DD85 /* OPDataRestrictions.h in Headers */,
+				C38BD1A57E6DF56D7054862FA40FB3D5 /* OPDisplayElement.h in Headers */,
+				53A131399DCE3E3705F3BA6677B656E3 /* OPDisplayElementsConverter.h in Headers */,
+				082EB85EFA3F6E604BB0013955DF8E8E /* OPDisplayElementType.h in Headers */,
+				02AF7B0AC2639064BB414496BF840B45 /* OPEncryptor.h in Headers */,
+				6ABE9EE728ADDA03E5D3913AC836502D /* OPFormElement.h in Headers */,
+				48F9209F0B1F828DA4E5AF382FEB8EC7 /* OPFormElementType.h in Headers */,
+				E56E7823A8E5590D1F2E61734E76A701 /* OPIINDetail.h in Headers */,
+				A20F5E6CD9F27ECEC451078631E5AFB4 /* OPIINDetailsResponse.h in Headers */,
+				D05C6EC1893A4E47AA09467618FEE33E /* OPIINDetailsResponseConverter.h in Headers */,
+				187B507319E09F0EA375EA5C0A45439E /* OPIINStatus.h in Headers */,
+				6F2E214AF5AA737D8EF04AC8479169C0 /* OPJOSEEncryptor.h in Headers */,
+				52D74F792F6FF1D05716174FD461D96E /* OPJSON.h in Headers */,
+				91BE1F9BEA8D0A906B170D67EF8D09BE /* OPLabelTemplate.h in Headers */,
+				FAC1CFAC9AFBEEA98FFE8DF81650EE74 /* OPLabelTemplateItem.h in Headers */,
+				4142B0A1F87C73D0921D06025B78558E /* OPMacros.h in Headers */,
+				D5377B972EA03E8372D026D1C676D066 /* OPNetworkingActivityConsoleLogger.h in Headers */,
+				7D5B76108CB7FB11C6190E82781B5946 /* OPNetworkingActivityLogger.h in Headers */,
+				CA681CA44FDD39CDA72E5BF1490E257E /* OPNetworkingActivityLoggerProtocol.h in Headers */,
+				2BB07984961EBADE9B5DDB11FE7260D3 /* OPNetworkingWrapper.h in Headers */,
+				81FC41D3A7DCD25FE69513563863A198 /* OPPaymentAmountOfMoney.h in Headers */,
+				8D7D28792ABD558FA2566CA9E0DFD6B9 /* OPPaymentContext.h in Headers */,
+				0BC51CB23E4B262791E8935D69E8F15E /* OPPaymentContextConverter.h in Headers */,
+				9AC25AA7E516E1D9F0C9028B4617CE54 /* OPPaymentItem.h in Headers */,
+				B4D1DF37FF767178752A1BC7069DCB35 /* OPPaymentItemConverter.h in Headers */,
+				931256958249FCBDDBBFAD8895C55B92 /* OPPaymentItemDisplayHints.h in Headers */,
+				5940B21E0AA7D72C02E68E947D2E51D5 /* OPPaymentItems.h in Headers */,
+				4CD0AD2A76AE674AEE85F17A1B912C6E /* OPPaymentProduct.h in Headers */,
+				B2F44A84F5DAFAEDD7FA91F7E076A574 /* OPPaymentProduct302SpecificData.h in Headers */,
+				6859BBD0B30F76F60FEC12D77B1159BF /* OPPaymentProductConverter.h in Headers */,
+				5CB2D03E757355817B07929327ADD3F1 /* OPPaymentProductField.h in Headers */,
+				F12AD1EC6910D8F088C71F3DC148A8DE /* OPPaymentProductFieldDisplayHints.h in Headers */,
+				262EF617346C027A185C16B1B6072587 /* OPPaymentProductFields.h in Headers */,
+				6528C11B757126D6A19E91CA946C3704 /* OPPaymentProductGroup.h in Headers */,
+				76044B01ABDEFCD073E1D7E19800F2A4 /* OPPaymentProductNetworks.h in Headers */,
+				432AA0FE137CE1B82FA332991FDAAEE6 /* OPPaymentRequest.h in Headers */,
+				5B2AA272032E5B4673E7EB15FF0D3087 /* OPPreferredInputType.h in Headers */,
+				AE84E28AA68212A7031ED1C92A17CB51 /* OPPreparedPaymentRequest.h in Headers */,
+				1AFFB228F734F03DB13AE7EB5730A151 /* OPPublicKeyResponse.h in Headers */,
+				4C2C9B967ECBA11C256CE04A04E20206 /* OPSDKConstants.h in Headers */,
+				776018F70DD8D306B0CA2BF83E523223 /* OPSession.h in Headers */,
+				1078DF7C5E27545967D53D0CD3C13F1F /* OPStringFormatter.h in Headers */,
+				4107050031821CDF9D1DF1F42795D8FE /* OPToolTip.h in Headers */,
+				BB1BFD65690B75A29A15471BAB336310 /* OPType.h in Headers */,
+				DECDF2B1B423C3C860C0FB0BDDD0C487 /* OPUtil.h in Headers */,
+				E215A9BAE48BA366DC57D37121CA0D6A /* OPValidationError.h in Headers */,
+				9C62D64CD34B4CC97ADE3AE8663D352B /* OPValidationErrorAllowed.h in Headers */,
+				543D2C891E06795723DA51F004EAA918 /* OPValidationErrorEmailAddress.h in Headers */,
+				5C92279F6E486547EB488BE5AE4FECDD /* OPValidationErrorExpirationDate.h in Headers */,
+				0A786D4100B2F17C712B35C257A5F018 /* OPValidationErrorFixedList.h in Headers */,
+				27E57A80A491C6955B6F7DE075B46967 /* OPValidationErrorIBAN.h in Headers */,
+				C7CB0869BFA6917AAF23949C6CD7F378 /* OPValidationErrorInteger.h in Headers */,
+				80CA4E18C8A298AFF0D108117D1DC903 /* OPValidationErrorIsRequired.h in Headers */,
+				57CB73B2D5E4C61744E2FDEC9F3CCD7F /* OPValidationErrorLength.h in Headers */,
+				1322986313CF81D7862E423A83B20AF2 /* OPValidationErrorLuhn.h in Headers */,
+				357A7D3E1ED8CE8FE78ACBF7B0AAC277 /* OPValidationErrorNumericString.h in Headers */,
+				26BC8F19DB81466A2876430245A39D30 /* OPValidationErrorRange.h in Headers */,
+				146D4B96AF41EA653E05C8B1819CE4DC /* OPValidationErrorRegularExpression.h in Headers */,
+				1189B5CD7755CE5CCB56AAC49B0F0B5A /* OPValidationErrorTermsAndConditions.h in Headers */,
+				70D9C67CF569EEA1B7BE2D1728B33C10 /* OPValidator.h in Headers */,
+				58057F16FDA93E0DE77C968BE4032113 /* OPValidatorEmailAddress.h in Headers */,
+				9DBD2D1995B982E7A0A503A23953D459 /* OPValidatorExpirationDate.h in Headers */,
+				8C8BCBF9A8BE48D486AD11E334364D22 /* OPValidatorFixedList.h in Headers */,
+				0C24DC8C4A4E051C7144594A7115DE9E /* OPValidatorIBAN.h in Headers */,
+				FDA05AEF61C5E5DF9378009E6DEA44D2 /* OPValidatorLength.h in Headers */,
+				68550F09E28EB90EFD48FB4B7B2AFFB0 /* OPValidatorLuhn.h in Headers */,
+				AF25A55158E708DC46460E4AACF7CE0E /* OPValidatorRange.h in Headers */,
+				7F96F7DFD11A08D59A2333CA7482A866 /* OPValidatorRegularExpression.h in Headers */,
+				D5D101B485AAB093072D05935179BB24 /* OPValidators.h in Headers */,
+				87503E14C4ED166DFDD1B5C46DB8A08A /* OPValidatorTermsAndConditions.h in Headers */,
+				4FC4ABD8FCF18A3EDB0E8D1EF63B125F /* OPValueMappingItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0502255A3F9F35BF44C01F9F5F4D4AB6 /* Pods-OnlinePaymentsExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4708C60E03A9787F0D644523D23BBF56 /* Build configuration list for PBXNativeTarget "Pods-OnlinePaymentsExampleTests" */;
+			buildPhases = (
+				861FDC6B4C9C0AD39AF2BEF45123A959 /* Headers */,
+				354C2FC055E7A8B8D7FC2F1182148625 /* Sources */,
+				A15D63B5DD2E17603A3F474F6976AFB1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C393B8440A4DE4DA2F3C03FB8EC56BC5 /* PBXTargetDependency */,
+			);
+			name = "Pods-OnlinePaymentsExampleTests";
+			productName = "Pods-OnlinePaymentsExampleTests";
+			productReference = AD79EF67E9F3072EADBFAC892131307D /* Pods-OnlinePaymentsExampleTests */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1C8D67D8B72D6BA42CCEDB648537A340 /* SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DD65BB04DEB1B3A25A8F29564098763 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildPhases = (
+				87D8C5BA2B3212CABAE8587818D1C2BB /* Headers */,
+				E38B00B909C633BC79B159AECEDB7C38 /* Sources */,
+				F95DF6F617F5AA65FA55EA9DE87C7DFD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVProgressHUD;
+			productName = SVProgressHUD;
+			productReference = E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6A2109B4346F0E3EFB49ED962FF518BB /* Pods-OnlinePaymentsExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6FCD1C14455346FAB6D996B499D99B5 /* Build configuration list for PBXNativeTarget "Pods-OnlinePaymentsExample" */;
+			buildPhases = (
+				C1B49C6E8D9675024E141C7740F9B8CC /* Headers */,
+				80CED0BD8F6CF2F069A4F046ED79713B /* Sources */,
+				5F67B90A8320FDFF8D825495D4ABAEC1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A8DE39959016916ABED38AB360264AB /* PBXTargetDependency */,
+				63709913B8C3CEF81682542F36D8CCE0 /* PBXTargetDependency */,
+			);
+			name = "Pods-OnlinePaymentsExample";
+			productName = "Pods-OnlinePaymentsExample";
+			productReference = 7C01B97EDF1DCD43025AFBA03724A021 /* Pods-OnlinePaymentsExample */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F2E7F83847EA4D125E11382BC9036970 /* OnlinePaymentsSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD60FD7840527E2E4A13DEDD2F950EAC /* Build configuration list for PBXNativeTarget "OnlinePaymentsSDK" */;
+			buildPhases = (
+				C43CAE6C9CFF1788E68CF57873C4EBE9 /* Headers */,
+				2B225BF2F87A9A3B5763446E5206AE80 /* Sources */,
+				D165930FADA1C5C7B2805C24FD6E4F16 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnlinePaymentsSDK;
+			productName = OnlinePaymentsSDK;
+			productReference = 01F348E7E1647059E33948DA9E5B0EE1 /* OnlinePaymentsSDK */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 1463BB1C6CCD9BDD6F11C8B848BC50B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2E7F83847EA4D125E11382BC9036970 /* OnlinePaymentsSDK */,
+				6A2109B4346F0E3EFB49ED962FF518BB /* Pods-OnlinePaymentsExample */,
+				0502255A3F9F35BF44C01F9F5F4D4AB6 /* Pods-OnlinePaymentsExampleTests */,
+				1C8D67D8B72D6BA42CCEDB648537A340 /* SVProgressHUD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B225BF2F87A9A3B5763446E5206AE80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88160614213837CE4896D2F8C1F404B5 /* OnlinePaymentsSDK-dummy.m in Sources */,
+				80214A42F4DD37F93BC49261A6EF8090 /* OPAccountOnFile.m in Sources */,
+				6E4761D698B26BC1106174334661016E /* OPAccountOnFileAttribute.m in Sources */,
+				A2B1E65781C322CB7EF748BAC308F54F /* OPAccountOnFileAttributes.m in Sources */,
+				30E611747C57283FFE7DC6AB17694F72 /* OPAccountOnFileDisplayHints.m in Sources */,
+				A712637A17408FC7E9184C6E7382267C /* OPAccountsOnFile.m in Sources */,
+				C2E075890912DDBF4B3C5341B3FCA296 /* OPAFNetworkingWrapper.m in Sources */,
+				E74C7B06657CA680C92B400872303ECA /* OPAssetManager.m in Sources */,
+				FA0106A9885CA60B72DA64E6CF09BEBC /* OPBase64.m in Sources */,
+				EC35C354FF7D6C4B78117C324A0BBCBA /* OPBasicPaymentItemConverter.m in Sources */,
+				71501C1178FEEAA92EEDC555D911F241 /* OPBasicPaymentProduct.m in Sources */,
+				09BC53B79C01737412371AAEDC93F659 /* OPBasicPaymentProductConverter.m in Sources */,
+				6DE80CB80745310683A1611A8A650AAC /* OPBasicPaymentProductGroup.m in Sources */,
+				03BA485BEE655850FB8BA7241BE6DEA8 /* OPBasicPaymentProductGroups.m in Sources */,
+				1979CFE42D429AA476AD6680A3034559 /* OPBasicPaymentProducts.m in Sources */,
+				C96A2504A5313227BEA830C3FA1AABBD /* OPBasicPaymentProductsConverter.m in Sources */,
+				B806374782FB219A4E72F1C323D72CEA /* OPC2SCommunicator.m in Sources */,
+				298E82F4FEFD5F06A0BDE9690EFE8800 /* OPC2SCommunicatorConfiguration.m in Sources */,
+				5994DD13C001AD503DEA64AEE219E12A /* OPDataRestrictions.m in Sources */,
+				52C1E3A1AD44B309A20C8A03920ADA2E /* OPDisplayElement.m in Sources */,
+				4A1EC988A2F8135E64AB95126C00EDDC /* OPDisplayElementsConverter.m in Sources */,
+				8BBCDC560F645066000EF8AB74152C3C /* OPEncryptor.m in Sources */,
+				13B57C144B2830F96F82F59A3D19BB70 /* OPFormElement.m in Sources */,
+				C35321A2673302A53726A2520F48D12E /* OPIINDetail.m in Sources */,
+				CDE54CEB72E0280231ABDF020FEAFAD6 /* OPIINDetailsResponse.m in Sources */,
+				397A4B3D7A0582FEAFB9A01D4AD86D00 /* OPIINDetailsResponseConverter.m in Sources */,
+				65EAE0B8830EC3604919149355005D1B /* OPJOSEEncryptor.m in Sources */,
+				D69903F38A226E2E9B096A851B989905 /* OPJSON.m in Sources */,
+				D3A00E1B712418B5CD5DFAD0FFA0C9F8 /* OPLabelTemplate.m in Sources */,
+				B3C2663C26CFFC4F27AB6FFDB453BBFF /* OPLabelTemplateItem.m in Sources */,
+				4C2530CDFB0EDC141599B1C00F49D435 /* OPNetworkingActivityConsoleLogger.m in Sources */,
+				8260D62273F18FEA02F5FB0EFB7D364B /* OPNetworkingActivityLogger.m in Sources */,
+				662AFD0E83B611707BCACB34DB508E19 /* OPNetworkingWrapper.m in Sources */,
+				D09C42D33F6AC6F25E8E51095BCF05D7 /* OPPaymentAmountOfMoney.m in Sources */,
+				D673268EAADFF0D2FCCFD629692D28DD /* OPPaymentContext.m in Sources */,
+				EF8977986240C3590E58470E1DF66BB1 /* OPPaymentContextConverter.m in Sources */,
+				9E1FFC63A78CC9B76F2E4EC7EEED91CB /* OPPaymentItemConverter.m in Sources */,
+				77BDEAC7AB059285BB98613E1D90295E /* OPPaymentItemDisplayHints.m in Sources */,
+				AE61806A139209E91C880074D84EA7C8 /* OPPaymentItems.m in Sources */,
+				60FA9258DB5F86DE72ED73486A298B53 /* OPPaymentProduct.m in Sources */,
+				27BBFB0214310346A5402A07979F8303 /* OPPaymentProduct302SpecificData.m in Sources */,
+				168C4728BF82F5238D11E83AC1EA58FA /* OPPaymentProductConverter.m in Sources */,
+				E1ED0707D133A6AB5BC856DDE16FF5E0 /* OPPaymentProductField.m in Sources */,
+				189ACC5280120533A56A765DC092E945 /* OPPaymentProductFieldDisplayHints.m in Sources */,
+				F4A08677867729789FE70147EA5F0207 /* OPPaymentProductFields.m in Sources */,
+				812C76C7670036462BDE178C35FB875C /* OPPaymentProductGroup.m in Sources */,
+				3A36ED45ACA0D1A1248468F17E07E45A /* OPPaymentProductNetworks.m in Sources */,
+				69125ACEB2A33DF56A62A8C407BF92CE /* OPPaymentRequest.m in Sources */,
+				22053BBF0F09171303E52213F6754668 /* OPPreparedPaymentRequest.m in Sources */,
+				AE84B81FF74A37E6D0C7E644F96E61E7 /* OPPublicKeyResponse.m in Sources */,
+				19CDCCD17828154CC4604D41EDA1E35F /* OPSession.m in Sources */,
+				A21824C5DB19D429BD0B326089E2B432 /* OPStringFormatter.m in Sources */,
+				64629F34C419F10E410E19D817859C8D /* OPToolTip.m in Sources */,
+				62184AF836C0922183B5BE7276E73E7E /* OPUtil.m in Sources */,
+				B3FB31282E59DC9F923B4F54B8833788 /* OPValidationError.m in Sources */,
+				9F30E1957E81D17C220C5D65D0B26D36 /* OPValidationErrorAllowed.m in Sources */,
+				3FB9D56B4319050CF25E72CA6903647D /* OPValidationErrorEmailAddress.m in Sources */,
+				9D1A608B2B6B7A35185FD1F7DEB52D9C /* OPValidationErrorExpirationDate.m in Sources */,
+				6A8260EB19F82952004A59D6B54D7744 /* OPValidationErrorFixedList.m in Sources */,
+				8F1C1EFFB1EFC4D75A17A4B26B172C13 /* OPValidationErrorIBAN.m in Sources */,
+				AAF5274E42A89BB283353648E2C7888D /* OPValidationErrorInteger.m in Sources */,
+				30B035C6C0044049BDE865365224ACCD /* OPValidationErrorIsRequired.m in Sources */,
+				A95751A764FF7D914B833E7FAE9A56E0 /* OPValidationErrorLength.m in Sources */,
+				4A1E89D51F1765DCB058534690DECE04 /* OPValidationErrorLuhn.m in Sources */,
+				DD2D44E2ABE2109567EB4A1A585F3F3C /* OPValidationErrorNumericString.m in Sources */,
+				349665B9E78F8FAC71BFA9222857740A /* OPValidationErrorRange.m in Sources */,
+				86AFA347308EBAA6991B8967E47F1B7B /* OPValidationErrorRegularExpression.m in Sources */,
+				5AAD431D7DF59861676D84EAFA188A62 /* OPValidationErrorTermsAndConditions.m in Sources */,
+				7C60DB9C9933744B9642F375F80F973C /* OPValidator.m in Sources */,
+				9879FF96294C72BB77117929B69CEAFB /* OPValidatorEmailAddress.m in Sources */,
+				2FDF4A5A0FDE6F4D832045026C67777E /* OPValidatorExpirationDate.m in Sources */,
+				1B3DDBC3F03C8741CFAC445ED33796A2 /* OPValidatorFixedList.m in Sources */,
+				0D29845595556CFEB4D36E3ACB8118A5 /* OPValidatorIBAN.m in Sources */,
+				D3A47E8496D366233446E7612004738D /* OPValidatorLength.m in Sources */,
+				26608352606854501143C11E77E8E600 /* OPValidatorLuhn.m in Sources */,
+				5FD22B47523004E7671B985BD2700EE9 /* OPValidatorRange.m in Sources */,
+				10E1F480F34B242DEF7895B60E14E912 /* OPValidatorRegularExpression.m in Sources */,
+				DB78A0D0E93E04FFB54BDBD46E1AA882 /* OPValidators.m in Sources */,
+				EBCEC9A47A36FB8905ED94E4584E3BE8 /* OPValidatorTermsAndConditions.m in Sources */,
+				66CD646BA7E53CC73E7B95C10AC1EB41 /* OPValueMappingItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		354C2FC055E7A8B8D7FC2F1182148625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F46345C0C20EA3497630960480AF76AE /* Pods-OnlinePaymentsExampleTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80CED0BD8F6CF2F069A4F046ED79713B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC671A55D8F18922AB0EFA7A799093C1 /* Pods-OnlinePaymentsExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38B00B909C633BC79B159AECEDB7C38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5863162E72E811C9AE254DE0B987AA4 /* SVIndefiniteAnimatedView.m in Sources */,
+				C6F9A06F7931E3609EBD6E67DF45A7CE /* SVProgressAnimatedView.m in Sources */,
+				C131D6D67F6BCEBE657BF16126A4E057 /* SVProgressHUD.m in Sources */,
+				DA63562A50DD02C4DBCCFA99AB0E7FB3 /* SVProgressHUD-dummy.m in Sources */,
+				8F96EAB04C7156B2B2A007A6D6D6660A /* SVRadialGradientLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63709913B8C3CEF81682542F36D8CCE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SVProgressHUD;
+			target = 1C8D67D8B72D6BA42CCEDB648537A340 /* SVProgressHUD */;
+			targetProxy = F471B55917A90B259692E64B6CE34C63 /* PBXContainerItemProxy */;
+		};
+		7A8DE39959016916ABED38AB360264AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OnlinePaymentsSDK;
+			target = F2E7F83847EA4D125E11382BC9036970 /* OnlinePaymentsSDK */;
+			targetProxy = 679F0E26A30E2E75714A52EAE30A9683 /* PBXContainerItemProxy */;
+		};
+		C393B8440A4DE4DA2F3C03FB8EC56BC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-OnlinePaymentsExample";
+			target = 6A2109B4346F0E3EFB49ED962FF518BB /* Pods-OnlinePaymentsExample */;
+			targetProxy = 87FC62285B5A925555BFCC2CFA71E36F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0EA46CD5F77E2ABF4919FD6C73533D3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA8346916902987EE867C84B8D3C4FF3 /* Pods-OnlinePaymentsExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CF0725889768B934170CB17168CE015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3A6028492814CECEB0B30617BF3D15F /* SVProgressHUD.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SVProgressHUD;
+				PRODUCT_NAME = SVProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		46B792A9B70CA47F84E598947270592E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D846F1916C30A264132FF2755686D93E /* Pods-OnlinePaymentsExampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		622EAD979306AACF38A24D3AFCBE943C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E66C685D15858D18AEB754F2EF98E536 /* SVProgressHUD.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SVProgressHUD;
+				PRODUCT_NAME = SVProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89C2CE1250E811D2CC3ABA66890F372F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD875C9656733F61767E075C387F1D6D /* Pods-OnlinePaymentsExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E4E61744225D5553DE9542BC9EAE923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32BEB15FF5B1B4B302275A45D141059A /* OnlinePaymentsSDK.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/OnlinePaymentsSDK/OnlinePaymentsSDK-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = OnlinePaymentsSDK;
+				PRODUCT_NAME = OnlinePaymentsSDK;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EF30809F9C26F2181DACE482E48126F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A0B30DFB76783729FFEE558B18F99D4 /* OnlinePaymentsSDK.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/OnlinePaymentsSDK/OnlinePaymentsSDK-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = OnlinePaymentsSDK;
+				PRODUCT_NAME = OnlinePaymentsSDK;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F79954FB4C48EB4B4F8233F5B3ADDDE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D881E6F5A8065ABCBDE9BCFADA79425 /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DD65BB04DEB1B3A25A8F29564098763 /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CF0725889768B934170CB17168CE015 /* Debug */,
+				622EAD979306AACF38A24D3AFCBE943C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4708C60E03A9787F0D644523D23BBF56 /* Build configuration list for PBXNativeTarget "Pods-OnlinePaymentsExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79954FB4C48EB4B4F8233F5B3ADDDE3 /* Debug */,
+				46B792A9B70CA47F84E598947270592E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6FCD1C14455346FAB6D996B499D99B5 /* Build configuration list for PBXNativeTarget "Pods-OnlinePaymentsExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89C2CE1250E811D2CC3ABA66890F372F /* Debug */,
+				0EA46CD5F77E2ABF4919FD6C73533D3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD60FD7840527E2E4A13DEDD2F950EAC /* Build configuration list for PBXNativeTarget "OnlinePaymentsSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E4E61744225D5553DE9542BC9EAE923 /* Debug */,
+				EF30809F9C26F2181DACE482E48126F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
