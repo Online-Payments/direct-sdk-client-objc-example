@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPStringFormatter.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPStringFormatter.h

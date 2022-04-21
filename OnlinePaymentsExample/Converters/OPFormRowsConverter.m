@@ -189,13 +189,6 @@ static NSBundle * _sdkBundle;
 }
 - (OPFormRowTextField *)textFieldFormRowFromField:(OPPaymentProductField *)field paymentItem:(NSObject<OPPaymentItem> *)paymentItem value:(NSString *)value isEnabled:(BOOL)isEnabled confirmedPaymentProducts:(NSSet *)confirmedPaymentProducts viewFactory:(OPViewFactory *)viewFactory
 {
-    NSString *placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.paymentProductFields.%@.placeholder", paymentItem.identifier, field.identifier];
-    NSString *placeholderValue = NSLocalizedStringFromTableInBundle(placeholderKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
-    if ([placeholderKey isEqualToString:placeholderValue] == YES) {
-        placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.placeholder", field.identifier];
-        placeholderValue = NSLocalizedStringFromTableInBundle(placeholderKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
-    }
-    
     UIKeyboardType keyboardType = UIKeyboardTypeDefault;
     if (field.displayHints.preferredInputType == OPIntegerKeyboard) {
         keyboardType = UIKeyboardTypeNumberPad;
@@ -205,13 +198,15 @@ static NSBundle * _sdkBundle;
         keyboardType = UIKeyboardTypePhonePad;
     }
     
+    NSString *placeholderValue = field.displayHints.placeholderLabel ?: @"No placeholder found";
+    
     OPFormRowField *formField = [[OPFormRowField alloc] initWithText:value placeholder:placeholderValue keyboardType:keyboardType isSecure:field.displayHints.obfuscate];
     OPFormRowTextField *row = [[OPFormRowTextField alloc] initWithPaymentProductField:field field:formField];
     row.isEnabled = isEnabled;
     
     if ([field.identifier isEqualToString:@"cardNumber"] == YES) {
-        if ([confirmedPaymentProducts member:paymentItem.identifier] != nil) {
-            row.logo = paymentItem.displayHints.logoImage;
+        if ([confirmedPaymentProducts member:paymentItem.identifier] != nil && paymentItem.displayHintsList != nil) {
+            row.logo = paymentItem.displayHintsList[0].logoImage;
         }
         else {
             row.logo = nil;
@@ -251,12 +246,7 @@ static NSBundle * _sdkBundle;
 
 - (OPFormRowCurrency *)currencyFormRowFromField:(OPPaymentProductField *)field paymentItem:(NSObject<OPPaymentItem> *)paymentItem value:(NSString *)value isEnabled:(BOOL)isEnabled viewFactory:(OPViewFactory *)viewFactory
 {
-    NSString *placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.paymentProductFields.%@.placeholder", paymentItem.identifier, field.identifier];
-    NSString *placeholderValue = NSLocalizedStringFromTableInBundle(placeholderKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
-    if ([placeholderKey isEqualToString:placeholderValue] == YES) {
-        placeholderKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.placeholder", field.identifier];
-        placeholderValue = NSLocalizedStringFromTableInBundle(placeholderKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
-    }
+    NSString *placeholderValue = field.displayHints.placeholderLabel ?: @"No placeholder found";
     
     OPFormRowCurrency *row = [[OPFormRowCurrency alloc] init];
     row.integerField = [[OPFormRowField alloc] init];
@@ -290,14 +280,10 @@ static NSBundle * _sdkBundle;
 
 - (void)setTooltipForFormRow:(OPFormRowWithInfoButton *)row withField:(OPPaymentProductField *)field paymentItem:(NSObject<OPPaymentItem> *)paymentItem
 {
-    if (field.displayHints.tooltip.imagePath != nil) {
+    if ([field.displayHints.tooltip.label length] != 0) {
         OPFormRowTooltip *tooltip = [OPFormRowTooltip new];
-        NSString *tooltipTextKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.paymentProductFields.%@.tooltipText", paymentItem.identifier, field.identifier];
-        NSString *tooltipTextValue = NSLocalizedStringFromTableInBundle(tooltipTextKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
-        if ([tooltipTextKey isEqualToString:tooltipTextValue] == YES) {
-            tooltipTextKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.tooltipText", field.identifier];
-            tooltipTextValue = NSLocalizedStringFromTableInBundle(tooltipTextKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
-        }
+        NSString *tooltipTextValue = field.displayHints.tooltip.label;
+        
         tooltip.text = tooltipTextValue;
         tooltip.image = field.displayHints.tooltip.image;
         row.tooltip = tooltip;
@@ -325,12 +311,8 @@ static NSBundle * _sdkBundle;
     return row;
 }
 - (NSString *)labelStringFormRowFromField:(OPPaymentProductField *)field paymentProduct:(NSString *)paymentProductId {
-    NSString *labelKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.paymentProductFields.%@.label", paymentProductId, field.identifier];
-    NSString *labelValue = NSLocalizedStringFromTableInBundle(labelKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
-    if ([labelKey isEqualToString:labelValue] == YES) {
-        labelKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.label", field.identifier];
-        labelValue = NSLocalizedStringFromTableInBundle(labelKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
-    }
+    NSString *labelValue = field.displayHints.label ?: @"No label found";
+    
     return labelValue;
 }
 - (OPFormRowLabel *)labelFormRowFromField:(OPPaymentProductField *)field paymentProduct:(NSString *)paymentProductId viewFactory:(OPViewFactory *)viewFactory

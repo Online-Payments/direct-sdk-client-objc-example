@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPPreferredInputType.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPPreferredInputType.h

@@ -12,7 +12,7 @@
 		F739BBA024C5B87200FFE16B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB9F24C5B87200FFE16B /* AppDelegate.m */; };
 		F739BBAB24C5B87300FFE16B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F739BBAA24C5B87300FFE16B /* Assets.xcassets */; };
 		F739BBB124C5B87300FFE16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBB024C5B87300FFE16B /* main.m */; };
-		F739BBD124C6CCF200FFE16B /* IDTranslations.strings in Resources */ = {isa = PBXBuildFile; fileRef = F739BBD024C6CCF200FFE16B /* IDTranslations.strings */; };
+		F739BBD124C6CCF200FFE16B /* OPTranslations.strings in Resources */ = {isa = PBXBuildFile; fileRef = F739BBD024C6CCF200FFE16B /* OPTranslations.strings */; };
 		F739BBD424C6CF1400FFE16B /* OPFormRowsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBD324C6CF1400FFE16B /* OPFormRowsConverter.m */; };
 		F739BBD724C6D1A500FFE16B /* OPViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBD624C6D1A500FFE16B /* OPViewFactory.m */; };
 		F739BBE424C6E5B300FFE16B /* OPTableSectionConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBE324C6E5B300FFE16B /* OPTableSectionConverter.m */; };
@@ -104,7 +104,7 @@
 		F739BBBC24C5B87300FFE16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F739BBCE24C6C87600FFE16B /* OnlinePaymentsExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnlinePaymentsExample-Prefix.pch"; sourceTree = "<group>"; };
 		F739BBCF24C6CB2900FFE16B /* OPAppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPAppConstants.h; sourceTree = "<group>"; };
-		F739BBD024C6CCF200FFE16B /* IDTranslations.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = IDTranslations.strings; sourceTree = "<group>"; };
+		F739BBD024C6CCF200FFE16B /* OPTranslations.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = OPTranslations.strings; sourceTree = "<group>"; };
 		F739BBD224C6CF1400FFE16B /* OPFormRowsConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPFormRowsConverter.h; sourceTree = "<group>"; };
 		F739BBD324C6CF1400FFE16B /* OPFormRowsConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPFormRowsConverter.m; sourceTree = "<group>"; };
 		F739BBD524C6D1A500FFE16B /* OPViewFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPViewFactory.h; sourceTree = "<group>"; };
@@ -422,7 +422,7 @@
 				F739BBAF24C5B87300FFE16B /* Info.plist */,
 				F739BBB024C5B87300FFE16B /* main.m */,
 				F739BBCE24C6C87600FFE16B /* OnlinePaymentsExample-Prefix.pch */,
-				F739BBD024C6CCF200FFE16B /* IDTranslations.strings */,
+				F739BBD024C6CCF200FFE16B /* OPTranslations.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -696,7 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F739BBAB24C5B87300FFE16B /* Assets.xcassets in Resources */,
-				F739BBD124C6CCF200FFE16B /* IDTranslations.strings in Resources */,
+				F739BBD124C6CCF200FFE16B /* OPTranslations.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

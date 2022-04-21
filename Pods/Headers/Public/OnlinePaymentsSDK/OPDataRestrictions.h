@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPDataRestrictions.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPDataRestrictions.h

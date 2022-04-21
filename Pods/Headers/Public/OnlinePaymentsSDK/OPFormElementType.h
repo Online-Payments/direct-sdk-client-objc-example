@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPFormElementType.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPFormElementType.h

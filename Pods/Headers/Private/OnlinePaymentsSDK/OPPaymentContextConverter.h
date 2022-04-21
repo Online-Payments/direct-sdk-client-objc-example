@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPPaymentContextConverter.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPPaymentContextConverter.h

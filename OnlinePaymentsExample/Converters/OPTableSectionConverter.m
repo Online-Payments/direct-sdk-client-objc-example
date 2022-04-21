@@ -26,7 +26,9 @@
         row.name = displayName;
         row.accountOnFileIdentifier = accountOnFile.identifier;
         row.paymentProductIdentifier = accountOnFile.paymentProductIdentifier;
-        row.logo = product.displayHints.logoImage;
+        if(product.displayHintsList != nil) {
+            row.logo = product.displayHintsList[0].logoImage ?: nil;
+        }
         [section.rows addObject:row];
     }
     return section;
@@ -34,18 +36,20 @@
 
 + (OPPaymentProductsTableSection *)paymentProductsTableSectionFromPaymentItems:(OPPaymentItems *)paymentItems
 {
-    NSBundle *sdkBundle = [NSBundle bundleWithPath:kOPSDKBundlePath];
-    
     OPPaymentProductsTableSection *section = [[OPPaymentProductsTableSection alloc] init];
     for (NSObject<OPPaymentItem> *paymentItem in paymentItems.paymentItems) {
         section.type = OPPaymentProductType;
         OPPaymentProductsTableRow *row = [[OPPaymentProductsTableRow alloc] init];
-        NSString *paymentProductKey = [self localizationKeyWithPaymentItem:paymentItem];
-        NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, kOPSDKLocalizable, sdkBundle, nil);
-        row.name = paymentProductValue;
+        if(paymentItem.displayHintsList != nil) {
+            row.name = paymentItem.displayHintsList[0].label ?: @"No label found";
+            row.logo = paymentItem.displayHintsList[0].logoImage ?: nil;
+        } else {
+            row.name = @"Display hints not found";
+            row.logo = nil;
+        }
+        
         row.accountOnFileIdentifier = @"";
         row.paymentProductIdentifier = paymentItem.identifier;
-        row.logo = paymentItem.displayHints.logoImage;
         [section.rows addObject:row];
     }
     return section;
@@ -53,7 +57,10 @@
 
 + (NSString *)localizationKeyWithPaymentItem:(NSObject<OPBasicPaymentItem> *)paymentItem {
     if ([paymentItem isKindOfClass:[OPBasicPaymentProduct class]]) {
-        return [NSString stringWithFormat:@"gc.general.paymentProducts.%@.name", paymentItem.identifier];
+        if(!paymentItem.displayHintsList) {
+            return paymentItem.displayHintsList[0].label ?: @"No label found";
+        }
+        return @"Display hints not found";
     }
     else if ([paymentItem isKindOfClass:[OPBasicPaymentProductGroup class]]) {
         return [NSString stringWithFormat:@"gc.general.paymentProductGroups.%@.name", paymentItem.identifier];

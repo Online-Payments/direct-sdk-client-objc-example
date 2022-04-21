@@ -50,7 +50,11 @@
         if([self.confirmedPaymentProducts containsObject:self.paymentItem.identifier]) {
             UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
             imageView.contentMode = UIViewContentModeScaleAspectFit;
-            row.logo = self.paymentItem.displayHints.logoImage;
+            if (self.paymentItem.displayHintsList != nil) {
+                row.logo = self.paymentItem.displayHintsList[0].logoImage;
+            } else {
+                row.logo = nil;
+            }
             imageView.image = row.logo;
             cell.rightView = imageView;
         }

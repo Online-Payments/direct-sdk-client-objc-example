@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPAccountOnFileAttributes.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPAccountOnFileAttributes.h

@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPValidators.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPValidators.h

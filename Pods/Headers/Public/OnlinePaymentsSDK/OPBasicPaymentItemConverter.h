@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPBasicPaymentItemConverter.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPBasicPaymentItemConverter.h

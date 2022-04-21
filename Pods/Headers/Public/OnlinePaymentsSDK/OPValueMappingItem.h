@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPValueMappingItem.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPValueMappingItem.h

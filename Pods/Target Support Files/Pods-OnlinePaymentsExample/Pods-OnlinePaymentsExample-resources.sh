@@ -97,11 +97,11 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/../../direct-sdk-client-objc/OnlinePaymentsSDK/OnlinePaymentsSDK.bundle"
+  install_resource "${PODS_ROOT}/OnlinePaymentsSDK/OnlinePaymentsSDK/OnlinePaymentsSDK.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/../../direct-sdk-client-objc/OnlinePaymentsSDK/OnlinePaymentsSDK.bundle"
+  install_resource "${PODS_ROOT}/OnlinePaymentsSDK/OnlinePaymentsSDK/OnlinePaymentsSDK.bundle"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 

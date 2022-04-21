@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPLabelTemplateItem.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPLabelTemplateItem.h

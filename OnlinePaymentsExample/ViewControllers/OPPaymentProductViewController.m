@@ -138,7 +138,7 @@
 - (void)addExtraRows {
     // Add remember me switch
       OPFormRowSwitch *switchFormRow = [[OPFormRowSwitch alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe", kOPSDKLocalizable, self.sdkBundle, @"Explanation of the switch for remembering payment information.") isOn:self.rememberPaymentDetails target:self action: @selector(switchChanged:)];
-    switchFormRow.isEnabled = false;
+    switchFormRow.isEnabled = true;
     [self.formRows addObject:switchFormRow];
     
     OPFormRowTooltip *switchFormRowTooltip = [OPFormRowTooltip new];

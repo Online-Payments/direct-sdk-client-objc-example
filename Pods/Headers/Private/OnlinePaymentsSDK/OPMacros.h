@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPMacros.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPMacros.h

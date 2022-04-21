@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPValidatorRegularExpression.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPValidatorRegularExpression.h

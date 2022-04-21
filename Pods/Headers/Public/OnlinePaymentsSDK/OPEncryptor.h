@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPEncryptor.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPEncryptor.h

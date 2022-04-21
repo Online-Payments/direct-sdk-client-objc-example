@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPValidationErrorLuhn.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPValidationErrorLuhn.h

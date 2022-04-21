@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPAccountOnFileDisplayHints.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPAccountOnFileDisplayHints.h

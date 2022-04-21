@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPAFNetworkingWrapper.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPAFNetworkingWrapper.h

@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPPaymentProductFields.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPPaymentProductFields.h

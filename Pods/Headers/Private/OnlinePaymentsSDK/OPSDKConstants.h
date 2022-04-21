@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPSDKConstants.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPSDKConstants.h

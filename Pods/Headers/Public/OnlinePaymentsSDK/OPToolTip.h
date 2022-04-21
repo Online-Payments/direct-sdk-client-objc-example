@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPToolTip.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPToolTip.h

@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPIINDetail.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPIINDetail.h

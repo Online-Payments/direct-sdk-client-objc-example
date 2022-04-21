@@ -1,1 +1,1 @@
-../../../../../direct-sdk-client-objc/OnlinePaymentsSDK/OPNetworkingActivityLoggerProtocol.h
+../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPNetworkingActivityLoggerProtocol.h
