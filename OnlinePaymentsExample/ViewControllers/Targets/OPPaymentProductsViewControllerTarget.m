@@ -180,23 +180,21 @@
     
     // ***************************************************************************
     //
-    // The summaryItems for the paymentRequest is a list of values with the last
-    // value being the total and having the name of the merchant as label.
+    // The summaryItems for the paymentRequest is a list of values with the only
+    // value being the subtotal. You are able to add more values to the list if
+    // desired, like a shipping cost and total. ApplePay expects the last summary
+    // item to be the grand total, this will be displayed differently from the
+    // other summary items.
     //
-    // A list of subtotal, shipping cost, and total is created below as example.
-    // The values are specified in cents and converted to a NSDecimalNumber with
+    // The value is specified in cents and converted to a NSDecimalNumber with
     // a exponent of -2.
     //
     // ***************************************************************************
     
     long subtotal = self.context.amountOfMoney.totalAmount;
-    long shippingCost = 200;
-    long total = subtotal + shippingCost;
     
     NSMutableArray *summaryItems = [[NSMutableArray alloc] init];
     [summaryItems addObject:[PKPaymentSummaryItem summaryItemWithLabel:NSLocalizedStringFromTableInBundle(@"gc.app.general.shoppingCart.subtotal", kOPSDKLocalizable, self.sdkBundle, @"subtotal summary item title") amount:[NSDecimalNumber decimalNumberWithMantissa:subtotal exponent:-2 isNegative:NO]]];
-    [summaryItems addObject:[PKPaymentSummaryItem summaryItemWithLabel:NSLocalizedStringFromTableInBundle(@"gc.app.general.shoppingCart.shippingCost", kOPSDKLocalizable, self.sdkBundle, @"shipping cost summary item title") amount:[NSDecimalNumber decimalNumberWithMantissa:shippingCost exponent:-2 isNegative:NO]]];
-    [summaryItems addObject:[PKPaymentSummaryItem summaryItemWithLabel:@"Merchant Name" amount:[NSDecimalNumber decimalNumberWithMantissa:total exponent:-2 isNegative:NO] type:PKPaymentSummaryItemTypeFinal]];
     
     self.summaryItems = summaryItems;
 }

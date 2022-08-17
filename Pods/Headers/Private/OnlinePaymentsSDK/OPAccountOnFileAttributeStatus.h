@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPAccountOnFileAttributeStatus.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPAccountOnFileAttributeStatus.h

@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPNetworkingWrapper.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPNetworkingWrapper.h

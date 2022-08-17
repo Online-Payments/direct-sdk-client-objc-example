@@ -48,28 +48,6 @@
     [super updateTextFieldCell:cell row:row];
     if ([row.paymentProductField.identifier isEqualToString:@"cardNumber"]) {
         if([self.confirmedPaymentProducts containsObject:self.paymentItem.identifier]) {
-            UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
-            imageView.contentMode = UIViewContentModeScaleAspectFit;
-            if (self.paymentItem.displayHintsList != nil) {
-                row.logo = self.paymentItem.displayHintsList[0].logoImage;
-            } else {
-                row.logo = nil;
-            }
-            imageView.image = row.logo;
-            cell.rightView = imageView;
-        }
-        else {
-            row.logo = nil;
-            cell.rightView = [[UIView alloc]init];
-        }
-    }
-}
-
-- (OPTextFieldTableViewCell *)cellForTextField:(OPFormRowTextField *)row tableView:(UITableView *)tableView {
-    OPTextFieldTableViewCell *cell = [super cellForTextField:row tableView:tableView];
-    
-    if ([row.paymentProductField.identifier isEqualToString:@"cardNumber"]) {
-        if([self.confirmedPaymentProducts containsObject:self.paymentItem.identifier]) {
             CGFloat size = cell.frame.size.height * 0.8;
             CGFloat padding = cell.frame.size.height * 0.1;
 
@@ -81,11 +59,11 @@
             
             imageView.image = row.logo;
             cell.rightView = outerView;
-
+        } else {
+            row.logo = nil;
+            cell.rightView = [[UIView alloc]init];
         }
-
     }
-    return cell;
 }
 
 - (OPCoBrandsSelectionTableViewCell *)cellForCoBrandsSelection:(OPFormRowCoBrandsSelection *)row tableView:(UITableView *)tableView {

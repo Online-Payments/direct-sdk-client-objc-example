@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPMacros.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPMacros.h

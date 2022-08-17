@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPSession.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPSession.h

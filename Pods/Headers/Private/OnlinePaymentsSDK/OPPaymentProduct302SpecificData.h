@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPPaymentProduct302SpecificData.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPPaymentProduct302SpecificData.h

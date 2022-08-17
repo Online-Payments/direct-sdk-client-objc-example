@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPC2SCommunicator.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPC2SCommunicator.h

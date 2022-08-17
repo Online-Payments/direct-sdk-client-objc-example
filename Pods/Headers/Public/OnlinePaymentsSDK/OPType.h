@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPType.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPType.h

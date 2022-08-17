@@ -9,7 +9,10 @@
 "PaymentProductErrorExplanation" = "We are unable to retrieve information about the selected payment product. \n\n Please check your internet connection and the provided client session identifier and customer identifier.";
 "PaymentProductNetworksErrorExplanation" = "We are unable to retrieve information about the selected payment product's networks. \n\n Please check your internet connection and the provided client session identifier and customer identifier.";
 "SubmitErrorExplanation" = "We are unable to retrieve a key to encrypt your payment information. \n\n Please check your internet connection and the provided customer client session identifier and customer identifier.";
+"TechnicalProblemErrorExplanation" = "A technical error occurred while we were trying to process your payment. Please try again or try another payment method.";
 "ConnectionErrorTitle" = "Connection error";
+"CompatibilityError" = "Compatibility error";
+"PaymentFailureTitle" = "Payment failure";
 "ContinueButtonTitle" = "Start another payment process";
 "SuccessLabel" = "Congratulations!";
 "SuccessText" = "Your payment has been successfully processed by the SDK.";

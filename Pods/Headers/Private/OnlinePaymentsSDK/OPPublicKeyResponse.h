@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPPublicKeyResponse.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPPublicKeyResponse.h

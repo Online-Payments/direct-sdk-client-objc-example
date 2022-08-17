@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPDisplayElementsConverter.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPDisplayElementsConverter.h

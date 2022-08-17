@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPValidatorExpirationDate.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPValidatorExpirationDate.h

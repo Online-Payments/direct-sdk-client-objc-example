@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPBasicPaymentProductsConverter.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPBasicPaymentProductsConverter.h

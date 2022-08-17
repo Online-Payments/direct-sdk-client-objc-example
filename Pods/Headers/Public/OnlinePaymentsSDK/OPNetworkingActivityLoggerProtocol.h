@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPNetworkingActivityLoggerProtocol.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPNetworkingActivityLoggerProtocol.h

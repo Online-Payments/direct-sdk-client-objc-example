@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPValidatorLuhn.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPValidatorLuhn.h

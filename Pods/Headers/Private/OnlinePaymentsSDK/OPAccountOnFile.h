@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPAccountOnFile.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPAccountOnFile.h

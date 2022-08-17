@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPValidationErrorIsRequired.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPValidationErrorIsRequired.h

@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPValidationErrorRegularExpression.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPValidationErrorRegularExpression.h

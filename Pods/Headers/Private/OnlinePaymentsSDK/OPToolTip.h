@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPToolTip.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPToolTip.h

@@ -1,20 +1,23 @@
 PODS:
-  - OnlinePaymentsSDK (2.0.0)
+  - OnlinePaymentsSDK (2.0.1)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - OnlinePaymentsSDK (~> 2.0)
+  - OnlinePaymentsSDK (from `../objc-sdk`)
   - SVProgressHUD
 
 SPEC REPOS:
   trunk:
-    - OnlinePaymentsSDK
     - SVProgressHUD
 
+EXTERNAL SOURCES:
+  OnlinePaymentsSDK:
+    :path: "../objc-sdk"
+
 SPEC CHECKSUMS:
-  OnlinePaymentsSDK: 20320dc2494ea5f1766b46e216d2d471d49d0cb6
+  OnlinePaymentsSDK: 121a72073e6a2e2248701628549a91609c1f0f77
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 4127852956d4a3d9db5c96fc61dbb9a7a622df81
+PODFILE CHECKSUM: a9d6460807218e53ec39d7d37d9cc50150a827cb
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

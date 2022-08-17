@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPSDKConstants.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPSDKConstants.h

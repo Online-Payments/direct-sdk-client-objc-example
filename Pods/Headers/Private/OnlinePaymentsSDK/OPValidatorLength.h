@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPValidatorLength.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPValidatorLength.h

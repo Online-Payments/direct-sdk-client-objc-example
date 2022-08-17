@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPDataRestrictions.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPDataRestrictions.h

@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPIINDetailsResponseConverter.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPIINDetailsResponseConverter.h

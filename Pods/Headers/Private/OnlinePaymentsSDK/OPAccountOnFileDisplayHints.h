@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPAccountOnFileDisplayHints.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPAccountOnFileDisplayHints.h

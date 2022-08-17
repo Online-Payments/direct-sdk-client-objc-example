@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPIINDetailsResponse.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPIINDetailsResponse.h

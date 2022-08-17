@@ -14,6 +14,7 @@
 #import "OPPaymentProductViewController.h"
 #import "OPEndViewController.h"
 #import "OPPaymentProductsViewControllerTarget.h"
+#import "OPPaymentItems.h"
 
 #import <OnlinePaymentsSDK/OPSDKConstants.h>
 #import <OnlinePaymentsSDK/OPPaymentItem.h>
@@ -119,7 +120,7 @@
     [self.containerView addSubview:self.customerOPTextField];
     
     self.baseURLLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.baseURLLabel.text = NSLocalizedStringFromTable(@"BaseURL", kOPAppLocalizable, @"Client session identifier");
+    self.baseURLLabel.text = NSLocalizedStringFromTable(@"BaseURL", kOPAppLocalizable, @"Base URL");
     self.baseURLLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.baseURLTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.baseURLTextField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -129,7 +130,7 @@
     [self.containerView addSubview:self.baseURLTextField];
     
     self.assetsBaseURLLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.assetsBaseURLLabel.text = NSLocalizedStringFromTable(@"AssetsBaseURL", kOPAppLocalizable, @"Customer identifier");
+    self.assetsBaseURLLabel.text = NSLocalizedStringFromTable(@"AssetsBaseURL", kOPAppLocalizable, @"Assets Base URL");
     self.assetsBaseURLLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.assetsBaseURLTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.assetsBaseURLTextField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -385,7 +386,7 @@
         NSString *alertReason = [NSString stringWithFormat: @"This version of the Online Payments SDK is only compatible with %@ , you supplied: '%@'",
                                  [versionComponents componentsJoinedByString: @"/"],
                                  [components componentsJoinedByString: @"/"]];
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"InvalidBaseURLTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(alertReason, kOPAppLocalizable, nil) preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"CompatibilityError", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(alertReason, kOPAppLocalizable, nil) preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
         [self presentViewController:alert animated:YES completion:nil];
         return;
@@ -412,11 +413,18 @@
     self.context = [[OPPaymentContext alloc] initWithAmountOfMoney:amountOfMoney isRecurring:isRecurring countryCode:countryCode];
 
     [self.session paymentItemsForContext:self.context groupPaymentProducts:NO success:^(OPPaymentItems *paymentItems) {
-        [SVProgressHUD dismiss];
-        [self showPaymentProductSelection:paymentItems];
+        if (paymentItems.paymentItems.count != 0) {
+            [SVProgressHUD dismiss];
+            [self showPaymentProductSelection:paymentItems];
+        } else {
+            [SVProgressHUD dismiss];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"PaymentFailureTitle", kOPAppLocalizable, @"Title of the payment failure dialog.") message:NSLocalizedStringFromTable(@"TechnicalProblemErrorExplanation", kOPAppLocalizable, @"Message of the payment failure dialog.") preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"InvalidBaseURLTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kOPAppLocalizable, @"Title of the connection error dialog.") preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductsErrorExplanation", kOPAppLocalizable, @"Message of the connection error dialog.") preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
         [self presentViewController:alert animated:YES completion:nil];
     }];

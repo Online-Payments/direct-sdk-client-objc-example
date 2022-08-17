@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPAssetManager.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPAssetManager.h

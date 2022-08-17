@@ -136,15 +136,17 @@
 }
 
 - (void)addExtraRows {
-    // Add remember me switch
-      OPFormRowSwitch *switchFormRow = [[OPFormRowSwitch alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe", kOPSDKLocalizable, self.sdkBundle, @"Explanation of the switch for remembering payment information.") isOn:self.rememberPaymentDetails target:self action: @selector(switchChanged:)];
-    switchFormRow.isEnabled = true;
-    [self.formRows addObject:switchFormRow];
-    
-    OPFormRowTooltip *switchFormRowTooltip = [OPFormRowTooltip new];
-    switchFormRowTooltip.text = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe.tooltip", kOPSDKLocalizable, self.sdkBundle, @"");
-    switchFormRow.tooltip = switchFormRowTooltip;
-    [self.formRows addObject:switchFormRowTooltip];
+    if ([self.paymentItem isKindOfClass:[OPBasicPaymentProduct class]] && ((OPBasicPaymentProduct *)self.paymentItem).allowsTokenization && self.accountOnFile == nil) {
+        // Add remember me switch
+          OPFormRowSwitch *switchFormRow = [[OPFormRowSwitch alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe", kOPSDKLocalizable, self.sdkBundle, @"Explanation of the switch for remembering payment information.") isOn:self.rememberPaymentDetails target:self action: @selector(switchChanged:)];
+        switchFormRow.isEnabled = true;
+        [self.formRows addObject:switchFormRow];
+        
+        OPFormRowTooltip *switchFormRowTooltip = [OPFormRowTooltip new];
+        switchFormRowTooltip.text = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe.tooltip", kOPSDKLocalizable, self.sdkBundle, @"");
+        switchFormRow.tooltip = switchFormRowTooltip;
+        [self.formRows addObject:switchFormRowTooltip];
+    }
     
     // Add pay and cancel button
     NSString *payButtonTitle = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.payButton", kOPSDKLocalizable, self.sdkBundle, @"");
@@ -370,14 +372,7 @@
 - (OPTextFieldTableViewCell *)cellForTextField:(OPFormRowTextField *)row tableView:(UITableView *)tableView {
     OPTextFieldTableViewCell *cell = (OPTextFieldTableViewCell *)[tableView dequeueReusableCellWithIdentifier:[OPTextFieldTableViewCell reuseIdentifier]];
     
-    cell.field = row.field;
-    cell.delegate = self;
-    cell.readonly = !row.isEnabled;
-    OPValidationError *error = [row.paymentProductField.errors firstObject];
-    if (error != nil && self.validation) {
-        cell.error = [OPFormRowsConverter errorMessageForError: error withCurrency: row.paymentProductField.displayHints.formElement.type == OPCurrencyType];
-    }
-    cell.accessoryType = row.showInfoButton ? UITableViewCellAccessoryDetailButton : UITableViewCellAccessoryNone;
+    [self updateTextFieldCell:cell row:row];
     
     return cell;
 }
@@ -517,7 +512,7 @@
             errorHeight = [str boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options: NSStringDrawingUsesLineFragmentOrigin context: nil].size.height;
         }
         
-        CGFloat height =  10 + 44 + 10 + errorHeight;
+        CGFloat height =  44 + errorHeight;
         return height;
         
     } else if ([row isKindOfClass:[OPFormRowSwitch class]]) {

@@ -1,1 +1,1 @@
-../../../OnlinePaymentsSDK/OnlinePaymentsSDK/OPJOSEEncryptor.h
+../../../../../objc-sdk/OnlinePaymentsSDK/OPJOSEEncryptor.h
