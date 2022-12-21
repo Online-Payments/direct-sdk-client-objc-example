@@ -9,8 +9,8 @@
 #import "OPPaymentProductSelectionTarget.h"
 #import "OPPaymentRequestTarget.h"
 #import "OPPaymentFinishedTarget.h"
-#import "OPSession.h"
 #import "OPViewFactory.h"
+@import OnlinePaymentsKit;
 
 @interface OPPaymentProductsViewControllerTarget : NSObject <OPPaymentProductSelectionTarget, OPPaymentRequestTarget, PKPaymentAuthorizationViewControllerDelegate>
 

@@ -5,11 +5,8 @@
 // 
 
 #import "OPPaymentProductInputData.h"
-#import "OPStringFormatter.h"
 
-#import <OnlinePaymentsSDK/OPPaymentRequest.h>
-#import <OnlinePaymentsSDK/OPValidator.h>
-#import <OnlinePaymentsSDK/OPValidatorFixedList.h>
+@import OnlinePaymentsKit;
 
 @interface OPPaymentProductInputData ()
 

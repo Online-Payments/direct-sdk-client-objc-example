@@ -5,7 +5,7 @@
 //
 
 #import "OPFormRow.h"
-#import <OnlinePaymentsSDK/OPPaymentProductField.h>
+@import OnlinePaymentsKit;
 
 @interface OPFormRowDate : OPFormRow
 

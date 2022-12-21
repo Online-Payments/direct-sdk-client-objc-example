@@ -6,8 +6,7 @@
 
 #import "OPFormRow.h"
 #import "OPPickerView.h"
-#import <OnlinePaymentsSDK/OPValueMappingItem.h>
-#import <OnlinePaymentsSDK/OPPaymentProductField.h>
+@import OnlinePaymentsKit;
 
 @interface OPFormRowList : OPFormRow
 

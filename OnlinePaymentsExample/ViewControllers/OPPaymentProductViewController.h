@@ -15,9 +15,7 @@
 #import "OPSwitchTableViewCell.h"
 #import "OPCoBrandsSelectionTableViewCell.h"
 
-#import <OnlinePaymentsSDK/OPPaymentProduct.h>
-#import <OnlinePaymentsSDK/OPAccountOnFile.h>
-#import <OnlinePaymentsSDK/OPSession.h>
+@import OnlinePaymentsKit;
 
 @interface OPPaymentProductViewController : UITableViewController <OPSwitchTableViewCellDelegate>
 

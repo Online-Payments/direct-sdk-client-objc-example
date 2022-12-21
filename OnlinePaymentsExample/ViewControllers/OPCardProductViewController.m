@@ -12,12 +12,9 @@
 #import "OPPaymentProductsTableRow.h"
 #import "OPPaymentProductTableViewCell.h"
 #import "OPCOBrandsExplanationTableViewCell.h"
-#import "OPPaymentProductGroup.h"
 #import "OPPaymentProductInputData.h"
-#import "OPIINDetail.h"
 
-#import <OnlinePaymentsSDK/OPSDKConstants.h>
-#import <OnlinePaymentsSDK/OPAssetManager.h>
+@import OnlinePaymentsKit;
 
 @interface OPCardProductViewController ()
 
@@ -32,7 +29,7 @@
 @implementation OPCardProductViewController
 
 - (void)viewDidLoad {
-    self.sdkBundle = [NSBundle bundleWithPath:kOPSDKBundlePath];
+    self.sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
     [super viewDidLoad];
     
 }
@@ -274,7 +271,7 @@
 - (NSArray *)coBrandFormsWithIINDetailsResponse: (NSArray<OPIINDetail *> *)inputBrands{
     NSMutableArray *coBrands = [[NSMutableArray alloc] init];
     for (OPIINDetail *coBrand in inputBrands) {
-        if (coBrand.allowedInContext) {
+        if (coBrand.isAllowedInContext) {
             [coBrands addObject:coBrand.paymentProductId];
         }
     }
@@ -290,7 +287,7 @@
             row.paymentProductIdentifier = identifier;
             
             NSString *paymentProductKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.name", identifier];
-            NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, kOPSDKLocalizable, [NSBundle bundleWithPath:kOPSDKBundlePath], "");
+            NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], "");
             row.name = paymentProductValue;
             
             OPAssetManager *assetManager = [[OPAssetManager alloc]init];

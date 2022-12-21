@@ -8,11 +8,9 @@
 #import "OPViewFactory.h"
 #import "OPCardProductViewController.h"
 #import "OPAppConstants.h"
-#import "OPBasicPaymentProductGroup.h"
-#import "OPPaymentProductGroup.h"
 
 #import <SVProgressHUD/SVProgressHUD.h>
-#import <OnlinePaymentsSDK/OPSDKConstants.h>
+@import OnlinePaymentsKit;
 
 @interface OPPaymentProductsViewControllerTarget ()
 
@@ -36,7 +34,7 @@
     self.session = session;
     self.context = context;
     self.viewFactory = viewFactory;
-    self.sdkBundle = [NSBundle bundleWithPath:kOPSDKBundlePath];
+    self.sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
 
     return self;
 }
@@ -51,7 +49,7 @@
 #pragma mark PaymentProduct selection target
 
 - (void)didSelectPaymentItem:(NSObject <OPBasicPaymentItem> *)paymentItem accountOnFile:(OPAccountOnFile *)accountOnFile; {
-    [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", kOPSDKLocalizable, [NSBundle bundleWithPath:kOPSDKBundlePath], nil)];
+    [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], nil)];
     
     // ***************************************************************************
     //
@@ -71,7 +69,7 @@
     // ***************************************************************************
 
     [self.session paymentProductWithId:paymentItem.identifier context:self.context success:^(OPPaymentProduct *paymentProduct) {
-        if ([paymentItem.identifier isEqualToString:kOPApplePayIdentifier]) {
+        if ([paymentItem.identifier isEqualToString:OPSDKConstants.kOPApplePayIdentifier]) {
             [self showApplePayPaymentItem:paymentProduct];
         } else {
             [SVProgressHUD dismiss];
@@ -116,8 +114,8 @@
 #pragma mark ApplePay selection handling
 
 - (void)showApplePayPaymentItem:(OPPaymentProduct *)paymentProduct {
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0") && [PKPaymentAuthorizationViewController canMakePayments]) {
-        [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", kOPSDKLocalizable, [NSBundle bundleWithPath:kOPSDKBundlePath], nil)];
+    if ([OPSDKConstants SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO:@"8.0"] && [PKPaymentAuthorizationViewController canMakePayments]) {
+        [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], nil)];
         
         // ***************************************************************************
         //
@@ -128,7 +126,7 @@
         //
         // ***************************************************************************
         
-        [self.session paymentProductNetworksForProductId:kOPApplePayIdentifier context:self.context success:^(OPPaymentProductNetworks *paymentProductNetworks) {
+        [self.session paymentProductNetworksForProductId:OPSDKConstants.kOPApplePayIdentifier context:self.context success:^(OPPaymentProductNetworks *paymentProductNetworks) {
             [self showApplePaySheetForPaymentProduct:paymentProduct withAvailableNetworks:paymentProductNetworks];
             [SVProgressHUD dismiss];
         } failure:^(NSError *error) {
@@ -142,7 +140,7 @@
 - (void)showApplePaySheetForPaymentProduct:(OPPaymentProduct *)paymentProduct withAvailableNetworks:(OPPaymentProductNetworks *)paymentProductNetworks {
     
     // This merchant should be the merchant id specified in the merchants developer portal.
-    NSString *merchantId = [StandardUserDefaults objectForKey:kOPMerchantId];
+    NSString *merchantId = [OPSDKConstants.StandardUserDefaults objectForKey:kOPMerchantId];
     if (merchantId == nil) {
         return;
     }
@@ -150,8 +148,8 @@
     [self generateSummaryItems];
     
     PKPaymentRequest *paymentRequest = [[PKPaymentRequest alloc] init];
-    [paymentRequest setCountryCode:self.context.countryCode];
-    [paymentRequest setCurrencyCode:self.context.amountOfMoney.currencyCode];
+    [paymentRequest setCountryCode:self.context.countryCodeString];
+    [paymentRequest setCurrencyCode:self.context.amountOfMoney.currencyCodeString];
     [paymentRequest setSupportedNetworks:paymentProductNetworks.paymentProductNetworks];
     [paymentRequest setPaymentSummaryItems:self.summaryItems];
     
@@ -194,7 +192,7 @@
     long subtotal = self.context.amountOfMoney.totalAmount;
     
     NSMutableArray *summaryItems = [[NSMutableArray alloc] init];
-    [summaryItems addObject:[PKPaymentSummaryItem summaryItemWithLabel:NSLocalizedStringFromTableInBundle(@"gc.app.general.shoppingCart.subtotal", kOPSDKLocalizable, self.sdkBundle, @"subtotal summary item title") amount:[NSDecimalNumber decimalNumberWithMantissa:subtotal exponent:-2 isNegative:NO]]];
+    [summaryItems addObject:[PKPaymentSummaryItem summaryItemWithLabel:NSLocalizedStringFromTableInBundle(@"gc.app.general.shoppingCart.subtotal", OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, @"subtotal summary item title") amount:[NSDecimalNumber decimalNumberWithMantissa:subtotal exponent:-2 isNegative:NO]]];
     
     self.summaryItems = summaryItems;
 }
@@ -206,7 +204,7 @@
 }
 
 - (void)didSubmitPaymentRequest:(OPPaymentRequest *)paymentRequest success:(void (^)(void))succes failure:(void (^)(void))failure {
-    [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", kOPSDKLocalizable, [NSBundle bundleWithPath:kOPSDKBundlePath], nil)];
+    [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], nil)];
     [self.session preparePaymentRequest:paymentRequest success:^(OPPreparedPaymentRequest *preparedPaymentRequest) {
         [SVProgressHUD dismiss];
         

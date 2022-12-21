@@ -9,8 +9,7 @@
 
 #import "OPPaymentType.h"
 
-#import <OnlinePaymentsSDK/OPBasicPaymentProduct.h>
-#import <OnlinePaymentsSDK/OPAccountOnFile.h>
+@import OnlinePaymentsKit;
 
 @protocol OPPaymentItem;
 

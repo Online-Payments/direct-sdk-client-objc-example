@@ -7,7 +7,7 @@
 #import "OPPaymentProductSelectionTarget.h"
 #import "OPViewFactory.h"
 
-#import <OnlinePaymentsSDK/OPBasicPaymentProducts.h>
+@import OnlinePaymentsKit;
 
 @class OPPaymentItems;
 

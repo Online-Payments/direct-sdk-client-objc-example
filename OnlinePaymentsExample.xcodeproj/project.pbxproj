@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24441D370356A18E096BBBA3 /* libPods-OnlinePaymentsExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5D8A5FD72F81A42C96C326 /* libPods-OnlinePaymentsExampleTests.a */; };
-		5321ABFEF7F97593A64C8168 /* libPods-OnlinePaymentsExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D650D2711C2E1282B081BB94 /* libPods-OnlinePaymentsExample.a */; };
+		23DF030BF9625FFCC45EEA50 /* Pods_OnlinePaymentsExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEDDC4D7712AF5CB6B4CB98 /* Pods_OnlinePaymentsExampleTests.framework */; };
+		D007ED8BE93F63BCEBA47A62 /* Pods_OnlinePaymentsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20687FC9332014C2542B0E3 /* Pods_OnlinePaymentsExample.framework */; };
 		F739BBA024C5B87200FFE16B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB9F24C5B87200FFE16B /* AppDelegate.m */; };
 		F739BBAB24C5B87300FFE16B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F739BBAA24C5B87300FFE16B /* Assets.xcassets */; };
 		F739BBB124C5B87300FFE16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBB024C5B87300FFE16B /* main.m */; };
@@ -88,12 +88,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		225AF9C492258FB7763C82AC /* Pods-OnlinePaymentsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.debug.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.debug.xcconfig"; sourceTree = "<group>"; };
-		5A5D8A5FD72F81A42C96C326 /* libPods-OnlinePaymentsExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlinePaymentsExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7236C8C11F10C58886EA0AC7 /* Pods-OnlinePaymentsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.release.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.release.xcconfig"; sourceTree = "<group>"; };
-		8928BB850216AFDE2609C876 /* Pods-OnlinePaymentsExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExampleTests.release.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExampleTests/Pods-OnlinePaymentsExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		B4F17DEAE9BF18EEF6606D0E /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExampleTests/Pods-OnlinePaymentsExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D650D2711C2E1282B081BB94 /* libPods-OnlinePaymentsExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlinePaymentsExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EACC82BCF297CCB36CB5C85 /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExampleTests/Pods-OnlinePaymentsExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3FAF28D948FD30F759AC126C /* Pods-OnlinePaymentsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.release.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.release.xcconfig"; sourceTree = "<group>"; };
+		70551286DEA787C0BFF1A77F /* Pods-OnlinePaymentsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.debug.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.debug.xcconfig"; sourceTree = "<group>"; };
+		7E6ADF7D80DC5BF4294A7DF2 /* libPods-OnlinePaymentsExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlinePaymentsExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC9270299AB50FF674E68FA /* Pods-OnlinePaymentsExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExampleTests.release.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExampleTests/Pods-OnlinePaymentsExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		B20687FC9332014C2542B0E3 /* Pods_OnlinePaymentsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlinePaymentsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBEDDC4D7712AF5CB6B4CB98 /* Pods_OnlinePaymentsExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlinePaymentsExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F739BB9B24C5B87200FFE16B /* OnlinePaymentsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlinePaymentsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F739BB9E24C5B87200FFE16B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F739BB9F24C5B87200FFE16B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -159,7 +160,7 @@
 		F739BC0F24C6ECB500FFE16B /* OPFormRowField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowField.h; sourceTree = "<group>"; };
 		F739BC1024C6ECB500FFE16B /* OPFormRowDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowDate.h; sourceTree = "<group>"; };
 		F739BC1124C6ECB500FFE16B /* OPFormRowReadonlyReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormRowReadonlyReview.m; sourceTree = "<group>"; };
-		F739BC1224C6ECB500FFE16B /* OpFormRowTooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpFormRowTooltip.h; sourceTree = "<group>"; };
+		F739BC1224C6ECB500FFE16B /* OPFormRowTooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormRowTooltip.h; sourceTree = "<group>"; };
 		F739BD0B24C7154500FFE16B /* OPButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPButton.h; sourceTree = "<group>"; };
 		F739BD0C24C7154500FFE16B /* OPButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPButton.m; sourceTree = "<group>"; };
 		F739BD1424C716C300FFE16B /* OPSeparatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPSeparatorView.h; sourceTree = "<group>"; };
@@ -239,7 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5321ABFEF7F97593A64C8168 /* libPods-OnlinePaymentsExample.a in Frameworks */,
+				D007ED8BE93F63BCEBA47A62 /* Pods_OnlinePaymentsExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,18 +248,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24441D370356A18E096BBBA3 /* libPods-OnlinePaymentsExampleTests.a in Frameworks */,
+				23DF030BF9625FFCC45EEA50 /* Pods_OnlinePaymentsExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B05C8BBF3C3FF26A9828FD2A /* Frameworks */ = {
+		D6D28D874BFC68C8788502B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D650D2711C2E1282B081BB94 /* libPods-OnlinePaymentsExample.a */,
-				5A5D8A5FD72F81A42C96C326 /* libPods-OnlinePaymentsExampleTests.a */,
+				7E6ADF7D80DC5BF4294A7DF2 /* libPods-OnlinePaymentsExample.a */,
+				B20687FC9332014C2542B0E3 /* Pods_OnlinePaymentsExample.framework */,
+				BBEDDC4D7712AF5CB6B4CB98 /* Pods_OnlinePaymentsExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -266,10 +268,10 @@
 		DFDE8820B37B7D1BB56DC797 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				225AF9C492258FB7763C82AC /* Pods-OnlinePaymentsExample.debug.xcconfig */,
-				7236C8C11F10C58886EA0AC7 /* Pods-OnlinePaymentsExample.release.xcconfig */,
-				B4F17DEAE9BF18EEF6606D0E /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */,
-				8928BB850216AFDE2609C876 /* Pods-OnlinePaymentsExampleTests.release.xcconfig */,
+				70551286DEA787C0BFF1A77F /* Pods-OnlinePaymentsExample.debug.xcconfig */,
+				3FAF28D948FD30F759AC126C /* Pods-OnlinePaymentsExample.release.xcconfig */,
+				3EACC82BCF297CCB36CB5C85 /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */,
+				ABC9270299AB50FF674E68FA /* Pods-OnlinePaymentsExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -281,7 +283,7 @@
 				F739BBB924C5B87300FFE16B /* OnlinePaymentsExampleTests */,
 				F739BB9C24C5B87200FFE16B /* Products */,
 				DFDE8820B37B7D1BB56DC797 /* Pods */,
-				B05C8BBF3C3FF26A9828FD2A /* Frameworks */,
+				D6D28D874BFC68C8788502B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -462,7 +464,7 @@
 				F739BC0A24C6ECB400FFE16B /* OPFormRowSwitch.m */,
 				F739BC0224C6ECB200FFE16B /* OPFormRowTextField.h */,
 				F739BBF524C6ECB000FFE16B /* OPFormRowTextField.m */,
-				F739BC1224C6ECB500FFE16B /* OpFormRowTooltip.h */,
+				F739BC1224C6ECB500FFE16B /* OPFormRowTooltip.h */,
 				F739BC0924C6ECB400FFE16B /* OPFormRowTooltip.m */,
 				F739BC0E24C6ECB500FFE16B /* OPFormRowWithInfoButton.h */,
 				F739BBF124C6ECAF00FFE16B /* OPFormRowWithInfoButton.m */,
@@ -619,11 +621,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F739BBBF24C5B87300FFE16B /* Build configuration list for PBXNativeTarget "OnlinePaymentsExample" */;
 			buildPhases = (
-				CA4AEF9DB0AB994A4D010D30 /* [CP] Check Pods Manifest.lock */,
+				11648F85DE04E108B7C7FB73 /* [CP] Check Pods Manifest.lock */,
 				F739BB9724C5B87200FFE16B /* Sources */,
 				F739BB9824C5B87200FFE16B /* Frameworks */,
 				F739BB9924C5B87200FFE16B /* Resources */,
-				E91707C78BF8FB184221DF82 /* [CP] Copy Pods Resources */,
+				0D001CBCE72743C8EEEABB49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -638,7 +640,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F739BBC224C5B87300FFE16B /* Build configuration list for PBXNativeTarget "OnlinePaymentsExampleTests" */;
 			buildPhases = (
-				1FFDC0D8503D4C869D999A4A /* [CP] Check Pods Manifest.lock */,
+				D52821CDB15504B32D57834B /* [CP] Check Pods Manifest.lock */,
 				F739BBB224C5B87300FFE16B /* Sources */,
 				F739BBB324C5B87300FFE16B /* Frameworks */,
 				F739BBB424C5B87300FFE16B /* Resources */,
@@ -664,6 +666,7 @@
 				TargetAttributes = {
 					F739BB9A24C5B87200FFE16B = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1330;
 					};
 					F739BBB524C5B87300FFE16B = {
 						CreatedOnToolsVersion = 11.5;
@@ -712,29 +715,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1FFDC0D8503D4C869D999A4A /* [CP] Check Pods Manifest.lock */ = {
+		0D001CBCE72743C8EEEABB49 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OnlinePaymentsExampleTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CA4AEF9DB0AB994A4D010D30 /* [CP] Check Pods Manifest.lock */ = {
+		11648F85DE04E108B7C7FB73 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -756,21 +754,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E91707C78BF8FB184221DF82 /* [CP] Copy Pods Resources */ = {
+		D52821CDB15504B32D57834B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnlinePaymentsExampleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -913,7 +916,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -965,7 +968,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -975,47 +978,56 @@
 		};
 		F739BBC024C5B87300FFE16B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 225AF9C492258FB7763C82AC /* Pods-OnlinePaymentsExample.debug.xcconfig */;
+			baseConfigurationReference = 70551286DEA787C0BFF1A77F /* Pods-OnlinePaymentsExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIDon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5K4669DNRP;
 				GCC_PREFIX_HEADER = "OnlinePaymentsExample/Supporting Files/OnlinePaymentsExample-Prefix.pch";
 				INFOPLIST_FILE = "OnlinePaymentsExample/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.OnlinePayments.iOSExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OnlinePaymentsExample/OnlinePaymentsExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		F739BBC124C5B87300FFE16B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7236C8C11F10C58886EA0AC7 /* Pods-OnlinePaymentsExample.release.xcconfig */;
+			baseConfigurationReference = 3FAF28D948FD30F759AC126C /* Pods-OnlinePaymentsExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIDon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5K4669DNRP;
 				GCC_PREFIX_HEADER = "OnlinePaymentsExample/Supporting Files/OnlinePaymentsExample-Prefix.pch";
 				INFOPLIST_FILE = "OnlinePaymentsExample/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.OnlinePayments.iOSExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OnlinePaymentsExample/OnlinePaymentsExample-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		F739BBC324C5B87300FFE16B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4F17DEAE9BF18EEF6606D0E /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */;
+			baseConfigurationReference = 3EACC82BCF297CCB36CB5C85 /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1035,7 +1047,7 @@
 		};
 		F739BBC424C5B87300FFE16B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8928BB850216AFDE2609C876 /* Pods-OnlinePaymentsExampleTests.release.xcconfig */;
+			baseConfigurationReference = ABC9270299AB50FF674E68FA /* Pods-OnlinePaymentsExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

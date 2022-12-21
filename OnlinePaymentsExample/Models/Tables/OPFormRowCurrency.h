@@ -8,7 +8,7 @@
 #import "OPFormRowWithInfoButton.h"
 #import "OPIntegerTextField.h"
 #import "OPFractionalTextField.h"
-#import <OnlinePaymentsSDK/OPPaymentProductField.h>
+@import OnlinePaymentsKit;
 
 @interface OPFormRowCurrency : OPFormRowWithInfoButton
 

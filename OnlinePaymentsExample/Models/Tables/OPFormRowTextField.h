@@ -7,7 +7,7 @@
 #import "OPFormRowField.h"
 #import "OPFormRowWithInfoButton.h"
 #import "OPTextField.h"
-#import <OnlinePaymentsSDK/OPPaymentProductField.h>
+@import OnlinePaymentsKit;
 
 @interface OPFormRowTextField : OPFormRowWithInfoButton
 

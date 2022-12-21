@@ -14,13 +14,8 @@
 #import "OPPaymentProductViewController.h"
 #import "OPEndViewController.h"
 #import "OPPaymentProductsViewControllerTarget.h"
-#import "OPPaymentItems.h"
 
-#import <OnlinePaymentsSDK/OPSDKConstants.h>
-#import <OnlinePaymentsSDK/OPPaymentItem.h>
-#import <OnlinePaymentsSDK/OPPaymentAmountOfMoney.h>
-#import <OnlinePaymentsSDK/OPPaymentProductGroup.h>
-#import <OnlinePaymentsSDK/OPBasicPaymentProductGroup.h>
+@import OnlinePaymentsKit;
 
 @interface OPStartViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -41,9 +36,9 @@
 @property (strong, nonatomic) OPLabel *amountLabel;
 @property (strong, nonatomic) OPTextField *amountTextField;
 @property (strong, nonatomic) OPLabel *countryCodeLabel;
-@property (strong, nonatomic) OPPickerView *countryCodePicker;
+@property (strong, nonatomic) OPTextField *countryCodeTextField;
 @property (strong, nonatomic) OPLabel *currencyCodeLabel;
-@property (strong, nonatomic) OPPickerView *currencyCodePicker;
+@property (strong, nonatomic) OPTextField *currencyCodeTextField;
 @property (strong, nonatomic) OPLabel *isRecurringLabel;
 @property (strong, nonatomic) OPSwitch *isRecurringSwitch;
 @property (strong, nonatomic) UIButton *payButton;
@@ -54,9 +49,6 @@
 @property (strong, nonatomic) OPViewFactory *viewFactory;
 @property (strong, nonatomic) OPSession *session;
 @property (strong, nonatomic) OPPaymentContext *context;
-
-@property (strong, nonatomic) NSArray *countryCodes;
-@property (strong, nonatomic) NSArray *currencyCodes;
 
 @end
 
@@ -71,10 +63,7 @@
     }
     
     self.viewFactory = [[OPViewFactory alloc] init];
-    
-    self.countryCodes = [[kOPCountryCodes componentsSeparatedByString:@", "] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-    self.currencyCodes = [[kOPCurrencyCodes componentsSeparatedByString:@", "] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-    
+
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.delaysContentTouches = NO;
     [self.view addSubview:self.scrollView];
@@ -105,7 +94,7 @@
     self.clientSessionOPTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.clientSessionOPTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.clientSessionOPTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.clientSessionOPTextField.text = [StandardUserDefaults objectForKey:kOPClientSessionId];
+    self.clientSessionOPTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPClientSessionId];
     [self.containerView addSubview:self.clientSessionIdLabel];
     [self.containerView addSubview:self.clientSessionOPTextField];
     
@@ -115,7 +104,7 @@
     self.customerOPTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.customerOPTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.customerOPTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.customerOPTextField.text = [StandardUserDefaults objectForKey:kOPCustomerId];
+    self.customerOPTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPCustomerId];
     [self.containerView addSubview:self.customerIdLabel];
     [self.containerView addSubview:self.customerOPTextField];
     
@@ -125,7 +114,7 @@
     self.baseURLTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.baseURLTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.baseURLTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.baseURLTextField.text = [StandardUserDefaults objectForKey:kOPBaseURL];
+    self.baseURLTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPBaseURL];
     [self.containerView addSubview:self.baseURLLabel];
     [self.containerView addSubview:self.baseURLTextField];
     
@@ -135,7 +124,7 @@
     self.assetsBaseURLTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.assetsBaseURLTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.assetsBaseURLTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.assetsBaseURLTextField.text = [StandardUserDefaults objectForKey:kOPAssetsBaseURL];
+    self.assetsBaseURLTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPAssetsBaseURL];
     [self.containerView addSubview:self.assetsBaseURLLabel];
     [self.containerView addSubview:self.assetsBaseURLTextField];
 
@@ -145,7 +134,7 @@
     self.merchantOPTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.merchantOPTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.merchantOPTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.merchantOPTextField.text = [StandardUserDefaults objectForKey:kOPMerchantId];
+    self.merchantOPTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPMerchantId];
     [self.containerView addSubview:self.merchantIdLabel];
     [self.containerView addSubview:self.merchantOPTextField];
     
@@ -168,39 +157,22 @@
     self.countryCodeLabel = [self.viewFactory labelWithType:OPLabelType];
     self.countryCodeLabel.text = NSLocalizedStringFromTable(@"CountryCode", kOPAppLocalizable, @"Country code");
     self.countryCodeLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    self.countryCodePicker = [self.viewFactory pickerViewWithType:OPPickerViewType];
-    self.countryCodePicker.translatesAutoresizingMaskIntoConstraints = NO;
-    self.countryCodePicker.content = self.countryCodes;
-    self.countryCodePicker.dataSource = self;
-    self.countryCodePicker.delegate = self;
-    NSInteger countryCode = [[NSUserDefaults standardUserDefaults] integerForKey:kOPCountryCode];
-    if (countryCode == 0) {
-        [self.countryCodePicker selectRow:165 inComponent:0 animated:NO];
-    }
-    else {
-        [self.countryCodePicker selectRow:countryCode inComponent:0 animated:NO];
-    }
-    [self.countryCodePicker selectRow:165 inComponent:0 animated:NO];
+    self.countryCodeTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
+    self.countryCodeTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.countryCodeTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    self.countryCodeTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPCountryCode];
     [self.containerView addSubview:self.countryCodeLabel];
-    [self.containerView addSubview:self.countryCodePicker];
+    [self.containerView addSubview:self.countryCodeTextField];
     
     self.currencyCodeLabel = [self.viewFactory labelWithType:OPLabelType];
     self.currencyCodeLabel.text = NSLocalizedStringFromTable(@"CurrencyCode", kOPAppLocalizable, @"Currency code");
     self.currencyCodeLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    self.currencyCodePicker = [self.viewFactory pickerViewWithType:OPPickerViewType];
-    self.currencyCodePicker.translatesAutoresizingMaskIntoConstraints = NO;
-    self.currencyCodePicker.content = self.currencyCodes;
-    self.currencyCodePicker.dataSource = self;
-    self.currencyCodePicker.delegate = self;
-    NSInteger currency = [[NSUserDefaults standardUserDefaults] integerForKey:kOPCurrency];
-    if (currency == 0) {
-        [self.currencyCodePicker selectRow:42 inComponent:0 animated:NO];
-    }
-    else {
-        [self.currencyCodePicker selectRow:currency inComponent:0 animated:NO];
-    }
+    self.currencyCodeTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
+    self.currencyCodeTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    self.currencyCodeTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    self.currencyCodeTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPCurrency];
     [self.containerView addSubview:self.currencyCodeLabel];
-    [self.containerView addSubview:self.currencyCodePicker];
+    [self.containerView addSubview:self.currencyCodeTextField];
     
     self.isRecurringLabel = [self.viewFactory labelWithType:OPLabelType];
     self.isRecurringLabel.text = NSLocalizedStringFromTable(@"RecurringPayment", kOPAppLocalizable, @"Payment is recurring");
@@ -216,7 +188,7 @@
     [self.payButton addTarget:self action:@selector(buyButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.containerView addSubview:self.payButton];
 
-    NSDictionary *views = NSDictionaryOfVariableBindings(_explanation, _clientSessionIdLabel, _clientSessionOPTextField, _customerIdLabel, _customerOPTextField, _baseURLLabel, _baseURLTextField, _assetsBaseURLLabel, _assetsBaseURLTextField, _merchantIdLabel, _merchantOPTextField, _amountLabel, _amountTextField, _countryCodeLabel, _countryCodePicker, _currencyCodeLabel, _currencyCodePicker, _isRecurringLabel, _isRecurringSwitch, _payButton, _containerView, _scrollView, superContainerView);
+    NSDictionary *views = NSDictionaryOfVariableBindings(_explanation, _clientSessionIdLabel, _clientSessionOPTextField, _customerIdLabel, _customerOPTextField, _baseURLLabel, _baseURLTextField, _assetsBaseURLLabel, _assetsBaseURLTextField, _merchantIdLabel, _merchantOPTextField, _amountLabel, _amountTextField, _countryCodeLabel, _countryCodeTextField, _currencyCodeLabel, _currencyCodeTextField, _isRecurringLabel, _isRecurringSwitch, _payButton, _containerView, _scrollView, superContainerView);
     NSDictionary *metrics = @{@"fieldSeparator": @"24", @"groupSeparator": @"72"};
 
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_explanation]-|" options:0 metrics:nil views:views]];
@@ -233,12 +205,12 @@
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_amountLabel]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_amountTextField]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_countryCodeLabel]-|" options:0 metrics:nil views:views]];
-    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_countryCodePicker]-|" options:0 metrics:nil views:views]];
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_countryCodeTextField]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_currencyCodeLabel]-|" options:0 metrics:nil views:views]];
-    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_currencyCodePicker]-|" options:0 metrics:nil views:views]];
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_currencyCodeTextField]-|" options:0 metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_isRecurringLabel]-[_isRecurringSwitch]-|" options:NSLayoutFormatAlignAllCenterY metrics:nil views:views]];
     [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_payButton]-|" options:0 metrics:nil views:views]];
-    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_explanation]-(fieldSeparator)-[_clientSessionIdLabel]-[_clientSessionOPTextField]-(fieldSeparator)-[_customerIdLabel]-[_customerOPTextField]-(fieldSeparator)-[_baseURLLabel]-[_baseURLTextField]-(fieldSeparator)-[_assetsBaseURLLabel]-[_assetsBaseURLTextField]-(fieldSeparator)-[_merchantIdLabel]-[_merchantOPTextField]-(groupSeparator)-[_amountLabel]-[_amountTextField]-(fieldSeparator)-[_countryCodeLabel]-[_countryCodePicker]-(fieldSeparator)-[_currencyCodeLabel]-[_currencyCodePicker]-(fieldSeparator)-[_isRecurringSwitch]-(fieldSeparator)-[_payButton]-|" options:0 metrics:metrics views:views]];
+    [self.containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_explanation]-(fieldSeparator)-[_clientSessionIdLabel]-[_clientSessionOPTextField]-(fieldSeparator)-[_customerIdLabel]-[_customerOPTextField]-(fieldSeparator)-[_baseURLLabel]-[_baseURLTextField]-(fieldSeparator)-[_assetsBaseURLLabel]-[_assetsBaseURLTextField]-(fieldSeparator)-[_merchantIdLabel]-[_merchantOPTextField]-(groupSeparator)-[_amountLabel]-[_amountTextField]-(fieldSeparator)-[_countryCodeLabel]-[_countryCodeTextField]-(fieldSeparator)-[_currencyCodeLabel]-[_currencyCodeTextField]-(fieldSeparator)-[_isRecurringSwitch]-(fieldSeparator)-[_payButton]-|" options:0 metrics:metrics views:views]];
     self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     self.containerView.translatesAutoresizingMaskIntoConstraints = NO;
     superContainerView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -298,7 +270,7 @@
     }
     
     
-    NSArray<NSString *> *versionComponents = [kOPAPIVersion componentsSeparatedByString:@"/"];
+    NSArray<NSString *> *versionComponents = [OPSDKConstants.kOPAPIVersion componentsSeparatedByString:@"/"];
     switch (components.count) {
         case 0: {
             components = versionComponents.mutableCopy;
@@ -337,24 +309,26 @@
         [NSException raise:@"Invalid sender" format:@"Sender %@ is invalid", sender];
     }
 
-    [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", kOPSDKLocalizable, [NSBundle bundleWithPath:kOPSDKBundlePath], nil)];
+    [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], nil)];
 
     NSString *clientSessionId = self.clientSessionOPTextField.text;
-    [StandardUserDefaults setObject:clientSessionId forKey:kOPClientSessionId];
+    [OPSDKConstants.StandardUserDefaults setObject:clientSessionId forKey:kOPClientSessionId];
     NSString *customerId = self.customerOPTextField.text;
-    [StandardUserDefaults setObject:customerId forKey:kOPCustomerId];
+    [OPSDKConstants.StandardUserDefaults setObject:customerId forKey:kOPCustomerId];
     NSString *baseURL = self.baseURLTextField.text;
-    [StandardUserDefaults setObject:baseURL forKey:kOPBaseURL];
+    [OPSDKConstants.StandardUserDefaults setObject:baseURL forKey:kOPBaseURL];
     NSString *assetsBaseURL = self.assetsBaseURLTextField.text;
-    [StandardUserDefaults setObject:assetsBaseURL forKey:kOPAssetsBaseURL];
+    [OPSDKConstants.StandardUserDefaults setObject:assetsBaseURL forKey:kOPAssetsBaseURL];
 
     if (self.merchantOPTextField.text != nil) {
         NSString *merchantId = self.merchantOPTextField.text;
-        [StandardUserDefaults setObject:merchantId forKey:kOPMerchantId];
+        [OPSDKConstants.StandardUserDefaults setObject:merchantId forKey:kOPMerchantId];
     }
-    [StandardUserDefaults setInteger:self.amountValue forKey:kOPPrice];
-    [StandardUserDefaults setInteger:[self.countryCodePicker selectedRowInComponent:0] forKey:kOPCountryCode];
-    [StandardUserDefaults setInteger:[self.currencyCodePicker selectedRowInComponent:0] forKey:kOPCurrency];
+    [OPSDKConstants.StandardUserDefaults setInteger:self.amountValue forKey:kOPPrice];
+    NSString *countryCode = self.countryCodeTextField.text;
+    [OPSDKConstants.StandardUserDefaults setObject:countryCode forKey:kOPCountryCode];
+    NSString *currencyCode = self.currencyCodeTextField.text;
+    [OPSDKConstants.StandardUserDefaults setObject:currencyCode forKey:kOPCurrency];
 
     // ***************************************************************************
     //
@@ -382,7 +356,7 @@
             components = [[[NSURL URLWithString:baseURL].path componentsSeparatedByString:@"/"] filteredArrayUsingPredicate:
                           [NSPredicate predicateWithFormat:@"length > 0"]].mutableCopy;
         }
-        NSArray<NSString *> *versionComponents = [kOPAPIVersion componentsSeparatedByString:@"/"];
+        NSArray<NSString *> *versionComponents = [OPSDKConstants.kOPAPIVersion componentsSeparatedByString:@"/"];
         NSString *alertReason = [NSString stringWithFormat: @"This version of the Online Payments SDK is only compatible with %@ , you supplied: '%@'",
                                  [versionComponents componentsJoinedByString: @"/"],
                                  [components componentsJoinedByString: @"/"]];
@@ -394,8 +368,6 @@
 
     self.session = [OPSession sessionWithClientSessionId:clientSessionId customerId:customerId baseURL:baseURL assetBaseURL:assetsBaseURL appIdentifier:kOPApplicationIdentifier];
 
-    NSString *countryCode = [self.countryCodes objectAtIndex:[self.countryCodePicker selectedRowInComponent:0]];
-    NSString *currencyCode = [self.currencyCodes objectAtIndex:[self.currencyCodePicker selectedRowInComponent:0]];
     BOOL isRecurring = self.isRecurringSwitch.on;
 
     // ***************************************************************************
@@ -438,7 +410,7 @@
     paymentProductSelection.paymentItems = paymentItems;
     paymentProductSelection.viewFactory = self.viewFactory;
     paymentProductSelection.amount = self.amountValue;
-    paymentProductSelection.currencyCode = self.context.amountOfMoney.currencyCode;
+    paymentProductSelection.currencyCode = self.context.amountOfMoney.currencyCodeString;
     [self.navigationController pushViewController:paymentProductSelection animated:YES];
     [SVProgressHUD dismiss];
 }

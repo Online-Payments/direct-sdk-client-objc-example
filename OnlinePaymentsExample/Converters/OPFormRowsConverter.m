@@ -14,20 +14,7 @@
 #import "OPFormRowCurrency.h"
 #import "OPFormRowLabel.h"
 
-#import <OnlinePaymentsSDK/OPIINDetailsResponse.h>
-#import <OnlinePaymentsSDK/OPSDKConstants.h>
-#import <OnlinePaymentsSDK/OPValidators.h>
-#import <OnlinePaymentsSDK/OPValidationErrorAllowed.h>
-#import <OnlinePaymentsSDK/OPValidationErrorIBAN.h>
-#import <OnlinePaymentsSDK/OPValidationErrorLuhn.h>
-#import <OnlinePaymentsSDK/OPValidationErrorLength.h>
-#import <OnlinePaymentsSDK/OPValidationErrorRegularExpression.h>
-#import <OnlinePaymentsSDK/OPValidationErrorTermsAndConditions.h>
-#import <OnlinePaymentsSDK/OPValidationErrorIsRequired.h>
-#import <OnlinePaymentsSDK/OPValidationErrorFixedList.h>
-#import <OnlinePaymentsSDK/OPValidationErrorRange.h>
-#import <OnlinePaymentsSDK/OPValidationErrorExpirationDate.h>
-#import <OnlinePaymentsSDK/OPValidationErrorEmailAddress.h>
+@import OnlinePaymentsKit;
 
 @interface OPFormRowsConverter ()
 
@@ -40,7 +27,7 @@
 static NSBundle * _sdkBundle;
 + (NSBundle *)sdkBundle {
     if (_sdkBundle == nil) {
-        _sdkBundle = [NSBundle bundleWithPath:kOPSDKBundlePath];
+        _sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
     }
     return _sdkBundle;
 }
@@ -93,7 +80,7 @@ static NSBundle * _sdkBundle;
                 break;
             }
             default: {
-                [NSException raise:@"Invalid form element type" format:@"Form element type %d is invalid", field.displayHints.formElement.type];
+                [NSException raise:@"Invalid form element type" format:@"Form element type %ld is invalid", (long)field.displayHints.formElement.type];
                 break;
             }
         }
@@ -128,13 +115,13 @@ static NSBundle * _sdkBundle;
         } else if (lengthError.minLength > 0 && lengthError.maxLength > 0) {
             errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"length.between"];
         }
-        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, self.sdkBundle, nil);
+        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, nil);
         NSString *errorMessageValueWithPlaceholder = [errorMessageValueWithPlaceholders stringByReplacingOccurrencesOfString:@"{maxLength}" withString:[NSString stringWithFormat:@"%ld", lengthError.maxLength]];
         errorMessage = [errorMessageValueWithPlaceholder stringByReplacingOccurrencesOfString:@"{minLength}" withString:[NSString stringWithFormat:@"%ld", lengthError.minLength]];
     } else if (errorClass == [OPValidationErrorRange class]) {
         OPValidationErrorRange *rangeError = (OPValidationErrorRange *)error;
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"length.between"];
-        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, self.sdkBundle, nil);
+        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, nil);
         NSString *minString;
         NSString *maxString;
         if (forCurrency == YES) {
@@ -148,39 +135,39 @@ static NSBundle * _sdkBundle;
         errorMessageValue = [errorMessageValueWithPlaceholder stringByReplacingOccurrencesOfString:@"{maxValue}" withString:maxString];
     } else if (errorClass == [OPValidationErrorExpirationDate class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"expirationDate"];
-        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [OPValidationErrorFixedList class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"fixedList"];
-        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [OPValidationErrorLuhn class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"luhn"];
-        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [OPValidationErrorAllowed class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"allowedInContext"];
-        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [OPValidationErrorEmailAddress class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"emailAddress"];
-        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [OPValidationErrorIBAN class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"regularExpression"];
-        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [OPValidationErrorRegularExpression class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"regularExpression"];
-        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [OPValidationErrorTermsAndConditions class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"termsAndConditions"];
-        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
         errorMessage = errorMessageValue;
     } else if (errorClass == [OPValidationErrorIsRequired class]) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"required"];
-        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
+        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
         errorMessage = errorMessageValue;
     } else {
         [NSException raise:@"Invalid validation error" format:@"Validation error %@ is invalid", error];
@@ -221,9 +208,9 @@ static NSBundle * _sdkBundle;
 - (OPFormRowSwitch *)switchFormRowFromField:(OPPaymentProductField *)field paymentItem:(NSObject<OPPaymentItem> *)paymentItem value:(NSString *)value isEnabled:(BOOL)isEnabled viewFactory:(OPViewFactory *)viewFactory
 {
     NSString *descriptionKey = [NSString stringWithFormat: @"gc.general.paymentProducts.%@.paymentProductFields.%@.label", paymentItem.identifier, field.identifier];
-    NSString *descriptionValue = NSLocalizedStringWithDefaultValue(descriptionKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil, @"Accept {link}");
+    NSString *descriptionValue = NSLocalizedStringWithDefaultValue(descriptionKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil, @"Accept {link}");
     NSString *labelKey = [NSString stringWithFormat: @"gc.general.paymentProducts.%@.paymentProductFields.%@.link.label", paymentItem.identifier, field.identifier];
-    NSString *labelValue = NSLocalizedStringWithDefaultValue(labelKey, kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil, @"");
+    NSString *labelValue = NSLocalizedStringWithDefaultValue(labelKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil, @"");
     NSRange range = [descriptionValue rangeOfString:@"{link}"];
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:descriptionValue];
     NSAttributedString *linkString = [[NSAttributedString alloc]initWithString:labelValue attributes:@{NSLinkAttributeName:field.displayHints.link.absoluteString}];

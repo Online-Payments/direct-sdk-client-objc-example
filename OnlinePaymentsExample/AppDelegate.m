@@ -6,7 +6,6 @@
 
 #import "AppDelegate.h"
 #import "SVProgressHUD.h"
-#import "OPNetworkingActivityLogger.h"
 #import "OPStartViewController.h"
 
 @interface AppDelegate ()

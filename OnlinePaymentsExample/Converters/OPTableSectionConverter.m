@@ -9,9 +9,7 @@
 #import "OPTableSectionConverter.h"
 #import "OPPaymentProductsTableRow.h"
 
-#import <OnlinePaymentsSDK/OPSDKConstants.h>
-#import <OnlinePaymentsSDK/OPPaymentItems.h>
-#import <OnlinePaymentsSDK/OPBasicPaymentProductGroup.h>
+@import OnlinePaymentsKit;
 
 @implementation OPTableSectionConverter
 

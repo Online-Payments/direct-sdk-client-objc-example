@@ -5,7 +5,7 @@
 //
 
 #import "OPCOBrandsExplanationTableViewCell.h"
-#import <OnlinePaymentsSDK/OPSDKConstants.h>
+@import OnlinePaymentsKit;
 
 @interface OPCOBrandsExplanationTableViewCell ()
 
@@ -40,9 +40,9 @@
     NSDictionary *fontAttribute = @{
             NSFontAttributeName: font
     };
-    NSBundle *sdkBundle = [NSBundle bundleWithPath:kOPSDKBundlePath];
+    NSBundle *sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
     NSString *cellKey = @"gc.general.cobrands.introText";
-    NSString *cellString = NSLocalizedStringFromTableInBundle(cellKey, kOPSDKLocalizable, sdkBundle, nil);
+    NSString *cellString = NSLocalizedStringFromTableInBundle(cellKey, OPSDKConstants.kOPSDKLocalizable, sdkBundle, nil);
     NSAttributedString *cellStringWithFont = [[NSAttributedString alloc] initWithString:cellString
                                                                              attributes:fontAttribute];
     return cellStringWithFont;

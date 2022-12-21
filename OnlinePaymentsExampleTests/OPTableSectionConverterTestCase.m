@@ -10,7 +10,6 @@
 #import "OPPaymentProductsTableSection.h"
 #import "OPPaymentProductsTableRow.h"
 #import "OPTableSectionConverter.h"
-#import "OPStringFormatter.h"
 #import "OPAccountOnFile.h"
 #import "OPPaymentItems.h"
 

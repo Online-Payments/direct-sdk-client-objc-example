@@ -6,8 +6,7 @@
 
 #import "OPTableViewCell.h"
 #import "OPPickerView.h"
-#import <OnlinePaymentsSDK/OPValueMappingItem.h>
-#import <OnlinePaymentsSDK/OPPaymentProductField.h>
+@import OnlinePaymentsKit;
 
 @interface OPPickerViewTableViewCell : OPTableViewCell {
     BOOL _readonly;

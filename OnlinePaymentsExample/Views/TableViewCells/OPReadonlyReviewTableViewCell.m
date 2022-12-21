@@ -5,7 +5,7 @@
 //
 
 #import "OPReadonlyReviewTableViewCell.h"
-#import <OnlinePaymentsSDK/OPSDKConstants.h>
+@import OnlinePaymentsKit;
 
 @interface OPReadonlyReviewTableViewCell()
 
@@ -39,8 +39,8 @@
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.tabStops = @[[[NSTextTab alloc]initWithTextAlignment:NSTextAlignmentRight location:width - 30 options:@{}]];
     NSString *successStringKey = [NSString stringWithFormat:@"gc.app.paymentProductDetails.searchConsumer.result.success.summary"];
-    NSString *successString = NSLocalizedStringWithDefaultValue(successStringKey, kOPSDKLocalizable,
-                                                            [NSBundle bundleWithPath:kOPSDKBundlePath],
+    NSString *successString = NSLocalizedStringWithDefaultValue(successStringKey, OPSDKConstants.kOPSDKLocalizable,
+                                                            [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath],
                                                             successStringKey, @"");
     successString = [successString stringByReplacingOccurrencesOfString:@"{br}" withString:@"\n"];
     for (NSString *key in data) {

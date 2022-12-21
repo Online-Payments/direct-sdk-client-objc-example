@@ -5,7 +5,7 @@
 //
 
 #import "OPCoBrandsSelectionTableViewCell.h"
-#import <OnlinePaymentsSDK/OPSDKConstants.h>
+@import OnlinePaymentsKit;
 
 @implementation OPCoBrandsSelectionTableViewCell
 
@@ -22,9 +22,9 @@
                 NSFontAttributeName: font
         };
 
-        NSBundle *sdkBundle = [NSBundle bundleWithPath:kOPSDKBundlePath];
+        NSBundle *sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
         NSString *cobrandsKey = @"gc.general.cobrands.toggleCobrands";
-        NSString *cobrandsString = NSLocalizedStringFromTableInBundle(cobrandsKey, kOPSDKLocalizable, sdkBundle, nil);
+        NSString *cobrandsString = NSLocalizedStringFromTableInBundle(cobrandsKey, OPSDKConstants.kOPSDKLocalizable, sdkBundle, nil);
         self.textLabel.attributedText = [[NSAttributedString alloc] initWithString:cobrandsString
                                                                  attributes:underlineAttribute];
         self.textLabel.textAlignment = NSTextAlignmentRight;

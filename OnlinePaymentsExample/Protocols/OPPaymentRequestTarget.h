@@ -7,7 +7,7 @@
 #ifndef OPPaymentRequestTarget_h
 #define OPPaymentRequestTarget_h
 
-#import <OnlinePaymentsSDK/OPPaymentRequest.h>
+@import OnlinePaymentsKit;
 
 @protocol OPPaymentRequestTarget <NSObject>
 

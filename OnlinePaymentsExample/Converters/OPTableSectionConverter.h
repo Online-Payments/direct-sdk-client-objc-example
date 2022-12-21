@@ -5,8 +5,8 @@
 // 
 
 #import "OPPaymentProductsTableSection.h"
-#import <OnlinePaymentsSDK/OPBasicPaymentProducts.h>
-#import <OnlinePaymentsSDK/OPPaymentItems.h>
+@import OnlinePaymentsKit;
+
 
 @interface OPTableSectionConverter : NSObject
 

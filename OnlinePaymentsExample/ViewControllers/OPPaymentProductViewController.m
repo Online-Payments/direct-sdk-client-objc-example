@@ -36,9 +36,7 @@
 #import "OPPaymentProductTableViewCell.h"
 #import "OPCOBrandsExplanationTableViewCell.h"
 
-#import <OnlinePaymentsSDK/OPSDKConstants.h>
-#import <OnlinePaymentsSDK/OPPaymentAmountOfMoney.h>
-#import <OnlinePaymentsSDK/OPIINDetail.h>
+@import OnlinePaymentsKit;
 
 @interface OPPaymentProductViewController () <UITextFieldDelegate, OPDatePickerTableViewCellDelegate, OPSwitchTableViewCellDelegate>
 
@@ -59,7 +57,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     
     if (self) {
-        self.sdkBundle = [NSBundle bundleWithPath:kOPSDKBundlePath];
+        self.sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
         self.context.forceBasicFlow = YES;
     }
     
@@ -122,39 +120,39 @@
 }
 
 - (void)initializeHeader {
-    NSBundle *sdkBundle = [NSBundle bundleWithPath:kOPSDKBundlePath];
+    NSBundle *sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
     self.header = (OPSummaryTableHeaderView *)[self.viewFactory tableHeaderViewWithType:OPSummaryTableHeaderViewType frame:CGRectMake(0, 0, self.tableView.frame.size.width, 80)];
-    self.header.summary = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTableInBundle(@"gc.app.general.shoppingCart.total", kOPSDKLocalizable, sdkBundle, @"Description of the amount header.")];
+    self.header.summary = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTableInBundle(@"gc.app.general.shoppingCart.total", OPSDKConstants.kOPSDKLocalizable, sdkBundle, @"Description of the amount header.")];
     NSNumber *amountAsNumber = [[NSNumber alloc] initWithFloat:self.amount / 100.0];
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
-    [numberFormatter setCurrencyCode:self.context.amountOfMoney.currencyCode];
+    [numberFormatter setCurrencyCode:self.context.amountOfMoney.currencyCodeString];
     NSString *amountAsString = [numberFormatter stringFromNumber:amountAsNumber];
     self.header.amount = amountAsString;
-    self.header.securePayment = NSLocalizedStringFromTableInBundle(@"gc.app.general.securePaymentText", kOPSDKLocalizable, sdkBundle, @"Text indicating that a secure payment method is used.");
+    self.header.securePayment = NSLocalizedStringFromTableInBundle(@"gc.app.general.securePaymentText", OPSDKConstants.kOPSDKLocalizable, sdkBundle, @"Text indicating that a secure payment method is used.");
     self.tableView.tableHeaderView = self.header;
 }
 
 - (void)addExtraRows {
     if ([self.paymentItem isKindOfClass:[OPBasicPaymentProduct class]] && ((OPBasicPaymentProduct *)self.paymentItem).allowsTokenization && self.accountOnFile == nil) {
         // Add remember me switch
-          OPFormRowSwitch *switchFormRow = [[OPFormRowSwitch alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe", kOPSDKLocalizable, self.sdkBundle, @"Explanation of the switch for remembering payment information.") isOn:self.rememberPaymentDetails target:self action: @selector(switchChanged:)];
+          OPFormRowSwitch *switchFormRow = [[OPFormRowSwitch alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe", OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, @"Explanation of the switch for remembering payment information.") isOn:self.rememberPaymentDetails target:self action: @selector(switchChanged:)];
         switchFormRow.isEnabled = true;
         [self.formRows addObject:switchFormRow];
         
         OPFormRowTooltip *switchFormRowTooltip = [OPFormRowTooltip new];
-        switchFormRowTooltip.text = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe.tooltip", kOPSDKLocalizable, self.sdkBundle, @"");
+        switchFormRowTooltip.text = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.rememberMe.tooltip", OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, @"");
         switchFormRow.tooltip = switchFormRowTooltip;
         [self.formRows addObject:switchFormRowTooltip];
     }
     
     // Add pay and cancel button
-    NSString *payButtonTitle = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.payButton", kOPSDKLocalizable, self.sdkBundle, @"");
+    NSString *payButtonTitle = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.payButton", OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, @"");
     OPFormRowButton *payButtonFormRow = [[OPFormRowButton alloc] initWithTitle: payButtonTitle target: self action: @selector(payButtonTapped)];
     payButtonFormRow.isEnabled = [self.paymentItem isKindOfClass:[OPPaymentProduct class]];
     [self.formRows addObject:payButtonFormRow];
     
-    NSString *cancelButtonTitle = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.cancelButton", kOPSDKLocalizable, self.sdkBundle, @"");
+    NSString *cancelButtonTitle = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductDetails.cancelButton", OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, @"");
     OPFormRowButton *cancelButtonFormRow = [[OPFormRowButton alloc] initWithTitle: cancelButtonTitle target: self action: @selector(cancelButtonTapped)];
     cancelButtonFormRow.buttonType = OPButtonTypeSecondary;
     cancelButtonFormRow.isEnabled = true;
@@ -189,7 +187,7 @@
     }
     if (coBrands.count > 1) {
         if (!self.coBrandsCollapsed) {
-            NSBundle *sdkBundle = [NSBundle bundleWithPath:kOPSDKBundlePath];
+            NSBundle *sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
             
             //Add explanation row
             OPFormRowCoBrandsExplanation *explanationRow = [OPFormRowCoBrandsExplanation new];
@@ -201,7 +199,7 @@
                 row.paymentProductIdentifier = id;
                 
                 NSString *paymentProductKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.name", id];
-                NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, kOPSDKLocalizable, sdkBundle, nil);
+                NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, OPSDKConstants.kOPSDKLocalizable, sdkBundle, nil);
                 row.name = paymentProductValue;
                 
                 OPAssetManager *assetManager = [OPAssetManager new];

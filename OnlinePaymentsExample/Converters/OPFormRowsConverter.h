@@ -7,8 +7,7 @@
 #import "OPViewFactory.h"
 #import "OPFormRowErrorMessage.h"
 
-#import <OnlinePaymentsSDK/OPPaymentRequest.h>
-#import <OnlinePaymentsSDK/OPValidationError.h>
+@import OnlinePaymentsKit;
 
 @class OPIINDetailsResponse;
 @class OPPaymentProductInputData;
