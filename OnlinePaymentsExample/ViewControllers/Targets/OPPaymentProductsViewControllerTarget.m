@@ -114,7 +114,7 @@
 #pragma mark ApplePay selection handling
 
 - (void)showApplePayPaymentItem:(OPPaymentProduct *)paymentProduct {
-    if ([OPSDKConstants SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO:@"8.0"] && [PKPaymentAuthorizationViewController canMakePayments]) {
+    if ([self systemVersionIsGreaterThan:@"8.0"] && [PKPaymentAuthorizationViewController canMakePayments]) {
         [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], nil)];
         
         // ***************************************************************************
@@ -135,6 +135,10 @@
             [alert show];
         }];
     }
+}
+
+- (BOOL) systemVersionIsGreaterThan:(NSString *)v {
+    return [[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending;
 }
 
 - (void)showApplePaySheetForPaymentProduct:(OPPaymentProduct *)paymentProduct withAvailableNetworks:(OPPaymentProductNetworks *)paymentProductNetworks {

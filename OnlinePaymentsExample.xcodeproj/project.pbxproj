@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23DF030BF9625FFCC45EEA50 /* Pods_OnlinePaymentsExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEDDC4D7712AF5CB6B4CB98 /* Pods_OnlinePaymentsExampleTests.framework */; };
-		D007ED8BE93F63BCEBA47A62 /* Pods_OnlinePaymentsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20687FC9332014C2542B0E3 /* Pods_OnlinePaymentsExample.framework */; };
+		1710AB0174AD7AFB568C2560 /* Pods_OnlinePaymentsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D115743117CE15BF6E0964A9 /* Pods_OnlinePaymentsExample.framework */; };
 		F739BBA024C5B87200FFE16B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB9F24C5B87200FFE16B /* AppDelegate.m */; };
 		F739BBAB24C5B87300FFE16B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F739BBAA24C5B87300FFE16B /* Assets.xcassets */; };
 		F739BBB124C5B87300FFE16B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BBB024C5B87300FFE16B /* main.m */; };
@@ -71,38 +70,18 @@
 		F749A8E424C72D76008597B6 /* OPPaymentProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8DE24C72D75008597B6 /* OPPaymentProductsViewController.m */; };
 		F749A8F124C72D80008597B6 /* OPCardProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8E924C72D7E008597B6 /* OPCardProductViewController.m */; };
 		F749A8F724C72D99008597B6 /* OPPaymentProductsViewControllerTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = F749A8F624C72D99008597B6 /* OPPaymentProductsViewControllerTarget.m */; };
-		F74DA1F524CF1C24002B6DE6 /* OPTableSectionConverterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F74DA1F424CF1C24002B6DE6 /* OPTableSectionConverterTestCase.m */; };
-		F74DA1F724CF1C5C002B6DE6 /* OPPaymentProductInputDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F74DA1F624CF1C5C002B6DE6 /* OPPaymentProductInputDataTestCase.m */; };
-		F74DA1FB24CF1CF0002B6DE6 /* paymentProduct.json in Resources */ = {isa = PBXBuildFile; fileRef = F74DA1F924CF1CF0002B6DE6 /* paymentProduct.json */; };
-		F74DA1FC24CF1CF0002B6DE6 /* paymentProducts.json in Resources */ = {isa = PBXBuildFile; fileRef = F74DA1FA24CF1CF0002B6DE6 /* paymentProducts.json */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F739BBB724C5B87300FFE16B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F739BB9324C5B87200FFE16B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F739BB9A24C5B87200FFE16B;
-			remoteInfo = IngenicoDirectExample;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		3EACC82BCF297CCB36CB5C85 /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExampleTests/Pods-OnlinePaymentsExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3FAF28D948FD30F759AC126C /* Pods-OnlinePaymentsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.release.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.release.xcconfig"; sourceTree = "<group>"; };
-		70551286DEA787C0BFF1A77F /* Pods-OnlinePaymentsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.debug.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.debug.xcconfig"; sourceTree = "<group>"; };
-		7E6ADF7D80DC5BF4294A7DF2 /* libPods-OnlinePaymentsExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OnlinePaymentsExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABC9270299AB50FF674E68FA /* Pods-OnlinePaymentsExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExampleTests.release.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExampleTests/Pods-OnlinePaymentsExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		B20687FC9332014C2542B0E3 /* Pods_OnlinePaymentsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlinePaymentsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBEDDC4D7712AF5CB6B4CB98 /* Pods_OnlinePaymentsExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlinePaymentsExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9BEF2916B7A94485720E5DF /* Pods-OnlinePaymentsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.debug.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.debug.xcconfig"; sourceTree = "<group>"; };
+		D115743117CE15BF6E0964A9 /* Pods_OnlinePaymentsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlinePaymentsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C2A86652F33E17F367E401 /* Pods-OnlinePaymentsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.release.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.release.xcconfig"; sourceTree = "<group>"; };
 		F739BB9B24C5B87200FFE16B /* OnlinePaymentsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlinePaymentsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F739BB9E24C5B87200FFE16B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F739BB9F24C5B87200FFE16B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F739BBAA24C5B87300FFE16B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F739BBAF24C5B87300FFE16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F739BBB024C5B87300FFE16B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F739BBB624C5B87300FFE16B /* OnlinePaymentsExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlinePaymentsExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F739BBBC24C5B87300FFE16B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F739BBCE24C6C87600FFE16B /* OnlinePaymentsExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnlinePaymentsExample-Prefix.pch"; sourceTree = "<group>"; };
 		F739BBCF24C6CB2900FFE16B /* OPAppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPAppConstants.h; sourceTree = "<group>"; };
 		F739BBD024C6CCF200FFE16B /* OPTranslations.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = OPTranslations.strings; sourceTree = "<group>"; };
@@ -229,10 +208,6 @@
 		F749A8E924C72D7E008597B6 /* OPCardProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPCardProductViewController.m; sourceTree = "<group>"; };
 		F749A8F524C72D99008597B6 /* OPPaymentProductsViewControllerTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductsViewControllerTarget.h; sourceTree = "<group>"; };
 		F749A8F624C72D99008597B6 /* OPPaymentProductsViewControllerTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductsViewControllerTarget.m; sourceTree = "<group>"; };
-		F74DA1F424CF1C24002B6DE6 /* OPTableSectionConverterTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPTableSectionConverterTestCase.m; sourceTree = "<group>"; };
-		F74DA1F624CF1C5C002B6DE6 /* OPPaymentProductInputDataTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductInputDataTestCase.m; sourceTree = "<group>"; };
-		F74DA1F924CF1CF0002B6DE6 /* paymentProduct.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProduct.json; sourceTree = "<group>"; };
-		F74DA1FA24CF1CF0002B6DE6 /* paymentProducts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProducts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,27 +215,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D007ED8BE93F63BCEBA47A62 /* Pods_OnlinePaymentsExample.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F739BBB324C5B87300FFE16B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23DF030BF9625FFCC45EEA50 /* Pods_OnlinePaymentsExampleTests.framework in Frameworks */,
+				1710AB0174AD7AFB568C2560 /* Pods_OnlinePaymentsExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D6D28D874BFC68C8788502B2 /* Frameworks */ = {
+		7E932C23AD03551CD5EC21B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7E6ADF7D80DC5BF4294A7DF2 /* libPods-OnlinePaymentsExample.a */,
-				B20687FC9332014C2542B0E3 /* Pods_OnlinePaymentsExample.framework */,
-				BBEDDC4D7712AF5CB6B4CB98 /* Pods_OnlinePaymentsExampleTests.framework */,
+				D115743117CE15BF6E0964A9 /* Pods_OnlinePaymentsExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -268,10 +233,8 @@
 		DFDE8820B37B7D1BB56DC797 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				70551286DEA787C0BFF1A77F /* Pods-OnlinePaymentsExample.debug.xcconfig */,
-				3FAF28D948FD30F759AC126C /* Pods-OnlinePaymentsExample.release.xcconfig */,
-				3EACC82BCF297CCB36CB5C85 /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */,
-				ABC9270299AB50FF674E68FA /* Pods-OnlinePaymentsExampleTests.release.xcconfig */,
+				A9BEF2916B7A94485720E5DF /* Pods-OnlinePaymentsExample.debug.xcconfig */,
+				D1C2A86652F33E17F367E401 /* Pods-OnlinePaymentsExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -280,10 +243,9 @@
 			isa = PBXGroup;
 			children = (
 				F739BB9D24C5B87200FFE16B /* OnlinePaymentsExample */,
-				F739BBB924C5B87300FFE16B /* OnlinePaymentsExampleTests */,
 				F739BB9C24C5B87200FFE16B /* Products */,
 				DFDE8820B37B7D1BB56DC797 /* Pods */,
-				D6D28D874BFC68C8788502B2 /* Frameworks */,
+				7E932C23AD03551CD5EC21B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				F739BB9B24C5B87200FFE16B /* OnlinePaymentsExample.app */,
-				F739BBB624C5B87300FFE16B /* OnlinePaymentsExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,16 +273,6 @@
 				F739BBCB24C6C7E800FFE16B /* Views */,
 			);
 			path = OnlinePaymentsExample;
-			sourceTree = "<group>";
-		};
-		F739BBB924C5B87300FFE16B /* OnlinePaymentsExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				F74DA1F824CF1CE1002B6DE6 /* Supporting Files */,
-				F74DA1F424CF1C24002B6DE6 /* OPTableSectionConverterTestCase.m */,
-				F74DA1F624CF1C5C002B6DE6 /* OPPaymentProductInputDataTestCase.m */,
-			);
-			path = OnlinePaymentsExampleTests;
 			sourceTree = "<group>";
 		};
 		F739BBC524C6C7B700FFE16B /* Constants */ = {
@@ -604,16 +555,6 @@
 			path = Targets;
 			sourceTree = "<group>";
 		};
-		F74DA1F824CF1CE1002B6DE6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F739BBBC24C5B87300FFE16B /* Info.plist */,
-				F74DA1F924CF1CF0002B6DE6 /* paymentProduct.json */,
-				F74DA1FA24CF1CF0002B6DE6 /* paymentProducts.json */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -621,11 +562,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F739BBBF24C5B87300FFE16B /* Build configuration list for PBXNativeTarget "OnlinePaymentsExample" */;
 			buildPhases = (
-				11648F85DE04E108B7C7FB73 /* [CP] Check Pods Manifest.lock */,
+				0201A46F5CD87EFA2C2BCB33 /* [CP] Check Pods Manifest.lock */,
 				F739BB9724C5B87200FFE16B /* Sources */,
 				F739BB9824C5B87200FFE16B /* Frameworks */,
 				F739BB9924C5B87200FFE16B /* Resources */,
-				0D001CBCE72743C8EEEABB49 /* [CP] Embed Pods Frameworks */,
+				D259E42373D44119B57BA65C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -635,25 +576,6 @@
 			productName = IngenicoDirectExample;
 			productReference = F739BB9B24C5B87200FFE16B /* OnlinePaymentsExample.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F739BBB524C5B87300FFE16B /* OnlinePaymentsExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F739BBC224C5B87300FFE16B /* Build configuration list for PBXNativeTarget "OnlinePaymentsExampleTests" */;
-			buildPhases = (
-				D52821CDB15504B32D57834B /* [CP] Check Pods Manifest.lock */,
-				F739BBB224C5B87300FFE16B /* Sources */,
-				F739BBB324C5B87300FFE16B /* Frameworks */,
-				F739BBB424C5B87300FFE16B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F739BBB824C5B87300FFE16B /* PBXTargetDependency */,
-			);
-			name = OnlinePaymentsExampleTests;
-			productName = IngenicoDirectExampleTests;
-			productReference = F739BBB624C5B87300FFE16B /* OnlinePaymentsExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -667,10 +589,6 @@
 					F739BB9A24C5B87200FFE16B = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1330;
-					};
-					F739BBB524C5B87300FFE16B = {
-						CreatedOnToolsVersion = 11.5;
-						TestTargetID = F739BB9A24C5B87200FFE16B;
 					};
 				};
 			};
@@ -688,7 +606,6 @@
 			projectRoot = "";
 			targets = (
 				F739BB9A24C5B87200FFE16B /* OnlinePaymentsExample */,
-				F739BBB524C5B87300FFE16B /* OnlinePaymentsExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -703,36 +620,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F739BBB424C5B87300FFE16B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F74DA1FC24CF1CF0002B6DE6 /* paymentProducts.json in Resources */,
-				F74DA1FB24CF1CF0002B6DE6 /* paymentProduct.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D001CBCE72743C8EEEABB49 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		11648F85DE04E108B7C7FB73 /* [CP] Check Pods Manifest.lock */ = {
+		0201A46F5CD87EFA2C2BCB33 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -754,26 +645,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D52821CDB15504B32D57834B /* [CP] Check Pods Manifest.lock */ = {
+		D259E42373D44119B57BA65C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OnlinePaymentsExampleTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -846,24 +732,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F739BBB224C5B87300FFE16B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F74DA1F724CF1C5C002B6DE6 /* OPPaymentProductInputDataTestCase.m in Sources */,
-				F74DA1F524CF1C24002B6DE6 /* OPTableSectionConverterTestCase.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F739BBB824C5B87300FFE16B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F739BB9A24C5B87200FFE16B /* OnlinePaymentsExample */;
-			targetProxy = F739BBB724C5B87300FFE16B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F739BBBD24C5B87300FFE16B /* Debug */ = {
@@ -978,7 +847,7 @@
 		};
 		F739BBC024C5B87300FFE16B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70551286DEA787C0BFF1A77F /* Pods-OnlinePaymentsExample.debug.xcconfig */;
+			baseConfigurationReference = A9BEF2916B7A94485720E5DF /* Pods-OnlinePaymentsExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIDon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1003,7 +872,7 @@
 		};
 		F739BBC124C5B87300FFE16B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FAF28D948FD30F759AC126C /* Pods-OnlinePaymentsExample.release.xcconfig */;
+			baseConfigurationReference = D1C2A86652F33E17F367E401 /* Pods-OnlinePaymentsExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIDon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1025,46 +894,6 @@
 			};
 			name = Release;
 		};
-		F739BBC324C5B87300FFE16B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EACC82BCF297CCB36CB5C85 /* Pods-OnlinePaymentsExampleTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "OnlinePaymentsExampleTests/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.onlinepayments.OnlinePaymentsExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnlinePaymentsExample.app/OnlinePaymentsExample";
-			};
-			name = Debug;
-		};
-		F739BBC424C5B87300FFE16B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABC9270299AB50FF674E68FA /* Pods-OnlinePaymentsExampleTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "OnlinePaymentsExampleTests/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.onlinepayments.OnlinePaymentsExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnlinePaymentsExample.app/OnlinePaymentsExample";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1082,15 +911,6 @@
 			buildConfigurations = (
 				F739BBC024C5B87300FFE16B /* Debug */,
 				F739BBC124C5B87300FFE16B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F739BBC224C5B87300FFE16B /* Build configuration list for PBXNativeTarget "OnlinePaymentsExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F739BBC324C5B87300FFE16B /* Debug */,
-				F739BBC424C5B87300FFE16B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

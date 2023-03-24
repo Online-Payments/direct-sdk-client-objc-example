@@ -45,11 +45,11 @@
     [super updateTextFieldCell:cell row:row];
     if ([row.paymentProductField.identifier isEqualToString:@"cardNumber"]) {
         if([self.confirmedPaymentProducts containsObject:self.paymentItem.identifier]) {
-            CGFloat size = cell.frame.size.height * 0.8;
-            CGFloat padding = cell.frame.size.height * 0.1;
+            CGFloat productIconSize = 35.2;
+            CGFloat padding = 4.4;
 
-            UIView *outerView = [[UIView alloc]initWithFrame:CGRectMake(padding, padding, size, size)];
-            UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, size, size)];
+            UIView *outerView = [[UIView alloc]initWithFrame:CGRectMake(padding, padding, productIconSize, productIconSize)];
+            UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, productIconSize, productIconSize)];
             imageView.contentMode = UIViewContentModeScaleAspectFit;
             [outerView addSubview:imageView];
             outerView.contentMode = UIViewContentModeScaleAspectFit;

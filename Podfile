@@ -7,9 +7,4 @@ target 'OnlinePaymentsExample' do
   pod 'OnlinePaymentsKit', '~> 2.0'
   pod 'SVProgressHUD'
 
-  target 'OnlinePaymentsExampleTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

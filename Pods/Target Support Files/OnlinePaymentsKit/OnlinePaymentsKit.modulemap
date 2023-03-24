@@ -1,6 +1,0 @@
-framework module OnlinePaymentsKit {
-  umbrella header "OnlinePaymentsKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module Pods_OnlinePaymentsExample {
-  umbrella header "Pods-OnlinePaymentsExample-umbrella.h"
-
-  export *
-  module * { export * }
-}
