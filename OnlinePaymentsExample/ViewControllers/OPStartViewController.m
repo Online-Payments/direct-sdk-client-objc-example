@@ -257,49 +257,6 @@
     return string;
 }
 
-- (BOOL)checkURL:(NSString *)url {
-    NSMutableArray<NSString *> *components;
-    if (@available(iOS 7.0, *)) {
-        NSURLComponents *finalComponents = [NSURLComponents componentsWithString:url];
-        components = [[finalComponents.path componentsSeparatedByString:@"/"] filteredArrayUsingPredicate:
-                      [NSPredicate predicateWithFormat:@"length > 0"]].mutableCopy;
-    }
-    else {
-        components = [[[NSURL URLWithString:url].path componentsSeparatedByString:@"/"] filteredArrayUsingPredicate:
-                      [NSPredicate predicateWithFormat:@"length > 0"]].mutableCopy;
-    }
-    
-    
-    NSArray<NSString *> *versionComponents = [OPSDKConstants.kOPAPIVersion componentsSeparatedByString:@"/"];
-    switch (components.count) {
-        case 0: {
-            components = versionComponents.mutableCopy;
-            break;
-        }
-        case 1: {
-            if (![components[0] isEqualToString:versionComponents[0]]) {
-                return NO;
-            }
-            [components addObject:versionComponents[1]];
-            break;
-        }
-        case 2: {
-            if (![components[0] isEqualToString:versionComponents[0]]) {
-                return NO;
-            }
-            if (![components[1] isEqualToString:versionComponents[1]]) {
-                return NO;
-            }
-            break;
-        }
-        default: {
-            return NO;
-            break;
-        }
-    }
-    return YES;
-}
-
 #pragma mark - Button actions
 
 - (void)buyButtonTapped:(UIButton *)sender {
@@ -343,30 +300,20 @@
     // instead of the factory method used below if you want to replace any of the
     // supporting objects.
     //
+    // You can log of requests made to the server and responses received from the server by passing the `loggingEnabled` parameter to the Session constructor.
+    // In the constructor below, the logging is disabled.
+    // You are also able to disable / enable logging at a later stage by calling `session.loggingEnabled = `, as shown below.
+    // Logging should be disabled in production.
+    // To use logging in debug, but not in production, you can set `loggingEnabled` within a DEBUG flag.
+    // In Objective-C the DEBUG flag is defined as a preprocessor macro. You can take a look at this app's build settings to see the setup you should apply to your own app.
+    //
     // ***************************************************************************
-    if (![self checkURL:baseURL]) {
-        [SVProgressHUD dismiss];
-        NSMutableArray<NSString *> *components;
-        if (@available(iOS 7.0, *)) {
-            NSURLComponents *finalComponents = [NSURLComponents componentsWithString:baseURL];
-            components = [[finalComponents.path componentsSeparatedByString:@"/"] filteredArrayUsingPredicate:
-                          [NSPredicate predicateWithFormat:@"length > 0"]].mutableCopy;
-        }
-        else {
-            components = [[[NSURL URLWithString:baseURL].path componentsSeparatedByString:@"/"] filteredArrayUsingPredicate:
-                          [NSPredicate predicateWithFormat:@"length > 0"]].mutableCopy;
-        }
-        NSArray<NSString *> *versionComponents = [OPSDKConstants.kOPAPIVersion componentsSeparatedByString:@"/"];
-        NSString *alertReason = [NSString stringWithFormat: @"This version of the Online Payments SDK is only compatible with %@ , you supplied: '%@'",
-                                 [versionComponents componentsJoinedByString: @"/"],
-                                 [components componentsJoinedByString: @"/"]];
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"CompatibilityError", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(alertReason, kOPAppLocalizable, nil) preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [self presentViewController:alert animated:YES completion:nil];
-        return;
-    }
 
-    self.session = [OPSession sessionWithClientSessionId:clientSessionId customerId:customerId baseURL:baseURL assetBaseURL:assetsBaseURL appIdentifier:kOPApplicationIdentifier];
+    self.session = [OPSession sessionWithClientSessionId:clientSessionId customerId:customerId baseURL:baseURL assetBaseURL:assetsBaseURL appIdentifier:kOPApplicationIdentifier loggingEnabled:NO];
+
+    #if DEBUG
+        self.session.loggingEnabled = YES;
+    #endif
 
     BOOL isRecurring = self.isRecurringSwitch.on;
 

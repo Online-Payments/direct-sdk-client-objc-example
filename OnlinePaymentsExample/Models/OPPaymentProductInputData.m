@@ -27,21 +27,20 @@
         self.formatter = [[OPStringFormatter alloc] init];
         self.fieldValues = [[NSMutableDictionary alloc] init];
         self.errors = [[NSMutableArray alloc] init];
+        self.paymentRequest = [[OPPaymentRequest alloc] init];
     }
     return self;
 }
 
-- (OPPaymentRequest *)paymentRequest {
-    OPPaymentRequest *paymentRequest = [[OPPaymentRequest alloc] init];
-
+- (void)createPaymentRequest {
     if ([self.paymentItem isKindOfClass:[OPPaymentProduct class]]) {
-        paymentRequest.paymentProduct = (OPPaymentProduct *) self.paymentItem;
+        self.paymentRequest.paymentProduct = (OPPaymentProduct *) self.paymentItem;
+    } else {
+        [NSException raise:@"Invalid paymentItem" format:@"Payment item is invalid"];
     }
-    else {
-        paymentRequest.paymentProduct = [[OPPaymentProduct alloc] init];
-    }
-    paymentRequest.accountOnFile = self.accountOnFile;
-    paymentRequest.tokenize = self.tokenize;
+
+    self.paymentRequest.accountOnFile = self.accountOnFile;
+    self.paymentRequest.tokenize = self.tokenize;
     NSDictionary *unmaskedValues = [self unmaskedFieldValues];
     for (NSString *key in unmaskedValues.allKeys) {
         // Check that the value in the field is not the same as in the Account on file.
@@ -50,10 +49,8 @@
             continue;
         }
         NSString *value = unmaskedValues[key];
-        [paymentRequest setValue:value forField:key];
+        [self.paymentRequest setValueForField:key value:value];
     }
-
-    return paymentRequest;
 }
 
 - (void)setValue:(NSString *)value forField:(NSString *)paymentProductFieldId {
@@ -135,32 +132,7 @@
     for (OPPaymentProductField *field in self.paymentItem.fields.paymentProductFields) {
         if (![self fieldIsPartOfAccountOnFile:field.identifier]) {
             if ([[self unmaskedValueForField:field.identifier] isEqualToString:@""]) {
-                BOOL hasFixedValidator = NO;
-                for (OPValidator *validator in field.dataRestrictions.validators.validators) {
-                    if ([validator isKindOfClass:[OPValidatorFixedList class]]) {
-                        // It's not possible to choose an empty string with a picker
-                        // If it is necessary to choose an invalid value here (placeholder), choose a different value from ""
-                        // Except if it is on the accountOnFile
-                        hasFixedValidator = true;
-                        OPValidatorFixedList *fixedListValidator = (OPValidatorFixedList *) validator;
-                        NSString *value = fixedListValidator.allowedValues[0];
-                        [self setValue:value forField:field.identifier];
-                    }
-                }
-                // It's not possible to choose an empty string with a date picker
-                // If not set, we assume the first is chosen
-                // Except if it is on the accountOnFile
-                if (!hasFixedValidator && field.type == OPDateString) {
-                    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-                    formatter.dateFormat = @"yyyyMMdd";
-                    [self setValue: [formatter stringFromDate: [NSDate date]] forField: field.identifier];
-                }
-                // It's not possible to choose an empty boolean with a switch
-                // If not set, we assume false is chosen
-                // Except if it is on the accountOnFile
-                if (!hasFixedValidator && field.type == OPBooleanString) {
-                    [self setValue: @"false" forField: field.identifier];
-                }
+                [self setDefaultValue:field];
             }
             
             if ([exceptionFields containsObject:field.identifier]) {
@@ -177,6 +149,23 @@
 - (void)validate
 {
     [self validateExceptFields:[NSSet set]];
+}
+
+- (void)setDefaultValue:(OPPaymentProductField *)field {
+    // It's not possible to choose an empty string with a date picker
+    // If not set, we assume the first is chosen
+    // Except if it is on the accountOnFile
+    if (field.type == OPDateString) {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyyMMdd";
+        [self setValue: [formatter stringFromDate: [NSDate date]] forField: field.identifier];
+    }
+    // It's not possible to choose an empty boolean with a switch
+    // If not set, we assume false is chosen
+    // Except if it is on the accountOnFile
+    if (field.type == OPBooleanString) {
+        [self setValue: @"false" forField: field.identifier];
+    }
 }
 
 @end

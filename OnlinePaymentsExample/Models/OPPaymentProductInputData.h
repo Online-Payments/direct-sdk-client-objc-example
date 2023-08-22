@@ -12,11 +12,12 @@
 
 @property (strong, nonatomic) NSObject<OPPaymentItem> *paymentItem;
 @property (strong, nonatomic) OPAccountOnFile *accountOnFile;
+@property (strong, nonatomic) OPPaymentRequest *paymentRequest;
 @property (nonatomic) BOOL tokenize;
 @property (nonatomic, readonly, strong) NSArray *fields;
 @property (strong, nonatomic) NSMutableArray *errors;
 
-- (OPPaymentRequest *)paymentRequest;
+- (void)createPaymentRequest;
 
 - (BOOL)fieldIsPartOfAccountOnFile:(NSString *)paymentProductFieldId;
 - (BOOL)fieldIsReadOnly:(NSString *)paymentProductFieldId;

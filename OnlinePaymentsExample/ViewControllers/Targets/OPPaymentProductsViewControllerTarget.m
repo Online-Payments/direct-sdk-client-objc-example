@@ -69,7 +69,7 @@
     // ***************************************************************************
 
     [self.session paymentProductWithId:paymentItem.identifier context:self.context success:^(OPPaymentProduct *paymentProduct) {
-        if ([paymentItem.identifier isEqualToString:OPSDKConstants.kOPApplePayIdentifier]) {
+        if ([paymentItem.identifier isEqualToString:kOPApplePayIdentifier]) {
             [self showApplePayPaymentItem:paymentProduct];
         } else {
             [SVProgressHUD dismiss];
@@ -126,7 +126,7 @@
         //
         // ***************************************************************************
         
-        [self.session paymentProductNetworksForProductId:OPSDKConstants.kOPApplePayIdentifier context:self.context success:^(OPPaymentProductNetworks *paymentProductNetworks) {
+        [self.session paymentProductNetworksForProductId:kOPApplePayIdentifier context:self.context success:^(OPPaymentProductNetworks *paymentProductNetworks) {
             [self showApplePaySheetForPaymentProduct:paymentProduct withAvailableNetworks:paymentProductNetworks];
             [SVProgressHUD dismiss];
         } failure:^(NSError *error) {
@@ -257,8 +257,8 @@
         OPPaymentRequest *request = [[OPPaymentRequest alloc] init];
         request.paymentProduct = self.applePayPaymentProduct;
         request.tokenize = NO;
-        [request setValue:[[NSString alloc] initWithData:payment.token.paymentData encoding:NSUTF8StringEncoding] forField:@"encryptedPaymentData"];
-        [request setValue:payment.token.transactionIdentifier forField:@"transactionId"];
+        [request setValueForField:@"encryptedPaymentData" value:[[NSString alloc] initWithData:payment.token.paymentData encoding:NSUTF8StringEncoding]];
+        [request setValueForField:@"transactionId" value:payment.token.transactionIdentifier];
         [self didSubmitPaymentRequest:request success:^{
             completion(PKPaymentAuthorizationStatusSuccess);
         } failure:^{

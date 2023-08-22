@@ -58,7 +58,6 @@
     
     if (self) {
         self.sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
-        self.context.forceBasicFlow = YES;
     }
     
     return self;
@@ -201,10 +200,9 @@
                 NSString *paymentProductKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.name", id];
                 NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, OPSDKConstants.kOPSDKLocalizable, sdkBundle, nil);
                 row.name = paymentProductValue;
-                
-                OPAssetManager *assetManager = [OPAssetManager new];
-                UIImage *logo = [assetManager logoImageForPaymentItem:id];
-                row.logo = logo;
+
+                UIImage *paymentItemLogo = self.paymentItem.displayHintsList[0].logoImage;
+                [row setLogo:paymentItemLogo];
                 
                 [formRows addObject:row];
             }
@@ -759,7 +757,10 @@
     
     [self.inputData validate];
     if (self.inputData.errors.count == 0) {
-        OPPaymentRequest *paymentRequest = [self.inputData paymentRequest];
+        [self.inputData createPaymentRequest];
+
+        OPPaymentRequest *paymentRequest = self.inputData.paymentRequest;
+
         [paymentRequest validate];
         if (paymentRequest.errors.count == 0) {
             valid = YES;

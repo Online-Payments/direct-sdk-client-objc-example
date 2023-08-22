@@ -4,7 +4,7 @@ target 'OnlinePaymentsExample' do
   use_frameworks!
 
   # Pods for OnlinePaymentsExample
-  pod 'OnlinePaymentsKit', '~> 2.0'
+  pod 'OnlinePaymentsKit', '~> 2.1'
   pod 'SVProgressHUD'
 
 end

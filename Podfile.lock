@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (5.6.2)
   - CryptoSwift (1.6.0)
-  - OnlinePaymentsKit (2.0.4):
+  - OnlinePaymentsKit (2.1.0):
     - Alamofire (~> 5.6)
     - CryptoSwift (~> 1.5)
   - SVProgressHUD (2.2.5)

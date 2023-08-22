@@ -278,7 +278,7 @@
     NSMutableArray *formRows = [[NSMutableArray alloc] init];
     
     if (coBrands.count > 1) {
-        // Add explanaton row
+        // Add explanation row
         OPFormRowCoBrandsExplanation *explanationRow = [[OPFormRowCoBrandsExplanation alloc]init];
         [formRows addObject:explanationRow];
         
@@ -289,11 +289,10 @@
             NSString *paymentProductKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.name", identifier];
             NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], "");
             row.name = paymentProductValue;
-            
-            OPAssetManager *assetManager = [[OPAssetManager alloc]init];
-            UIImage *logo = [assetManager logoImageForPaymentItem:identifier];
-            [row setLogo:logo];
-            
+
+            UIImage *paymentItemLogo = self.paymentItem.displayHintsList[0].logoImage;
+            [row setLogo:paymentItemLogo];
+
             [formRows addObject:row];
         }
         OPFormRowCoBrandsSelection *toggleCoBrandRow = [[OPFormRowCoBrandsSelection alloc]init];

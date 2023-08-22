@@ -73,6 +73,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7BF5CC3D2A14F4A500753D6B /* OPMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPMacros.h; sourceTree = "<group>"; };
 		A9BEF2916B7A94485720E5DF /* Pods-OnlinePaymentsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.debug.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.debug.xcconfig"; sourceTree = "<group>"; };
 		D115743117CE15BF6E0964A9 /* Pods_OnlinePaymentsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlinePaymentsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C2A86652F33E17F367E401 /* Pods-OnlinePaymentsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlinePaymentsExample.release.xcconfig"; path = "Target Support Files/Pods-OnlinePaymentsExample/Pods-OnlinePaymentsExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +223,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BF5CC3C2A14F49000753D6B /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				7BF5CC3D2A14F4A500753D6B /* OPMacros.h */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		7E932C23AD03551CD5EC21B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +275,7 @@
 				F739BBC724C6C7CB00FFE16B /* Converters */,
 				F739BBC924C6C7D900FFE16B /* Enumerations */,
 				F739BBC824C6C7D000FFE16B /* Factories */,
+				7BF5CC3C2A14F49000753D6B /* Logging */,
 				F739BBC624C6C7C400FFE16B /* Models */,
 				F739BBCA24C6C7E100FFE16B /* Protocols */,
 				F739BBCD24C6C7FA00FFE16B /* Supporting Files */,
