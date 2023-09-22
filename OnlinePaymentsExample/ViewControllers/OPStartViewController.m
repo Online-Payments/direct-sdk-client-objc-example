@@ -328,7 +328,7 @@
     // only illustrates a possible payment product selection screen.
     //
     // ***************************************************************************
-    OPPaymentAmountOfMoney *amountOfMoney = [[OPPaymentAmountOfMoney alloc] initWithTotalAmount:self.amountValue currencyCode:currencyCode];
+    OPAmountOfMoney *amountOfMoney = [[OPAmountOfMoney alloc] initWithTotalAmount:self.amountValue currencyCode:currencyCode];
     self.context = [[OPPaymentContext alloc] initWithAmountOfMoney:amountOfMoney isRecurring:isRecurring countryCode:countryCode];
 
     [self.session paymentItemsForContext:self.context groupPaymentProducts:NO success:^(OPPaymentItems *paymentItems) {
