@@ -125,7 +125,7 @@
     NSNumber *amountAsNumber = [[NSNumber alloc] initWithFloat:self.amount / 100.0];
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
-    [numberFormatter setCurrencyCode:self.context.amountOfMoney.currencyCodeString];
+    [numberFormatter setCurrencyCode:self.context.amountOfMoney.currencyCode];
     NSString *amountAsString = [numberFormatter stringFromNumber:amountAsNumber];
     self.header.amount = amountAsString;
     self.header.securePayment = NSLocalizedStringFromTableInBundle(@"gc.app.general.securePaymentText", OPSDKConstants.kOPSDKLocalizable, sdkBundle, @"Text indicating that a secure payment method is used.");
@@ -234,6 +234,7 @@
             [self updateFormRows];
             self.switching = NO;
         } failure:^(NSError *error) {
+        } apiFailure:^(OPErrorResponse *errorResponse) {
         }];
     }
 }
@@ -274,7 +275,7 @@
 
 - (void)updateTextFieldCell:(OPTextFieldTableViewCell *)cell row: (OPFormRowTextField *)row {
     // Add error messages for cells
-    OPValidationError *error = [row.paymentProductField.errors firstObject];
+    OPValidationError *error = [row.paymentProductField.errorMessageIds firstObject];
     cell.delegate = self;
     cell.accessoryType = row.showInfoButton ? UITableViewCellAccessoryDetailButton : UITableViewCellAccessoryNone;
     cell.field = row.field;
@@ -291,7 +292,7 @@
     if (row.field == nil) {
         return;
     }
-    OPValidationError *error = [row.field.errors firstObject];
+    OPValidationError *error = [row.field.errorMessageIds firstObject];
     if (error != nil) {
         cell.errorMessage = [OPFormRowsConverter errorMessageForError: error withCurrency: NO];
     } else {
@@ -398,7 +399,7 @@
     [cell setSwitchTarget:row.target action:row.action];
     cell.on = row.isOn;
     cell.delegate = self;
-    OPValidationError *error = [row.field.errors firstObject];
+    OPValidationError *error = [row.field.errorMessageIds firstObject];
     if (error != nil && self.validation) {
         cell.errorMessage = [OPFormRowsConverter errorMessageForError: error withCurrency: 0];
     }
@@ -502,9 +503,9 @@
         }
         CGFloat errorHeight = 0;
 
-        if ([textfieldRow.paymentProductField.errors firstObject] && self.validation) {
+        if ([textfieldRow.paymentProductField.errorMessageIds firstObject] && self.validation) {
             NSAttributedString *str = [[NSAttributedString alloc] initWithString:@""];
-            str = [[NSAttributedString alloc] initWithString: [OPFormRowsConverter errorMessageForError:[textfieldRow.paymentProductField.errors firstObject]   withCurrency: textfieldRow.paymentProductField.displayHints.formElement.type == OPCurrencyType]];
+            str = [[NSAttributedString alloc] initWithString: [OPFormRowsConverter errorMessageForError:[textfieldRow.paymentProductField.errorMessageIds firstObject]   withCurrency: textfieldRow.paymentProductField.displayHints.formElement.type == OPCurrencyType]];
             errorHeight = [str boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options: NSStringDrawingUsesLineFragmentOrigin context: nil].size.height;
         }
         
@@ -518,9 +519,9 @@
             width -= 48;
         }
         CGFloat errorHeight = 0;
-        if ([textfieldRow.field.errors firstObject] && self.validation) {
+        if ([textfieldRow.field.errorMessageIds firstObject] && self.validation) {
             NSAttributedString *str = [[NSAttributedString alloc] initWithString:@""];
-            str = [[NSAttributedString alloc] initWithString: [OPFormRowsConverter errorMessageForError:[textfieldRow.field.errors firstObject]   withCurrency: 0]];
+            str = [[NSAttributedString alloc] initWithString: [OPFormRowsConverter errorMessageForError:[textfieldRow.field.errorMessageIds firstObject]   withCurrency: 0]];
             errorHeight = [str boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options: NSStringDrawingUsesLineFragmentOrigin context: nil].size.height + 10;
         }
     
@@ -761,8 +762,8 @@
 
         OPPaymentRequest *paymentRequest = self.inputData.paymentRequest;
 
-        [paymentRequest validate];
-        if (paymentRequest.errors.count == 0) {
+        NSArray<OPValidationError *> *errorMessageIds = [paymentRequest validate];
+        if (errorMessageIds.count == 0) {
             valid = YES;
             [self.paymentRequestTarget didSubmitPaymentRequest:paymentRequest];
         }

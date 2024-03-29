@@ -50,6 +50,8 @@
 @property (strong, nonatomic) OPSession *session;
 @property (strong, nonatomic) OPPaymentContext *context;
 
+@property (strong, nonatomic) NSUserDefaults *userDefaults;
+
 @end
 
 @implementation OPStartViewController
@@ -57,6 +59,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initializeTapRecognizer];
+    
+    self.userDefaults = NSUserDefaults.standardUserDefaults;
     
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)] == YES) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -94,7 +98,7 @@
     self.clientSessionOPTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.clientSessionOPTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.clientSessionOPTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.clientSessionOPTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPClientSessionId];
+    self.clientSessionOPTextField.text = [self.userDefaults objectForKey:kOPClientSessionId];
     [self.containerView addSubview:self.clientSessionIdLabel];
     [self.containerView addSubview:self.clientSessionOPTextField];
     
@@ -104,7 +108,7 @@
     self.customerOPTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.customerOPTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.customerOPTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.customerOPTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPCustomerId];
+    self.customerOPTextField.text = [self.userDefaults objectForKey:kOPCustomerId];
     [self.containerView addSubview:self.customerIdLabel];
     [self.containerView addSubview:self.customerOPTextField];
     
@@ -114,7 +118,7 @@
     self.baseURLTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.baseURLTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.baseURLTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.baseURLTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPBaseURL];
+    self.baseURLTextField.text = [self.userDefaults objectForKey:kOPBaseURL];
     [self.containerView addSubview:self.baseURLLabel];
     [self.containerView addSubview:self.baseURLTextField];
     
@@ -124,7 +128,7 @@
     self.assetsBaseURLTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.assetsBaseURLTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.assetsBaseURLTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.assetsBaseURLTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPAssetsBaseURL];
+    self.assetsBaseURLTextField.text = [self.userDefaults objectForKey:kOPAssetsBaseURL];
     [self.containerView addSubview:self.assetsBaseURLLabel];
     [self.containerView addSubview:self.assetsBaseURLTextField];
 
@@ -134,7 +138,7 @@
     self.merchantOPTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.merchantOPTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.merchantOPTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.merchantOPTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPMerchantId];
+    self.merchantOPTextField.text = [self.userDefaults objectForKey:kOPMerchantId];
     [self.containerView addSubview:self.merchantIdLabel];
     [self.containerView addSubview:self.merchantOPTextField];
     
@@ -160,7 +164,7 @@
     self.countryCodeTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.countryCodeTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.countryCodeTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.countryCodeTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPCountryCode];
+    self.countryCodeTextField.text = [self.userDefaults objectForKey:kOPCountryCode];
     [self.containerView addSubview:self.countryCodeLabel];
     [self.containerView addSubview:self.countryCodeTextField];
     
@@ -170,7 +174,7 @@
     self.currencyCodeTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.currencyCodeTextField.translatesAutoresizingMaskIntoConstraints = NO;
     self.currencyCodeTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-    self.currencyCodeTextField.text = [OPSDKConstants.StandardUserDefaults objectForKey:kOPCurrency];
+    self.currencyCodeTextField.text = [self.userDefaults objectForKey:kOPCurrency];
     [self.containerView addSubview:self.currencyCodeLabel];
     [self.containerView addSubview:self.currencyCodeTextField];
     
@@ -269,23 +273,23 @@
     [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], nil)];
 
     NSString *clientSessionId = self.clientSessionOPTextField.text;
-    [OPSDKConstants.StandardUserDefaults setObject:clientSessionId forKey:kOPClientSessionId];
+    [self.userDefaults setObject:clientSessionId forKey:kOPClientSessionId];
     NSString *customerId = self.customerOPTextField.text;
-    [OPSDKConstants.StandardUserDefaults setObject:customerId forKey:kOPCustomerId];
+    [self.userDefaults setObject:customerId forKey:kOPCustomerId];
     NSString *baseURL = self.baseURLTextField.text;
-    [OPSDKConstants.StandardUserDefaults setObject:baseURL forKey:kOPBaseURL];
+    [self.userDefaults setObject:baseURL forKey:kOPBaseURL];
     NSString *assetsBaseURL = self.assetsBaseURLTextField.text;
-    [OPSDKConstants.StandardUserDefaults setObject:assetsBaseURL forKey:kOPAssetsBaseURL];
+    [self.userDefaults setObject:assetsBaseURL forKey:kOPAssetsBaseURL];
 
     if (self.merchantOPTextField.text != nil) {
         NSString *merchantId = self.merchantOPTextField.text;
-        [OPSDKConstants.StandardUserDefaults setObject:merchantId forKey:kOPMerchantId];
+        [self.userDefaults setObject:merchantId forKey:kOPMerchantId];
     }
-    [OPSDKConstants.StandardUserDefaults setInteger:self.amountValue forKey:kOPPrice];
+    [self.userDefaults setInteger:self.amountValue forKey:kOPPrice];
     NSString *countryCode = self.countryCodeTextField.text;
-    [OPSDKConstants.StandardUserDefaults setObject:countryCode forKey:kOPCountryCode];
+    [self.userDefaults setObject:countryCode forKey:kOPCountryCode];
     NSString *currencyCode = self.currencyCodeTextField.text;
-    [OPSDKConstants.StandardUserDefaults setObject:currencyCode forKey:kOPCurrency];
+    [self.userDefaults setObject:currencyCode forKey:kOPCurrency];
 
     // ***************************************************************************
     //
@@ -342,11 +346,17 @@
             [self presentViewController:alert animated:YES completion:nil];
         }
     } failure:^(NSError *error) {
-        [SVProgressHUD dismiss];
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductsErrorExplanation", kOPAppLocalizable, @"Message of the connection error dialog.") preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [self presentViewController:alert animated:YES completion:nil];
+        [self showConnectionError];
+    } apiFailure:^(OPErrorResponse *errorResponse) {
+        [self showConnectionError];
     }];
+}
+
+-(void)showConnectionError {
+    [SVProgressHUD dismiss];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductsErrorExplanation", kOPAppLocalizable, @"Message of the connection error dialog.") preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)showPaymentProductSelection:(OPPaymentItems *)paymentItems {
@@ -357,7 +367,7 @@
     paymentProductSelection.paymentItems = paymentItems;
     paymentProductSelection.viewFactory = self.viewFactory;
     paymentProductSelection.amount = self.amountValue;
-    paymentProductSelection.currencyCode = self.context.amountOfMoney.currencyCodeString;
+    paymentProductSelection.currencyCode = self.context.amountOfMoney.currencyCode;
     [self.navigationController pushViewController:paymentProductSelection animated:YES];
     [SVProgressHUD dismiss];
 }

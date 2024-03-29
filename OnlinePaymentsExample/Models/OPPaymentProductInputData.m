@@ -128,7 +128,6 @@
 - (void)validateExceptFields:(NSSet *)exceptionFields
 {
     [self.errors removeAllObjects];
-    OPPaymentRequest *request = self.paymentRequest;
     for (OPPaymentProductField *field in self.paymentItem.fields.paymentProductFields) {
         if (![self fieldIsPartOfAccountOnFile:field.identifier]) {
             if ([[self unmaskedValueForField:field.identifier] isEqualToString:@""]) {
@@ -140,8 +139,8 @@
             }
             
             NSString *fieldValue = [self unmaskedValueForField:field.identifier];
-            [field validateValue:fieldValue forPaymentRequest:request];
-            [self.errors addObjectsFromArray:field.errors];
+            NSArray<OPValidationError *> *errorMessageIds = [field validateValue:fieldValue];
+            [self.errors addObjectsFromArray:errorMessageIds];
         }
     }
 }

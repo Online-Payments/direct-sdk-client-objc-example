@@ -84,10 +84,21 @@
             }
         }
     } failure:^(NSError *error) {
-        [SVProgressHUD dismiss];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductErrorExplanation", kOPAppLocalizable, nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        [self showConnectionErrorSelectPaymentItem];
+    } apiFailure:^(OPErrorResponse *errorResponse) {
+        [self showConnectionErrorSelectPaymentItem];
     }];
+}
+
+- (void)showConnectionErrorSelectPaymentItem {
+    [SVProgressHUD dismiss];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductErrorExplanation", kOPAppLocalizable, nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+
+    [alert addAction:ok];
+
+    [_navigationController presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)showPaymentItem:(NSObject <OPPaymentItem> *)paymentItem accountOnFile:(OPAccountOnFile *)accountOnFile {
@@ -130,11 +141,22 @@
             [self showApplePaySheetForPaymentProduct:paymentProduct withAvailableNetworks:paymentProductNetworks];
             [SVProgressHUD dismiss];
         } failure:^(NSError *error) {
-            [SVProgressHUD dismiss];
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductNetworksErrorExplanation", kOPAppLocalizable, nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
+            [self showConnectionError];
+        } apiFailure:^(OPErrorResponse *errorResponse) {
+            [self showConnectionError];
         }];
     }
+}
+
+- (void)showConnectionError {
+    [SVProgressHUD dismiss];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"PaymentProductNetworksErrorExplanation", kOPAppLocalizable, nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+
+    [alert addAction:ok];
+
+    [_navigationController presentViewController:alert animated:YES completion:nil];
 }
 
 - (BOOL) systemVersionIsGreaterThan:(NSString *)v {
@@ -144,7 +166,7 @@
 - (void)showApplePaySheetForPaymentProduct:(OPPaymentProduct *)paymentProduct withAvailableNetworks:(OPPaymentProductNetworks *)paymentProductNetworks {
     
     // This merchant should be the merchant id specified in the merchants developer portal.
-    NSString *merchantId = [OPSDKConstants.StandardUserDefaults objectForKey:kOPMerchantId];
+    NSString *merchantId = [NSUserDefaults.standardUserDefaults objectForKey:kOPMerchantId];
     if (merchantId == nil) {
         return;
     }
@@ -152,8 +174,8 @@
     [self generateSummaryItems];
     
     PKPaymentRequest *paymentRequest = [[PKPaymentRequest alloc] init];
-    [paymentRequest setCountryCode:self.context.countryCodeString];
-    [paymentRequest setCurrencyCode:self.context.amountOfMoney.currencyCodeString];
+    [paymentRequest setCountryCode:self.context.countryCode];
+    [paymentRequest setCurrencyCode:self.context.amountOfMoney.currencyCode];
     [paymentRequest setSupportedNetworks:paymentProductNetworks.paymentProductNetworks];
     [paymentRequest setPaymentSummaryItems:self.summaryItems];
     
@@ -225,13 +247,27 @@
             succes();
         }
     } failure:^(NSError *error) {
-        [SVProgressHUD dismiss];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"SubmitErrorExplanation", kOPAppLocalizable, nil) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        [self showConnectionErrorSubmitPaymentRequest];
+        if (failure != nil) {
+            failure();
+        }
+    } apiFailure:^(OPErrorResponse *errorResponse) {
+        [self showConnectionErrorSubmitPaymentRequest];
         if (failure != nil) {
             failure();
         }
     }];
+}
+
+- (void)showConnectionErrorSubmitPaymentRequest {
+    [SVProgressHUD dismiss];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedStringFromTable(@"ConnectionErrorTitle", kOPAppLocalizable, @"Title of the connection error dialog.") message:NSLocalizedStringFromTable(@"SubmitErrorExplanation", kOPAppLocalizable, nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+
+    [alert addAction:ok];
+
+    [_navigationController presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)didCancelPaymentRequest {

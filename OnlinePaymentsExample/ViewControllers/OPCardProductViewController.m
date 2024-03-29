@@ -135,6 +135,8 @@
                 }
             } failure:^(NSError *error) {
                 
+            } apiFailure:^(OPErrorResponse *errorResponse) {
+
             }];
         }
         _previousEnteredCreditCardNumber = unmasked;
