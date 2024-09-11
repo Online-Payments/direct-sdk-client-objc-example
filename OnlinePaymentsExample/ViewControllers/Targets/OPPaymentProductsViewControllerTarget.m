@@ -9,7 +9,7 @@
 #import "OPCardProductViewController.h"
 #import "OPAppConstants.h"
 
-#import <SVProgressHUD/SVProgressHUD.h>
+#import <SVProgressHUD.h>
 @import OnlinePaymentsKit;
 
 @interface OPPaymentProductsViewControllerTarget ()
@@ -21,7 +21,6 @@
 @property (strong, nonatomic) OPPaymentProduct *applePayPaymentProduct;
 @property (strong, nonatomic) NSArray *summaryItems;
 @property (strong, nonatomic) PKPaymentAuthorizationViewController * authorizationViewController;
-@property (strong, nonatomic) NSBundle *sdkBundle;
 
 @end
 
@@ -34,7 +33,6 @@
     self.session = session;
     self.context = context;
     self.viewFactory = viewFactory;
-    self.sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
 
     return self;
 }
@@ -49,7 +47,8 @@
 #pragma mark PaymentProduct selection target
 
 - (void)didSelectPaymentItem:(NSObject <OPBasicPaymentItem> *)paymentItem accountOnFile:(OPAccountOnFile *)accountOnFile; {
-    [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], nil)];
+
+    [SVProgressHUD showWithStatus:NSLocalizedStringFromTable(@"LoadingMessage", kOPAppLocalizable, nil)];
     
     // ***************************************************************************
     //
@@ -126,7 +125,7 @@
 
 - (void)showApplePayPaymentItem:(OPPaymentProduct *)paymentProduct {
     if ([self systemVersionIsGreaterThan:@"8.0"] && [PKPaymentAuthorizationViewController canMakePayments]) {
-        [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], nil)];
+        [SVProgressHUD showWithStatus:NSLocalizedStringFromTable(@"LoadingMessage", kOPAppLocalizable, nil)];
         
         // ***************************************************************************
         //
@@ -218,7 +217,7 @@
     long subtotal = self.context.amountOfMoney.totalAmount;
     
     NSMutableArray *summaryItems = [[NSMutableArray alloc] init];
-    [summaryItems addObject:[PKPaymentSummaryItem summaryItemWithLabel:NSLocalizedStringFromTableInBundle(@"gc.app.general.shoppingCart.subtotal", OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, @"subtotal summary item title") amount:[NSDecimalNumber decimalNumberWithMantissa:subtotal exponent:-2 isNegative:NO]]];
+    [summaryItems addObject:[PKPaymentSummaryItem summaryItemWithLabel:NSLocalizedStringFromTable(@"SubtotalText", kOPAppLocalizable, @"Subtotal title") amount:[NSDecimalNumber decimalNumberWithMantissa:subtotal exponent:-2 isNegative:NO]]];
     
     self.summaryItems = summaryItems;
 }
@@ -230,7 +229,7 @@
 }
 
 - (void)didSubmitPaymentRequest:(OPPaymentRequest *)paymentRequest success:(void (^)(void))succes failure:(void (^)(void))failure {
-    [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], nil)];
+    [SVProgressHUD showWithStatus:NSLocalizedStringFromTable(@"LoadingMessage", kOPAppLocalizable, nil)];
     [self.session preparePaymentRequest:paymentRequest success:^(OPPreparedPaymentRequest *preparedPaymentRequest) {
         [SVProgressHUD dismiss];
         

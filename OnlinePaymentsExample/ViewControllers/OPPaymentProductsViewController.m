@@ -19,7 +19,6 @@
 
 @property (strong, nonatomic) NSMutableArray *sections;
 @property (strong, nonatomic) OPSummaryTableHeaderView *header;
-@property (strong, nonatomic) NSBundle *sdkBundle;
 
 @end
 
@@ -32,7 +31,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
 
     self.view.backgroundColor = [UIColor whiteColor];
 
@@ -41,15 +39,14 @@
     [self initializeHeader];
     
     self.sections = [[NSMutableArray alloc] init];
-    //TODO: Accounts on file
     if ([self.paymentItems hasAccountsOnFile] == YES) {
         OPPaymentProductsTableSection *accountsSection =
         [OPTableSectionConverter paymentProductsTableSectionFromAccountsOnFile:[self.paymentItems accountsOnFile] paymentItems:self.paymentItems];
-        accountsSection.title = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductSelection.accountsOnFileTitle", OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, @"Title of the section that displays stored payment products.");
+        accountsSection.title = NSLocalizedStringFromTable(@"AccountsOnFileTitle", kOPAppLocalizable, @"Title of the section that displays stored payment products.");
         [self.sections addObject:accountsSection];
     }
     OPPaymentProductsTableSection *productsSection = [OPTableSectionConverter paymentProductsTableSectionFromPaymentItems:self.paymentItems];
-    productsSection.title = NSLocalizedStringFromTableInBundle(@"gc.app.paymentProductSelection.pageTitle", OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, @"Title of the section that shows all available payment products.");
+    productsSection.title = NSLocalizedStringFromTable(@"SelectPaymentProductText", kOPAppLocalizable, @"Title of the section that shows all available payment products.");
     [self.sections addObject:productsSection];
     
     [self.tableView registerClass:[OPPaymentProductTableViewCell class] forCellReuseIdentifier:[OPPaymentProductTableViewCell reuseIdentifier]];
@@ -57,14 +54,14 @@
 
 - (void)initializeHeader {
     self.header = (OPSummaryTableHeaderView *)[self.viewFactory tableHeaderViewWithType:OPSummaryTableHeaderViewType frame:CGRectMake(0, 0, self.tableView.frame.size.width, 70)];
-    self.header.summary = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTableInBundle(@"gc.app.general.shoppingCart.total", OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, @"Description of the amount header.")];
+    self.header.summary = [NSString stringWithFormat:@"%@:", NSLocalizedStringFromTable(@"TotalText", kOPAppLocalizable, @"Text indicating that a secure payment method is used.")];
     NSNumber *amountAsNumber = [[NSNumber alloc] initWithFloat:self.amount / 100.0];
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
     [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
     [numberFormatter setCurrencyCode:self.currencyCode];
     NSString *amountAsString = [numberFormatter stringFromNumber:amountAsNumber];
     self.header.amount = amountAsString;
-    self.header.securePayment = NSLocalizedStringFromTableInBundle(@"gc.app.general.securePaymentText", OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, @"Text indicating that a secure payment method is used.");
+    self.header.securePayment = NSLocalizedStringFromTable(@"SecurePaymentText", kOPAppLocalizable, @"Text indicating that a secure payment method is used.");
     self.tableView.tableHeaderView = self.header;
 }
 

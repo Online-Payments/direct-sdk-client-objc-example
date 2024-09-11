@@ -53,19 +53,4 @@
     return section;
 }
 
-+ (NSString *)localizationKeyWithPaymentItem:(NSObject<OPBasicPaymentItem> *)paymentItem {
-    if ([paymentItem isKindOfClass:[OPBasicPaymentProduct class]]) {
-        if(!paymentItem.displayHintsList) {
-            return paymentItem.displayHintsList[0].label ?: @"No label found";
-        }
-        return @"Display hints not found";
-    }
-    else if ([paymentItem isKindOfClass:[OPBasicPaymentProductGroup class]]) {
-        return [NSString stringWithFormat:@"gc.general.paymentProductGroups.%@.name", paymentItem.identifier];
-    }
-    else {
-        return @"";
-    }
-}
-
 @end

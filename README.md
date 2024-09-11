@@ -1,32 +1,10 @@
 Online Payments Objective-C SDK Example
 ===============================
 
-This example app illustrates the use of the Online Payments Objective-C iOS SDK and the services provided by the Online Payments platform.
-
-Prerequisites
-------------
-
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Swift and Objective-C Cocoa projects.
- To install the dependencies this example app requires, you will need to install the CocoaPods Ruby gem.
-
-```
-$ sudo gem install cocoapods
-```
+This example app illustrates the use of the Online Payments Swift SDK and the services provided by the Online Payments platform in an Objective-C app.
 
 Installation
 ------------
 
-To obtain the example app for the Online Payments Objective-C iOS SDK, first clone the code from GitHub:
-
-```
-$ git clone https://github.com/wl-online-payments-direct/sdk-client-objc-example.git
-```
-
-Then run the following command to install the dependencies with CocoaPods:
-
-```
-$ pod install
-```
-
-Afterwards, you can open and run the Xcode workspace that is now created to run the example app.
+To run this example app, clone or download the source from Github. This example uses Swift Package Manager for its dependencies and so the dependencies should be downloaded automatically as soon as you open the project in XCode.
 

@@ -5,7 +5,7 @@
 //
 
 #import <PassKit/PassKit.h>
-#import <SVProgressHUD/SVProgressHUD.h>
+#import <SVProgressHUD.h>
 
 #import "OPAppConstants.h"
 #import "OPStartViewController.h"
@@ -84,7 +84,7 @@
 
     self.explanation = [[UITextView alloc] init];
     self.explanation.translatesAutoresizingMaskIntoConstraints = NO;
-    self.explanation.text = NSLocalizedStringFromTable(@"SetupExplanation", kOPAppLocalizable, @"To process a payment using the services provided by the Online Payments platform, the following information must be provided by a merchant.\n\nAfter providing the information requested below, this example app can process a payment.");
+    self.explanation.text = NSLocalizedStringFromTable(@"SetupExplanationText", kOPAppLocalizable, @"");
     self.explanation.editable = NO;
     self.explanation.backgroundColor = [UIColor colorWithRed:0.85 green:0.94 blue:0.97 alpha:1];
     self.explanation.textColor = [UIColor colorWithRed:0 green:0.58 blue:0.82 alpha:1];
@@ -93,7 +93,7 @@
     [self.containerView addSubview:self.explanation];
 
     self.clientSessionIdLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.clientSessionIdLabel.text = NSLocalizedStringFromTable(@"ClientSessionIdentifier", kOPAppLocalizable, @"Client session identifier");
+    self.clientSessionIdLabel.text = NSLocalizedStringFromTable(@"ClientSessionIdentifierTitle", kOPAppLocalizable, @"Client session identifier");
     self.clientSessionIdLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.clientSessionOPTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.clientSessionOPTextField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -103,7 +103,7 @@
     [self.containerView addSubview:self.clientSessionOPTextField];
     
     self.customerIdLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.customerIdLabel.text = NSLocalizedStringFromTable(@"CustomerIdentifier", kOPAppLocalizable, @"Customer identifier");
+    self.customerIdLabel.text = NSLocalizedStringFromTable(@"CustomerIdentifierTitle", kOPAppLocalizable, @"Customer identifier");
     self.customerIdLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.customerOPTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.customerOPTextField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -113,7 +113,7 @@
     [self.containerView addSubview:self.customerOPTextField];
     
     self.baseURLLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.baseURLLabel.text = NSLocalizedStringFromTable(@"BaseURL", kOPAppLocalizable, @"Base URL");
+    self.baseURLLabel.text = NSLocalizedStringFromTable(@"BaseURLTitle", kOPAppLocalizable, @"Base URL");
     self.baseURLLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.baseURLTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.baseURLTextField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -123,7 +123,7 @@
     [self.containerView addSubview:self.baseURLTextField];
     
     self.assetsBaseURLLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.assetsBaseURLLabel.text = NSLocalizedStringFromTable(@"AssetsBaseURL", kOPAppLocalizable, @"Assets Base URL");
+    self.assetsBaseURLLabel.text = NSLocalizedStringFromTable(@"AssetsURLTitle", kOPAppLocalizable, @"Assets Base URL");
     self.assetsBaseURLLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.assetsBaseURLTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.assetsBaseURLTextField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -133,7 +133,7 @@
     [self.containerView addSubview:self.assetsBaseURLTextField];
 
     self.merchantIdLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.merchantIdLabel.text = NSLocalizedStringFromTable(@"MerchantIdentifier", kOPAppLocalizable, @"Merchant identifier");
+    self.merchantIdLabel.text = NSLocalizedStringFromTable(@"MerchantIdentifierTitle", kOPAppLocalizable, @"Merchant identifier");
     self.merchantIdLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.merchantOPTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.merchantOPTextField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -143,7 +143,7 @@
     [self.containerView addSubview:self.merchantOPTextField];
     
     self.amountLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.amountLabel.text = NSLocalizedStringFromTable(@"AmountInCents", kOPAppLocalizable, @"Amount in cents");
+    self.amountLabel.text = NSLocalizedStringFromTable(@"AmountInCentsTitle", kOPAppLocalizable, @"Amount in cents");
     self.amountLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.amountTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.amountTextField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -159,7 +159,7 @@
     [self.containerView addSubview:self.amountTextField];
     
     self.countryCodeLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.countryCodeLabel.text = NSLocalizedStringFromTable(@"CountryCode", kOPAppLocalizable, @"Country code");
+    self.countryCodeLabel.text = NSLocalizedStringFromTable(@"CountryCodeTitle", kOPAppLocalizable, @"Country code");
     self.countryCodeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.countryCodeTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.countryCodeTextField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -169,7 +169,7 @@
     [self.containerView addSubview:self.countryCodeTextField];
     
     self.currencyCodeLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.currencyCodeLabel.text = NSLocalizedStringFromTable(@"CurrencyCode", kOPAppLocalizable, @"Currency code");
+    self.currencyCodeLabel.text = NSLocalizedStringFromTable(@"CurrencyCodeTitle", kOPAppLocalizable, @"Currency code");
     self.currencyCodeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.currencyCodeTextField = [self.viewFactory textFieldWithType:OPTextFieldType];
     self.currencyCodeTextField.translatesAutoresizingMaskIntoConstraints = NO;
@@ -179,7 +179,7 @@
     [self.containerView addSubview:self.currencyCodeTextField];
     
     self.isRecurringLabel = [self.viewFactory labelWithType:OPLabelType];
-    self.isRecurringLabel.text = NSLocalizedStringFromTable(@"RecurringPayment", kOPAppLocalizable, @"Payment is recurring");
+    self.isRecurringLabel.text = NSLocalizedStringFromTable(@"RecurringPaymentTitle", kOPAppLocalizable, @"Payment is recurring");
     self.isRecurringLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.isRecurringSwitch = [self.viewFactory switchWithType:OPSwitchType];
     self.isRecurringSwitch.translatesAutoresizingMaskIntoConstraints = NO;
@@ -187,7 +187,7 @@
     [self.containerView addSubview:self.isRecurringSwitch];
 
     self.payButton = [self.viewFactory buttonWithType:OPButtonTypePrimary];
-    [self.payButton setTitle:NSLocalizedStringFromTable(@"PayNow", kOPAppLocalizable, @"Pay securely now") forState:UIControlStateNormal];
+    [self.payButton setTitle:NSLocalizedStringFromTable(@"StartPaymentProcessButtonText", kOPAppLocalizable, @"Start payment process") forState:UIControlStateNormal];
     self.payButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.payButton addTarget:self action:@selector(buyButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.containerView addSubview:self.payButton];
@@ -269,8 +269,8 @@
     } else {
         [NSException raise:@"Invalid sender" format:@"Sender %@ is invalid", sender];
     }
-
-    [SVProgressHUD showWithStatus:NSLocalizedStringFromTableInBundle(@"gc.app.general.loading.body", OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], nil)];
+    
+    [SVProgressHUD showWithStatus:NSLocalizedStringFromTable(@"LoadingMessage", kOPAppLocalizable, nil)];
 
     NSString *clientSessionId = self.clientSessionOPTextField.text;
     [self.userDefaults setObject:clientSessionId forKey:kOPClientSessionId];

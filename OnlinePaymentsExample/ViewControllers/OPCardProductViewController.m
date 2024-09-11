@@ -13,6 +13,7 @@
 #import "OPPaymentProductTableViewCell.h"
 #import "OPCOBrandsExplanationTableViewCell.h"
 #import "OPPaymentProductInputData.h"
+#import "OPAppConstants.h"
 
 @import OnlinePaymentsKit;
 
@@ -20,7 +21,6 @@
 
 @property (nonatomic, strong) UITextPosition *cursorPositionInCreditCardNumberTextField;
 @property (nonatomic, strong) OPIINDetailsResponse *iinDetailsResponse;
-@property (strong, nonatomic) NSBundle *sdkBundle;
 @property (strong, nonatomic) NSArray<OPIINDetail *> *cobrands;
 @property (strong, nonatomic) NSString *previousEnteredCreditCardNumber;
 
@@ -29,7 +29,6 @@
 @implementation OPCardProductViewController
 
 - (void)viewDidLoad {
-    self.sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
     [super viewDidLoad];
     
 }
@@ -288,8 +287,8 @@
             OPPaymentProductsTableRow *row = [[OPPaymentProductsTableRow alloc]init];
             row.paymentProductIdentifier = identifier;
             
-            NSString *paymentProductKey = [NSString stringWithFormat:@"gc.general.paymentProducts.%@.name", identifier];
-            NSString *paymentProductValue = NSLocalizedStringFromTableInBundle(paymentProductKey, OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], "");
+            NSString *paymentProductKey = [NSString stringWithFormat:@"PaymentProducts.%@.name", identifier];
+            NSString *paymentProductValue = NSLocalizedStringFromTable(paymentProductKey, kOPAppLocalizable, nil);
             row.name = paymentProductValue;
 
             UIImage *paymentItemLogo = self.paymentItem.displayHintsList[0].logoImage;

@@ -18,7 +18,7 @@
 #define kOPPrice                @"kOPPrice"
 #define kOPCountryCode          @"kOPCountryCode"
 #define kOPCurrency             @"kOPCurrency"
-#define kOPApplicationIdentifier @"objc Example Application/v2.1.2"
+#define kOPApplicationIdentifier @"objc Example Application/v2.2.0"
 #define kOPApplePayIdentifier   @"302"
 
 #endif /* OPAppConstants_h */

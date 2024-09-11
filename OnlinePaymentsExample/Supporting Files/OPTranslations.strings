@@ -4,26 +4,133 @@
 // Copyright © 2020 Global Collect Services. All rights reserved.
 //
 
-"PayNow" = "Start payment process";
+// App elements
+"StartPaymentProcessButtonText" = "Start payment process";
+"ContinueButtonText" = "Start another payment process";
+"SuccessTitle" = "Success!";
+"SuccessText" = "Your payment has been successfully processed by the SDK.\n\nThe method \"didSubmitPaymentRequest\" in \"PaymentProductsViewControllerTarget\" contains the encrypted data that should be sent to the Create Payment API.";
+"SetupExplanationText" = "To process a payment using the services provided by Online Payments, the following information must be provided by a merchant.\n\nAfter providing the information requested below, this example app can process a payment.";
+"ClientSessionIdentifierTitle" = "Client session identifier";
+"CustomerIdentifierTitle" = "Customer identifier";
+"BaseURLTitle" = "Base URL";
+"AssetsURLTitle" = "Assets URL";
+"MerchantIdentifierTitle" = "Merchant identifier";
+"AmountInCentsTitle" = "Amount in cents";
+"CountryCodeTitle" = "Country code";
+"CurrencyCodeTitle" = "Currency code";
+"RecurringPaymentTitle" = "Payment is recurring";
+"SecurePaymentText" = "Secure payment";
+"SubtotalText" = "Subtotal";
+"TotalText" = "Total";
+"CancelButtonText" = "Cancel";
+"PayButtonText" = "Pay";
+"RememberMeText" = "Remember my details for future purchases";
+"RememberMeTooltip" = "If you check this box your payment information will be stored for future purchases.";
+"LoadingMessage" = "Please wait..";
+
+// Product selection
+"AccountsOnFileTitle" = "Previously used accounts";
+"SelectPaymentProductText" = "Select payment product";
+
+// Co-brands
+"CobrandsIntroText" = "This card has multiple payment options, please choose your preferred option.";
+"CobrandsDetectedText" = "Multiple payment options detected.";
+
+// Payment Product Fields Messages
+"PaymentProductFields.accountHolderName.label" = "Account holder name";
+"PaymentProductFields.accountHolderName.placeholder" = "John Doe";
+"PaymentProductFields.accountNumber.label" = "Account number";
+"PaymentProductFields.accountNumber.placeholder" = "Account number";
+"PaymentProductFields.additionalInfo.label" = "Additional address information";
+"PaymentProductFields.additionalInfo.placeholder" = "Additional address information";
+"PaymentProductFields.bankCode.label" = "Bank code";
+"PaymentProductFields.bankCode.placeholder" = "Bank code";
+"PaymentProductFields.bic.label" = "BIC / Swift code";
+"PaymentProductFields.bic.placeholder" = "BIC / Swift code";
+"PaymentProductFields.cardNumber.label" = "Card number";
+"PaymentProductFields.cardNumber.placeholder" = "**** **** **** ****";
+"PaymentProductFields.cardholderName.label" = "Cardholder name";
+"PaymentProductFields.cardholderName.placeholder" = "John Doe";
+"PaymentProductFields.city.label" = "City";
+"PaymentProductFields.city.placeholder" = "City";
+"PaymentProductFields.companyName.label" = "Company name";
+"PaymentProductFields.companyName.placeholder" = "Company name";
+"PaymentProductFields.countryCode.label" = "Country";
+"PaymentProductFields.countryCode.placeholder" = "Country";
+"PaymentProductFields.cvv.label" = "CVV";
+"PaymentProductFields.cvv.placeholder" = "123";
+"PaymentProductFields.dateOfBirth.label" = "Date of birth";
+"PaymentProductFields.dateOfBirth.placeholder" = "dd-mm-yyyy";
+"PaymentProductFields.emailAddress.label" = "E-mail address";
+"PaymentProductFields.emailAddress.placeholder" = "you@domain.com";
+"PaymentProductFields.expiryDate.label" = "Expiry date";
+"PaymentProductFields.expiryDate.placeholder" = "MM/YY";
+"PaymentProductFields.firstName.label" = "First name";
+"PaymentProductFields.firstName.placeholder" = "First name";
+"PaymentProductFields.fiscalNumber.label" = "Fiscal number";
+"PaymentProductFields.fiscalNumber.placeholder" = "Fiscal number";
+"PaymentProductFields.houseNumber.label" = "House number";
+"PaymentProductFields.houseNumber.placeholder" = "House number";
+"PaymentProductFields.iban.label" = "IBAN";
+"PaymentProductFields.iban.placeholder" = "IBAN";
+"PaymentProductFields.issuerId.label" = "Select your bank";
+"PaymentProductFields.issuerId.placeholder" = "Select your bank";
+"PaymentProductFields.phoneNumber.label" = "Phone number";
+"PaymentProductFields.phoneNumber.placeholder" = "Phone number";
+"PaymentProductFields.residentIdName.label" = "Resident name ";
+"PaymentProductFields.residentIdName.placeholder" = "Resident name ";
+"PaymentProductFields.residentMobilePhoneNumber.label" = "Cell phone number";
+"PaymentProductFields.residentMobilePhoneNumber.placeholder" = "+ 86*** **** ****";
+"PaymentProductFields.stateCode.label" = "State code";
+"PaymentProductFields.stateCode.placeholder" = "State code";
+"PaymentProductFields.street.label" = "Street";
+"PaymentProductFields.street.placeholder" = "Street";
+"PaymentProductFields.surname.label" = "Surname";
+"PaymentProductFields.surname.placeholder" = "Surname";
+"PaymentProductFields.termsAndConditions.label" = "Accept {link}";
+"PaymentProductFields.termsAndConditions.link.label" = "Terms and conditions";
+"PaymentProductFields.title.label" = "Title";
+"PaymentProductFields.title.placeholder" = "Title";
+"PaymentProductFields.zip.label" = "Zip code";
+"PaymentProductFields.zip.placeholder" = "Zip code";
+
+// Overriden placeholders
+"PaymentProducts.2.paymentProductFields.cvv.placeholder" = "1234";
+"PaymentProducts.2.paymentProductFields.cardNumber.placeholder" = "**** ****** *****";
+
+// CoBrands
+"Cobrands.introText" = "This card has multiple payment options, please choose your preferred option.";
+"Cobrands.detected" = "Multiple payment options detected.";
+
+// Errors
 "PaymentProductsErrorExplanation" = "We are unable to retrieve the available payment products. \n\n Please check your internet connection and the provided client session identifier and customer identifier.";
 "PaymentProductErrorExplanation" = "We are unable to retrieve information about the selected payment product. \n\n Please check your internet connection and the provided client session identifier and customer identifier.";
 "PaymentProductNetworksErrorExplanation" = "We are unable to retrieve information about the selected payment product's networks. \n\n Please check your internet connection and the provided client session identifier and customer identifier.";
 "SubmitErrorExplanation" = "We are unable to retrieve a key to encrypt your payment information. \n\n Please check your internet connection and the provided customer client session identifier and customer identifier.";
 "TechnicalProblemErrorExplanation" = "A technical error occurred while we were trying to process your payment. Please try again or try another payment method.";
-"ConnectionErrorTitle" = "Connection error";
-"CompatibilityError" = "Compatibility error";
 "PaymentFailureTitle" = "Payment failure";
-"ContinueButtonTitle" = "Start another payment process";
-"SuccessLabel" = "Congratulations!";
-"SuccessText" = "Your payment has been successfully processed by the SDK.";
+"ConnectionErrorTitle" = "Connection error";
+"FieldErrorTitle" = "Text field error";
+"FieldErrorClientSessionIdCustomerIdExplanation" = "We are unable to retrieve the input of the text fields. Please check that you have provided a client session identifier and customer identifier.";
+"FieldErrorCountryCodeCurrencyExplanation" = "We are unable to retrieve the input of the text fields. Please check that you have provided a country code and currency code.";
 
-"SetupExplanation" = "To process a payment using the services provided by Online Payments, the following information must be provided by a merchant.\n\nAfter providing the information requested below, this example app can process a payment.";
-"ClientSessionIdentifier" = "Client session identifier";
-"CustomerIdentifier" = "Customer identifier";
-"MerchantIdentifier" = "Merchant identifier";
-"Region" = "Region";
-"Environment" = "Environment";
-"AmountInCents" = "Amount in cents";
-"CountryCode" = "Country code";
-"CurrencyCode" = "Currency code";
-"RecurringPayment" = "Payment is recurring";
+// Validation Error Messages
+"ValidationErrors.allowedInContext" = "The card you entered is not supported. Please enter another card or try another payment method.";
+"ValidationErrors.cardholderName" = "Please provide the name as exactly written on your card";
+"ValidationErrors.emailAddress" = "Please provide a valid email address";
+"ValidationErrors.expirationDate" = "Please provide a valid expiration date";
+"ValidationErrors.fixedList" = "Please select one of the values from the list";
+"ValidationErrors.iban" = "Please enter a valid IBAN";
+"ValidationErrors.iin" = "Please provide a valid card number";
+"ValidationErrors.invalidContent" = "Please provide a value of the correct format";
+"ValidationErrors.length.between" = "Please provide a value between {minLength} and {maxLength} characters";
+"ValidationErrors.length.exact" = "Please provide a value of exactly {maxLength} characters";
+"ValidationErrors.length" = "Please provide a value of maximum of {maxLength} characters";
+"ValidationErrors.length.max" = "Please provide a value of maximum of {maxLength} characters";
+"ValidationErrors.luhn" = "Please provide a valid card number";
+"ValidationErrors.range" = "Please provide a value between {minValue} and {maxValue}";
+"ValidationErrors.regularExpression" = "Please provide a value of the correct format";
+"ValidationErrors.required" = "Please provide a value";
+"ValidationErrors.residentIdName" = "Please provide the exact name as written on your Resident Identity Card";
+"ValidationErrors.residentIdNumber" = "Please provide the exact number as written on your Resident Identity Card";
+"ValidationErrors.termsAndConditions" = "Please accept the terms and conditions";

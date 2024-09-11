@@ -5,6 +5,7 @@
 //
 
 #import "OPDetailedPickerViewCell.h"
+#import "OPAppConstants.h"
 @import OnlinePaymentsKit;
 
 @interface OPDetailedPickerViewCell ()
@@ -110,8 +111,8 @@
     NSMutableAttributedString *returnValue = [[NSMutableAttributedString alloc]init];
     NSAttributedString *left;
     NSAttributedString *right;
-    NSString *elementKey = [NSString stringWithFormat:@"gc.general.paymentProductFields.%@.fields.%@.label",self.fieldIdentifier , element.identifier];
-    NSString *elementId = NSLocalizedStringWithDefaultValue(elementKey, OPSDKConstants.kOPSDKLocalizable, [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath], element.identifier, @"");
+    NSString *elementKey = [NSString stringWithFormat:@"PaymentProductFields.%@.label", self.fieldIdentifier];
+    NSString *elementId = NSLocalizedStringFromTable(elementKey, kOPAppLocalizable, nil);
     switch (element.type) {
         case OPDisplayElementTypeCurrency:
             left = [[NSAttributedString alloc]initWithString:elementId];

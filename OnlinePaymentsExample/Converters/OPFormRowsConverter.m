@@ -13,24 +13,15 @@
 #import "OPPaymentProductInputData.h"
 #import "OPFormRowCurrency.h"
 #import "OPFormRowLabel.h"
+#import "OPAppConstants.h"
 
 @import OnlinePaymentsKit;
 
 @interface OPFormRowsConverter ()
 
-+ (NSBundle *)sdkBundle;
-
 @end
 
 @implementation OPFormRowsConverter
-
-static NSBundle * _sdkBundle;
-+ (NSBundle *)sdkBundle {
-    if (_sdkBundle == nil) {
-        _sdkBundle = [NSBundle bundleWithPath:OPSDKConstants.kOPSDKBundlePath];
-    }
-    return _sdkBundle;
-}
 
 - (instancetype)init
 {
@@ -102,7 +93,7 @@ static NSBundle * _sdkBundle;
 + (NSString *)errorMessageForError:(OPValidationError *)error withCurrency:(BOOL)forCurrency
 {
     Class errorClass = [error class];
-    NSString *errorMessageFormat = @"gc.general.paymentProductFields.validationErrors.%@.label";
+    NSString *errorMessageFormat = @"ValidationErrors.%@";
     NSString *errorMessageKey;
     NSString *errorMessageValue;
     NSString *errorMessage;
@@ -115,13 +106,13 @@ static NSBundle * _sdkBundle;
         } else if (lengthError.minLength > 0 && lengthError.maxLength > 0) {
             errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"length.between"];
         }
-        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, nil);
+        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTable(errorMessageKey, kOPAppLocalizable, nil);
         NSString *errorMessageValueWithPlaceholder = [errorMessageValueWithPlaceholders stringByReplacingOccurrencesOfString:@"{maxLength}" withString:[NSString stringWithFormat:@"%ld", lengthError.maxLength]];
         errorMessage = [errorMessageValueWithPlaceholder stringByReplacingOccurrencesOfString:@"{minLength}" withString:[NSString stringWithFormat:@"%ld", lengthError.minLength]];
     } else if (errorClass == [OPValidationErrorRange class]) {
         OPValidationErrorRange *rangeError = (OPValidationErrorRange *)error;
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, @"length.between"];
-        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, self.sdkBundle, nil);
+        NSString *errorMessageValueWithPlaceholders = NSLocalizedStringFromTable(errorMessageKey, kOPAppLocalizable, nil);
         NSString *minString;
         NSString *maxString;
         if (forCurrency == YES) {
@@ -135,7 +126,7 @@ static NSBundle * _sdkBundle;
         errorMessageValue = [errorMessageValueWithPlaceholder stringByReplacingOccurrencesOfString:@"{maxValue}" withString:maxString];
     } else if ([error.errorMessage length] != 0) {
         errorMessageKey = [NSString stringWithFormat:errorMessageFormat, error.errorMessage];
-        errorMessageValue = NSLocalizedStringFromTableInBundle(errorMessageKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil);
+        errorMessageValue = NSLocalizedStringFromTable(errorMessageKey, kOPAppLocalizable, nil);
         errorMessage = errorMessageValue;
     } else {
         [NSException raise:@"Invalid validation error" format:@"Validation error %@ is invalid", error];
@@ -175,8 +166,8 @@ static NSBundle * _sdkBundle;
 
 - (OPFormRowSwitch *)switchFormRowFromField:(OPPaymentProductField *)field paymentItem:(NSObject<OPPaymentItem> *)paymentItem value:(NSString *)value isEnabled:(BOOL)isEnabled viewFactory:(OPViewFactory *)viewFactory
 {
-    NSString *descriptionKey = [NSString stringWithFormat: @"gc.general.paymentProducts.%@.paymentProductFields.%@.label", paymentItem.identifier, field.identifier];
-    NSString *descriptionValue = NSLocalizedStringWithDefaultValue(descriptionKey, OPSDKConstants.kOPSDKLocalizable, [OPFormRowsConverter sdkBundle], nil, @"Accept {link}");
+    NSString *descriptionKey = [NSString stringWithFormat: @"PaymentProducts.%@.paymentProductFields.%@.label", paymentItem.identifier, field.identifier];
+    NSString *descriptionValue = NSLocalizedStringFromTable(descriptionKey, kOPAppLocalizable, nil);
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:descriptionValue];
 
     OPFormRowSwitch *row = [[OPFormRowSwitch alloc] initWithAttributedTitle:attrString isOn:[value isEqualToString:@"true"] target:nil action:NULL paymentProductField:field];

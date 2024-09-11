@@ -38,7 +38,7 @@
     UILabel *label = [[UILabel alloc] init];
     [container addSubview:label];
     label.textAlignment = NSTextAlignmentCenter;
-    label.text = NSLocalizedStringFromTable(@"SuccessLabel", kOPAppLocalizable, nil);
+    label.text = NSLocalizedStringFromTable(@"SuccessTitle", kOPAppLocalizable, nil);
     label.translatesAutoresizingMaskIntoConstraints = NO;
     
     UITextView *textView = [[UITextView alloc] init];
@@ -53,7 +53,7 @@
     
     UIButton *button = [self.viewFactory buttonWithType:OPButtonTypePrimary];
     [container addSubview:button];
-    NSString *continueButtonTitle = NSLocalizedStringFromTable(@"ContinueButtonTitle", kOPAppLocalizable, nil);
+    NSString *continueButtonTitle = NSLocalizedStringFromTable(@"ContinueButtonText", kOPAppLocalizable, nil);
     [button setTitle:continueButtonTitle forState:UIControlStateNormal];
     [button addTarget:self action:@selector(continueButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     button.translatesAutoresizingMaskIntoConstraints = NO;
